@@ -1,4 +1,6 @@
-/* ---------- Color themes ---------- */
+/* ---------- Color themes ----------
+   Each draft year picks one of these; the mapping lives in YEAR_THEMES
+   in app/main.py. Midnight is also the fallback if no theme is set. */
 
 /* Midnight: deep navy with an electric cyan accent */
 :root,
@@ -37,18 +39,6 @@
   --accent-ink: #2b1a00;
 }
 
-/* Crimson: warm black with a bold red accent */
-[data-theme="crimson"] {
-  --bg: #0f0a0b;
-  --surface: #181112;
-  --surface-2: #211719;
-  --border: #352427;
-  --text: #f2eaeb;
-  --muted: #a3918f;
-  --accent: #f43f5e;
-  --accent-ink: #3b0711;
-}
-
 /* Ultraviolet: deep indigo with a violet accent */
 [data-theme="ultraviolet"] {
   --bg: #0c0a17;
@@ -59,18 +49,6 @@
   --muted: #9a94b8;
   --accent: #a78bfa;
   --accent-ink: #1e1048;
-}
-
-/* Graphite: neutral gray, monochrome stat-sheet look */
-[data-theme="graphite"] {
-  --bg: #0e0f11;
-  --surface: #16181b;
-  --surface-2: #1e2125;
-  --border: #2e3237;
-  --text: #f1f3f5;
-  --muted: #959ca5;
-  --accent: #e2e8f0;
-  --accent-ink: #111418;
 }
 
 /* ---------- Base ---------- */
@@ -98,8 +76,7 @@ a { color: inherit; }
 }
 
 /* Condensed display type: headings, labels, numbers */
-.brand, .main-nav a, .year-row a, .eyebrow, h1, h2, .stat, .pos,
-.footer-label, .theme-switch button {
+.brand, .main-nav a, .year-row a, .eyebrow, h1, h2, .stat, .pos {
   font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
   text-transform: uppercase;
 }
@@ -281,55 +258,7 @@ h2 {
   color: var(--muted);
 }
 
-/* ---------- Footer / theme switcher ---------- */
-
-.site-footer {
-  border-top: 1px solid var(--border);
-}
-
-.footer-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding-top: 24px;
-  padding-bottom: 32px;
-}
-
-.footer-label {
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-}
-
-.theme-switch {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.theme-switch button {
-  padding: 6px 12px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.theme-switch button:hover { color: var(--text); }
-
-.theme-switch button[aria-pressed="true"] {
-  color: var(--text);
-  border-color: var(--accent);
-}
-
-a:focus-visible,
-button:focus-visible {
+a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }

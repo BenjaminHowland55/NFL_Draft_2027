@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="midnight">
+<html lang="en" data-theme="{{ year_themes.get(year, year_themes[current_year]) }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <script>
-    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
-  </script>
 </head>
 <body>
   <header class="site-header">
@@ -34,37 +31,5 @@
   <main class="wrap">
     {% block content %}{% endblock %}
   </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-row">
-      <span class="footer-label">Theme</span>
-      <div class="theme-switch" role="group" aria-label="Color theme">
-        <button type="button" data-set-theme="midnight">Midnight</button>
-        <button type="button" data-set-theme="turf">Turf</button>
-        <button type="button" data-set-theme="broadcast">Broadcast</button>
-        <button type="button" data-set-theme="crimson">Crimson</button>
-        <button type="button" data-set-theme="ultraviolet">Ultraviolet</button>
-        <button type="button" data-set-theme="graphite">Graphite</button>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    (function () {
-      var root = document.documentElement;
-      var buttons = document.querySelectorAll("[data-set-theme]");
-      function apply(theme) {
-        root.dataset.theme = theme;
-        buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.setTheme === theme); });
-      }
-      apply(root.dataset.theme);
-      buttons.forEach(function (b) {
-        b.addEventListener("click", function () {
-          apply(b.dataset.setTheme);
-          try { localStorage.setItem("theme", b.dataset.setTheme); } catch (e) {}
-        });
-      });
-    })();
-  </script>
 </body>
 </html>

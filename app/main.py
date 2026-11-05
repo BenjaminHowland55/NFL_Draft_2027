@@ -8,10 +8,18 @@ CURRENT_YEAR = 2027
 YEARS = [2027, 2026, 2025, 2024]
 POSITIONS = ["QB", "RB", "WR", "TE", "OT", "IOL", "IDL", "EDGE", "LB", "CB", "SAF"]
 
+# Each draft year has its own color theme (defined in public/static/style.css).
+YEAR_THEMES = {
+    2027: "broadcast",
+    2026: "turf",
+    2025: "ultraviolet",
+    2024: "midnight",
+}
+
 
 @app.context_processor
 def inject_site_data():
-    return {"years": YEARS, "current_year": CURRENT_YEAR}
+    return {"years": YEARS, "current_year": CURRENT_YEAR, "year_themes": YEAR_THEMES}
 
 
 @app.route("/")
