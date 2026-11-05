@@ -376,12 +376,22 @@ def build(year, entries):
 
         # Pass 2: value per season
         season_rows, weighted, total_weight = [], 0.0, 0.0
+        past_grades = []
         for s, team, weeks_played, team_weeks, hurt in lines:
             share, games, counted = season_line(side, weeks_played, team_weeks, hurt, counted_fraction)
             # Snap share relative to a typical starter at his position (a 62% RB is full-time)
             rel_share = min(1.0, share / starter_share[room]) if starter_share.get(room) else share
             grade = single_season.get((gsis, s))
-            mult = grade_multiplier(grade if grade is not None else NEUTRAL_GRADE)
+            # A season still in progress (non-QBs): blend its grade with his previous seasons' average in
+            # proportion to games played, so an 8-game hot or cold start moves him, but less than a full
+            # season would. Quarterbacks use this season's grade as is.
+            grade_used = grade
+            frac = season_fraction.get(s, 1.0)
+            if room != "QB" and frac < 1.0 and grade is not None and past_grades:
+                grade_used = frac * grade + (1 - frac) * sum(past_grades) / len(past_grades)
+            if grade is not None:
+                past_grades.append(grade)
+            mult = grade_multiplier(grade_used if grade_used is not None else NEUTRAL_GRADE)
             value = pos_value[room] * rel_share * mult
             # Recent seasons count more (QB 5-2-1, others 3-2-1; the current season in full even
             # mid-season), and each season counts for the share of it that counts (see above).
@@ -390,7 +400,9 @@ def build(year, entries):
                                 "starter_share": round(rel_share, 3), "games": games,
                                 "games_missed_injured": len(hurt),
                                 "injured_games_counted": round(counted_fraction * len(hurt), 1),
-                                "grade": grade, "weight": round(weight, 3), "value": round(value * 100, 3)})
+                                "grade": grade,
+                                "grade_used": round(grade_used, 1) if grade_used is not None else None,
+                                "weight": round(weight, 3), "value": round(value * 100, 3)})
             weighted += value * weight
             total_weight += weight
         player_value = weighted / total_weight if total_weight else 0.0

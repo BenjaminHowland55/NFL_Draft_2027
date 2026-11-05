@@ -15,7 +15,11 @@
   <td class="season-cell">
     {%- if s.snap_share or s.grade is not none -%}
     <span class="snap">{{ (s.snap_share * 100)|round|int }}%</span>
+    {%- if s.grade_used is not none and s.grade is not none and (s.grade_used - s.grade)|abs >= 0.5 %}
+    <span class="sgrade blended" title="Season in progress: graded {{ s.grade|round|int }} so far, blended with his track record to {{ s.grade_used|round|int }} for the value">{{ s.grade|round|int }}*</span>
+    {%- else %}
     <span class="sgrade">{{ s.grade|round|int if s.grade is not none else '—' }}</span>
+    {%- endif %}
     {%- if s.games_missed_injured %}<span class="inj" title="{{ s.games_missed_injured }} game{{ 's' if s.games_missed_injured != 1 }} missed injured (excused)">+{{ s.games_missed_injured }}</span>{% endif -%}
     {%- else -%}<span class="muted">—</span>{%- endif -%}
   </td>
@@ -52,7 +56,7 @@
       <li><strong>Positional value</strong> is what the NFL pays the position (median of the top 10 veteran contracts, as a share of the cap). The score is measured against it; the All Positions view ranks by raw draft value (% of the cap), where it does matter, so quarterbacks lead.</li>
       <li><strong>Recent seasons count most.</strong> Quarterbacks: this season 5×, last season 2×, two seasons ago 1×. Other positions, whose play depends more on circumstances: 3×, 2×, 1×. The current season counts in full while it's in progress.</li>
     </ul>
-    <p class="muted">Each season cell shows snap share and that season's grade{% if value.seasons %}; {{ value.seasons[-1] }} is in progress{% endif %}. A small +N marks games missed to injury. Offensive linemen aren't graded yet.</p>
+    <p class="muted">Each season cell shows snap share and that season's grade{% if value.seasons %}; {{ value.seasons[-1] }} is in progress{% endif %}. A small +N marks games missed to injury. An asterisk on a grade means the season is in progress and, for non-quarterbacks, it's blended with his track record in proportion to games played (hover to see). Offensive linemen aren't graded yet.</p>
   </div>
 </details>
 

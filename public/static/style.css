@@ -931,6 +931,8 @@ a.position:hover {
   color: var(--muted);
 }
 
+.season-cell .blended { cursor: help; text-decoration: underline dotted; }
+
 .season-cell .inj {
   margin-left: 4px;
   font-size: 0.7rem;
