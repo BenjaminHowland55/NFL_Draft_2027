@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_macros.html" import grade_meter %}
 
 {% block title %}{{ year }} Draft · NFL Draft Archive{% endblock %}
 
@@ -39,8 +40,11 @@
   </div>
   {% if data and data.board_by_tier %}
     {% for tier in data.board_by_tier %}
-    <div class="tier">
-      <h3 class="tier-name">{{ tier.name }}</h3>
+    <div class="tier tier-{{ tier.num }}">
+      <h3 class="tier-name">
+        <span class="swatch" aria-hidden="true"></span>{{ tier.name }}
+        <span class="tier-count">{{ tier.entries|length }} player{{ 's' if tier.entries|length != 1 }}</span>
+      </h3>
       <div class="table-scroll">
         <table class="rank-table">
           <thead>
@@ -56,7 +60,7 @@
                 </td>
                 <td>{{ p.position if p else e.detail }}</td>
                 <td class="muted">{{ p.school if p and p.school else '' }}</td>
-                <td class="num">{{ e.grade|grade }}</td>
+                <td class="num">{{ grade_meter(year, e.grade, e.tier_num) }}</td>
               </tr>
             {% endfor %}
           </tbody>

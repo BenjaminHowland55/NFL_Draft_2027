@@ -26,18 +26,26 @@
 
 <header class="player-head">
   <div class="player-id">
-    <p class="eyebrow">
+    <p class="eyebrow{% if player.tier_num %} tier-{{ player.tier_num }}{% endif %}">
       {% if player.rank %}#{{ player.rank }} Overall{% endif %}
-      {% if player.rank and player.tier %} · {% endif %}{{ player.tier or '' }}
+      {% if player.rank and player.tier %} · {% endif %}
+      {% if player.tier %}<span class="swatch" aria-hidden="true"></span>{{ player.tier }}{% endif %}
     </p>
     <h1>{{ player.name }}</h1>
     <p class="player-sub">
       {{ player.position or '' }}{% if player.school %} · {{ player.school }}{% endif %}{% if player['class'] %} · {{ player['class'] }}{% endif %}
     </p>
   </div>
-  <div class="player-grade">
+  <div class="player-grade{% if player.tier_num %} tier-{{ player.tier_num }}{% endif %}">
     <span class="grade-value">{{ player.grade|grade }}</span>
     <span class="grade-label">Grade</span>
+    {% set pos = grade_position(year, player.grade) %}
+    {% if pos is not none %}
+    <span class="class-meter" role="img" aria-label="Grade position within the {{ year }} class">
+      <span class="meter-track"><span class="meter-dot" style="left: {{ pos }}%"></span></span>
+      <span class="class-meter-labels"><span>Low</span><span>{{ year }} class</span><span>High</span></span>
+    </span>
+    {% endif %}
   </div>
 </header>
 

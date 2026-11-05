@@ -51,6 +51,43 @@
   --accent-ink: #1e1048;
 }
 
+/* ---------- Tier color ramps ----------
+   One hue per theme (the accent's), bright for Tier 1 fading toward
+   Tier 9. Generated in OKLCH and checked as an ordinal ramp: lightness
+   steps down monotonically by >= 0.06 per tier, and the dimmest step keeps
+   >= 2:1 contrast on the panel background. Colors only mark tiers (dots,
+   swatches); numbers and labels always stay in the normal text colors. */
+:root,
+[data-theme="midnight"] {
+  --t1: #d2efff; --t2: #a3defe; --t3: #6ccdfe; --t4: #34baf5; --t5: #09a6e0;
+  --t6: #0292c5; --t7: #067daa; --t8: #026a91; --t9: #045777;
+}
+
+[data-theme="turf"] {
+  --t1: #b3ffc6; --t2: #66f696; --t3: #4de183; --t4: #31cc6f; --t5: #03b75d;
+  --t6: #09a051; --t7: #048a45; --t8: #017539; --t9: #04602e;
+}
+
+[data-theme="ultraviolet"] {
+  --t1: #eae6fe; --t2: #d6cdff; --t3: #c3b4fe; --t4: #b19afe; --t5: #9f83f1;
+  --t6: #8c6fdb; --t7: #7a5cc6; --t8: #6849b1; --t9: #57369d;
+}
+
+[data-theme="broadcast"] {
+  --t1: #fee5c7; --t2: #ffca88; --t3: #feae32; --t4: #e99906; --t5: #cf8807;
+  --t6: #b67700; --t7: #9d6601; --t8: #855602; --t9: #6e4603;
+}
+
+.tier-1 { --tier: var(--t1); }
+.tier-2 { --tier: var(--t2); }
+.tier-3 { --tier: var(--t3); }
+.tier-4 { --tier: var(--t4); }
+.tier-5 { --tier: var(--t5); }
+.tier-6 { --tier: var(--t6); }
+.tier-7 { --tier: var(--t7); }
+.tier-8 { --tier: var(--t8); }
+.tier-9 { --tier: var(--t9); }
+
 /* ---------- Base ---------- */
 
 * { box-sizing: border-box; }
@@ -288,7 +325,19 @@ a.position:hover {
 .tier .rank-table th:nth-child(1) { width: 64px; }
 .tier .rank-table th:nth-child(2) { width: 34%; }
 .tier .rank-table th:nth-child(3) { width: 14%; }
-.tier .rank-table th:nth-child(5) { width: 96px; }
+.tier .rank-table th:nth-child(5) { width: 200px; }
+
+@media (max-width: 640px) {
+  /* Phones: drop School so the grade stays on screen */
+  .tier .rank-table { min-width: 0; }
+  .tier .rank-table th:nth-child(4),
+  .tier .rank-table td:nth-child(4) { display: none; }
+  .tier .rank-table th:nth-child(1) { width: 52px; }
+  .tier .rank-table th:nth-child(2) { width: auto; }
+  .tier .rank-table th:nth-child(3) { width: 72px; }
+  .tier .rank-table th:nth-child(5) { width: 100px; }
+  .grade-meter { gap: 0; }
+}
 
 .tier .rank-table td {
   overflow: hidden;
@@ -296,12 +345,96 @@ a.position:hover {
 }
 
 .tier-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 0;
-  padding: 14px 20px 6px;
+  padding: 16px 20px 8px;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.1em;
-  color: var(--accent);
+  color: var(--text);
+}
+
+.tier-name .swatch {
+  width: 12px;
+  height: 12px;
+}
+
+.tier-count {
+  margin-left: auto;
+  font-family: "Barlow", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+/* Tier marks */
+.swatch {
+  display: inline-block;
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: var(--tier, var(--border));
+}
+
+.eyebrow .swatch {
+  margin: 0 6px 0 2px;
+  vertical-align: 1px;
+}
+
+.tier-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* Rows in a tier get a thin tier-colored edge */
+.tier .rank-table td:first-child { box-shadow: inset 3px 0 0 var(--tier); }
+
+/* Grade meter: value plus a dot showing where it sits in the class */
+.grade-meter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.meter-track {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+}
+
+.meter-dot {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: var(--tier, var(--muted));
+  box-shadow: 0 0 0 2px var(--surface);
+}
+
+.rank-table tbody tr:hover .meter-dot { box-shadow: 0 0 0 2px var(--surface-2); }
+
+.meter-value {
+  min-width: 3.2em;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .grade-meter .meter-track { display: none; }
 }
 
 .table-scroll {
@@ -435,7 +568,30 @@ a.position:hover {
 
 .player-grade .grade-value {
   font-size: 3rem;
-  color: var(--accent);
+  color: var(--text);
+}
+
+.class-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+  width: 180px;
+}
+
+.class-meter .meter-track { width: 100%; }
+
+.class-meter-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .player-grade { align-items: flex-start; }
 }
 
 .stat-strip {

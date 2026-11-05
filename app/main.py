@@ -31,13 +31,20 @@ def load_year(year):
         return None
     data = json.loads(path.read_text(encoding="utf-8"))
     data["by_slug"] = {p["slug"]: p for p in data["players"]}
+    # Tier number (1 = best) drives the tier color ramp in style.css
+    tier_num = {name: i for i, name in enumerate(data["tiers"], start=1)}
+    for item in data["players"] + data["big_board"]:
+        item["tier_num"] = tier_num.get(item.get("tier"))
     # Big board grouped by tier, in board order
     tiers = []
     for tier in data["tiers"]:
         entries = [e for e in data["big_board"] if e["tier"] == tier]
         if entries:
-            tiers.append({"name": tier, "entries": entries})
+            tiers.append({"name": tier, "num": tier_num[tier], "entries": entries})
     data["board_by_tier"] = tiers
+    # Grade range of the class, for the grade meters (each year uses its own scale)
+    grades = [g for g in (p.get("grade") for p in data["players"]) if g is not None]
+    data["grade_range"] = (min(grades), max(grades)) if grades else (0, 1)
     return data
 
 
@@ -55,6 +62,21 @@ def format_grade(value, places=2):
     if value is None:
         return "—"
     return f"{value:.{places}f}"
+
+
+def grade_position(year, value):
+    """Where a grade sits within that year's class, as a 0-100 percentage."""
+    data = DATA.get(year)
+    if not data or value is None:
+        return None
+    lo, hi = data["grade_range"]
+    if hi <= lo:
+        return 50
+    return round(max(0.0, min(1.0, (value - lo) / (hi - lo))) * 100, 1)
+
+
+# A global (not just context) so imported macros in _macros.html can use it.
+app.jinja_env.globals["grade_position"] = grade_position
 
 
 @app.context_processor

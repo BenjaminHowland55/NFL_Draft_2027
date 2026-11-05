@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_macros.html" import grade_meter, tier_tag %}
 
 {% block title %}{{ year }} {{ pos }} Rankings · NFL Draft Archive{% endblock %}
 
@@ -36,6 +37,7 @@
           {% if 'athleticism' in cols %}<th class="num">Athl.</th>{% endif %}
           {% if 'tape_grade' in cols %}<th class="num">Tape</th>{% endif %}
           <th class="num">Grade</th>
+          <th>Tier</th>
           <th class="num">Overall</th>
         </tr>
       </thead>
@@ -54,11 +56,12 @@
           {% if 'size_score' in cols %}<td class="num">{{ p.size_score|grade(1) }}</td>{% endif %}
           {% if 'athleticism' in cols %}<td class="num">{{ p.athleticism|grade(1) }}</td>{% endif %}
           {% if 'tape_grade' in cols %}<td class="num">{{ p.tape_grade|grade(1) }}</td>{% endif %}
-          <td class="num strong">{{ p.grade|grade }}</td>
+          <td class="num strong">{{ grade_meter(year, p.grade, p.tier_num) }}</td>
+          <td>{{ tier_tag(p.tier_num, p.tier) }}</td>
           <td class="num muted">{{ p.rank or '—' }}</td>
         </tr>
         {% else %}
-        <tr><td colspan="{{ 9 + cols|length }}" class="empty">No players ranked at {{ pos }}.</td></tr>
+        <tr><td colspan="{{ 10 + cols|length }}" class="empty">No players ranked at {{ pos }}.</td></tr>
         {% endfor %}
       </tbody>
     </table>

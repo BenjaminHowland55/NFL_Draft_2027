@@ -1,0 +1,16 @@
+{# Grade shown as text, with a dot on a track marking where it sits in the
+   year's class. The dot is colored by the player's tier. #}
+{% macro grade_meter(year, value, tier_num, places=2) -%}
+  {%- set pos = grade_position(year, value) -%}
+  <span class="grade-meter{% if tier_num %} tier-{{ tier_num }}{% endif %}">
+    {%- if pos is not none %}<span class="meter-track" aria-hidden="true"><span class="meter-dot" style="left: {{ pos }}%"></span></span>{% endif -%}
+    <span class="meter-value">{{ value|grade(places) }}</span>
+  </span>
+{%- endmacro %}
+
+{# Small tier label: colored swatch plus the tier number in text. #}
+{% macro tier_tag(tier_num, tier_name=None) -%}
+  {%- if tier_num -%}
+  <span class="tier-tag tier-{{ tier_num }}"{% if tier_name %} title="{{ tier_name }}"{% endif %}><span class="swatch" aria-hidden="true"></span>T{{ tier_num }}</span>
+  {%- else -%}<span class="muted">—</span>{%- endif -%}
+{%- endmacro %}
