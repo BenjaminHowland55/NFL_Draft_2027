@@ -20,23 +20,30 @@ import polars as pl
 SEASON_GAMES = 17
 
 # room -> list of (stat, weight, lower_is_better)
+# Each room mixes efficiency (rates) with raw production per game played (yards, TDs, pressures, tackles),
+# so a productive workhorse isn't outgraded by an efficient part-timer. Production is per game PLAYED, so
+# games missed to injury don't drag it down. Corners have no production stat: in coverage, a quiet game
+# is usually a good one.
 STATS = {
-    "QB": [("epa_per_play", 0.7, False), ("cpoe", 0.3, False)],
-    "RB": [("epa_per_opp", 0.5, False), ("first_down_rate", 0.3, False), ("yards_per_touch", 0.2, False)],
-    # Target share: how much of the passing game runs through him (efficiency per target alone
-    # punishes high-volume receivers on weak offenses)
-    "WR": [("target_share", 0.35, False), ("rec_epa_per_target", 0.35, False),
-           ("yards_per_target", 0.15, False), ("first_downs_per_target", 0.15, False)],
-    "TE": [("target_share", 0.35, False), ("rec_epa_per_target", 0.35, False),
-           ("yards_per_target", 0.15, False), ("first_downs_per_target", 0.15, False)],
-    "EDGE": [("pressure_rate", 0.6, False), ("sack_rate", 0.2, False), ("missed_tackle_rate", 0.2, True)],
-    "IDL": [("pressure_rate", 0.6, False), ("sack_rate", 0.2, False), ("missed_tackle_rate", 0.2, True)],
-    "LB": [("missed_tackle_rate", 0.3, True), ("tackle_rate", 0.25, False),
-           ("yards_allowed_per_snap", 0.25, True), ("pressure_rate", 0.2, False)],
+    "QB": [("epa_per_play", 0.45, False), ("cpoe", 0.2, False),
+           ("yards_per_game", 0.2, False), ("tds_per_game", 0.15, False)],
+    "RB": [("epa_per_opp", 0.25, False), ("first_down_rate", 0.15, False), ("yards_per_touch", 0.1, False),
+           ("scrimmage_yards_per_game", 0.35, False), ("scrimmage_tds_per_game", 0.15, False)],
+    # Target share: how much of the passing game runs through him
+    "WR": [("target_share", 0.25, False), ("rec_epa_per_target", 0.2, False), ("yards_per_target", 0.1, False),
+           ("first_downs_per_target", 0.1, False), ("rec_yards_per_game", 0.25, False), ("rec_tds_per_game", 0.1, False)],
+    "TE": [("target_share", 0.25, False), ("rec_epa_per_target", 0.2, False), ("yards_per_target", 0.1, False),
+           ("first_downs_per_target", 0.1, False), ("rec_yards_per_game", 0.25, False), ("rec_tds_per_game", 0.1, False)],
+    "EDGE": [("pressure_rate", 0.4, False), ("sack_rate", 0.1, False), ("missed_tackle_rate", 0.15, True),
+             ("pressures_per_game", 0.25, False), ("sacks_per_game", 0.1, False)],
+    "IDL": [("pressure_rate", 0.4, False), ("sack_rate", 0.1, False), ("missed_tackle_rate", 0.15, True),
+            ("pressures_per_game", 0.25, False), ("sacks_per_game", 0.1, False)],
+    "LB": [("missed_tackle_rate", 0.25, True), ("tackle_rate", 0.15, False), ("yards_allowed_per_snap", 0.2, True),
+           ("pressure_rate", 0.1, False), ("tackles_per_game", 0.3, False)],
     "CB": [("yards_allowed_per_snap", 0.4, True), ("rating_allowed", 0.25, True),
            ("missed_tackle_rate", 0.2, True), ("int_rate", 0.15, False)],
-    "S": [("yards_allowed_per_snap", 0.3, True), ("rating_allowed", 0.2, True), ("int_rate", 0.2, False),
-          ("missed_tackle_rate", 0.2, True), ("tackle_rate", 0.1, False)],
+    "S": [("yards_allowed_per_snap", 0.25, True), ("rating_allowed", 0.15, True), ("int_rate", 0.15, False),
+          ("missed_tackle_rate", 0.15, True), ("tackle_rate", 0.1, False), ("tackles_per_game", 0.2, False)],
 }
 # Opportunities needed in a full season to count as a regular (prorated for a partial season)
 REGULAR = {"QB": 250, "RB": 100, "WR": 50, "TE": 35, "EDGE": 300, "IDL": 300, "LB": 300, "CB": 300, "S": 300}
@@ -57,10 +64,11 @@ def offense_table(seasons):
     agg = ps.group_by(["player_id", "season"]).agg(
         pl.col("position").last(), pl.col("player_display_name").last().alias("name"),
         pl.col("target_share").fill_null(0).mean().alias("target_share"),
+        pl.col("week").n_unique().alias("games"),
         *[pl.col(c).fill_null(0).sum() for c in [
             "attempts", "sacks_suffered", "carries", "targets", "receptions", "passing_epa", "rushing_epa",
             "receiving_epa", "rushing_yards", "receiving_yards", "rushing_first_downs", "receiving_first_downs",
-            "cpoe_x_att"]])
+            "cpoe_x_att", "passing_yards", "passing_tds", "rushing_tds", "receiving_tds"]])
     rows = {}
     for r in agg.iter_rows(named=True):
         room = OFFENSE_POS.get(r["position"])
@@ -77,6 +85,12 @@ def offense_table(seasons):
             "first_down_rate": _safe(r["rushing_first_downs"] + r["receiving_first_downs"], opp),
             "yards_per_touch": _safe(r["rushing_yards"] + r["receiving_yards"], r["carries"] + r["receptions"]),
             "target_share": r["target_share"],
+            "yards_per_game": _safe(r["passing_yards"] + r["rushing_yards"], r["games"]),
+            "tds_per_game": _safe(r["passing_tds"] + r["rushing_tds"], r["games"]),
+            "scrimmage_yards_per_game": _safe(r["rushing_yards"] + r["receiving_yards"], r["games"]),
+            "scrimmage_tds_per_game": _safe(r["rushing_tds"] + r["receiving_tds"], r["games"]),
+            "rec_yards_per_game": _safe(r["receiving_yards"], r["games"]),
+            "rec_tds_per_game": _safe(r["receiving_tds"], r["games"]),
             "rec_epa_per_target": _safe(r["receiving_epa"], r["targets"]),
             "yards_per_target": _safe(r["receiving_yards"], r["targets"]),
             "first_downs_per_target": _safe(r["receiving_first_downs"], r["targets"]),
@@ -92,7 +106,7 @@ def defense_table(seasons, room_by_gsis, pfr_to_gsis):
     pfr = nfl.load_pfr_advstats(seasons, stat_type="def", summary_level="week").filter(pl.col("game_type") == "REG")
     pfr = pfr.with_columns((pl.col("def_passer_rating_allowed").fill_null(0) * pl.col("def_targets").fill_null(0)).alias("rat_x_tgt"))
     agg = pfr.group_by(["pfr_player_id", "season"]).agg(
-        pl.col("pfr_player_name").last().alias("name"),
+        pl.col("pfr_player_name").last().alias("name"), pl.col("week").n_unique().alias("games"),
         *[pl.col(c).fill_null(0).sum() for c in [
             "def_ints", "def_targets", "def_yards_allowed", "def_sacks", "def_pressures",
             "def_tackles_combined", "def_missed_tackles", "rat_x_tgt"]])
@@ -113,6 +127,9 @@ def defense_table(seasons, room_by_gsis, pfr_to_gsis):
             "yards_allowed_per_snap": _safe(r["def_yards_allowed"], n),
             "rating_allowed": _safe(r["rat_x_tgt"], r["def_targets"]),
             "int_rate": _safe(r["def_ints"], n),
+            "pressures_per_game": _safe(r["def_pressures"], r["games"]),
+            "sacks_per_game": _safe(r["def_sacks"], r["games"]),
+            "tackles_per_game": _safe(r["def_tackles_combined"], r["games"]),
         }
     return rows
 
