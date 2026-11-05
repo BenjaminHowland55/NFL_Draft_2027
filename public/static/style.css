@@ -37,6 +37,42 @@
   --accent-ink: #2b1a00;
 }
 
+/* Crimson: warm black with a bold red accent */
+[data-theme="crimson"] {
+  --bg: #0f0a0b;
+  --surface: #181112;
+  --surface-2: #211719;
+  --border: #352427;
+  --text: #f2eaeb;
+  --muted: #a3918f;
+  --accent: #f43f5e;
+  --accent-ink: #3b0711;
+}
+
+/* Ultraviolet: deep indigo with a violet accent */
+[data-theme="ultraviolet"] {
+  --bg: #0c0a17;
+  --surface: #141124;
+  --surface-2: #1c1830;
+  --border: #2d2747;
+  --text: #ece9f7;
+  --muted: #9a94b8;
+  --accent: #a78bfa;
+  --accent-ink: #1e1048;
+}
+
+/* Graphite: neutral gray, monochrome stat-sheet look */
+[data-theme="graphite"] {
+  --bg: #0e0f11;
+  --surface: #16181b;
+  --surface-2: #1e2125;
+  --border: #2e3237;
+  --text: #f1f3f5;
+  --muted: #959ca5;
+  --accent: #e2e8f0;
+  --accent-ink: #111418;
+}
+
 /* ---------- Base ---------- */
 
 * { box-sizing: border-box; }
