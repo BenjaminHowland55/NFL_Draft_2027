@@ -4,9 +4,11 @@ Value per season = positional value x snap share x grade multiplier
   positional value  median cap share (APY / cap) of veteran starters at the player's position, from Over The
                     Cap contracts (rookie deals left out). This is what the NFL pays the position.
   snap share        the player's offensive or defensive snaps / his team's snaps in the games he was
-                    available for. Games missed to injury (injured reserve, PUP, or ruled Out/Doubtful) are
-                    excused; benchings and healthy scratches count as zero. Playing time is the main driver:
-                    a team that plays a player trusts him.
+                    available for, relative to a typical starter at his position (starter_shares: e.g. RB
+                    ~62%, QB ~94%), capped at 1: a 62% RB is as full-time as a 94% QB. Games missed to
+                    injury (IR, PUP, Out/Doubtful, or on the report and didn't play) are excused up to
+                    INJURY_ALLOWANCE of his team's games across his career; past that, missed games count
+                    as not playing. Benchings and healthy scratches count as zero.
   grade multiplier  GRADE_MIN_MULT (grade 0) to GRADE_MAX_MULT (grade 100), from a single-season grade
                     (season_grades.py: that season's stats only, a percentile among the season's regulars at
                     the position). Wide enough that quality separates starters, while a 90%-snap player graded
@@ -50,6 +52,11 @@ OUT_DIR = REPO / "app" / "data"
 SEASON_GAMES = 17
 GRADE_MIN_MULT, GRADE_MAX_MULT = 0.2, 1.8
 NEUTRAL_GRADE = 50
+# Injured games are excused up to this share of his team's games across his career; beyond it, missed
+# games count as not playing (one bad injury year is forgiven, being hurt every year isn't)
+INJURY_ALLOWANCE = 0.25
+# Starters per team at each position, for the typical starter snap share (starter_shares)
+STARTERS_PER_TEAM = {"QB": 1, "RB": 1, "WR": 3, "TE": 1, "EDGE": 2, "IDL": 2, "LB": 2, "CB": 3, "S": 2}
 SCORE_AT_MARKET = 70  # score for a full-time, average-graded starter at his position's market rate
 # Season weights by how long ago it was (this season, last season, two ago, ...): built for
 # looking ahead, so recent play counts most.
@@ -205,21 +212,58 @@ def grade_multiplier(grade):
     return GRADE_MIN_MULT + (GRADE_MAX_MULT - GRADE_MIN_MULT) * grade / 100
 
 
-def season_line(side, weeks_played, team_weeks, injury):
-    """Snap share over the games he was available for, and the share of the season he was available."""
-    if not team_weeks:
-        return 0.0, 0, 0, 0.0
+def hurt_weeks_for(side, weeks_played, team_weeks, injury):
+    """Weeks he was hurt: ruled out / on an injury list, or on the injury report and then didn't play."""
     idx = 0 if side == "off" else 1
-    # Hurt weeks: ruled out / on an injury list, or on the injury report and then didn't play
     hurt = set(injury.get("out", ())) | {
         w for w in injury.get("listed", ())
         if w not in weeks_played or not weeks_played[w][1 + idx]}
+    return {w for w in hurt if w in team_weeks}
+
+
+def season_line(side, weeks_played, team_weeks, hurt, counted_fraction):
+    """Snap share and the share of the season that counts.
+
+    Healthy weeks always count. Injured weeks are excused, except `counted_fraction` of each one, which
+    counts as a game he didn't play (used once a player passes the career injury allowance).
+    """
+    if not team_weeks:
+        return 0.0, 0, 0.0
+    idx = 0 if side == "off" else 1
     available = [w for w in team_weeks if w not in hurt]
     team_snaps = sum(team_weeks[w][idx] for w in available)
+    team_snaps += counted_fraction * sum(team_weeks[w][idx] for w in hurt)
     played = sum(weeks_played[w][1 + idx] for w in available if w in weeks_played)
     share = min(1.0, played / team_snaps) if team_snaps else 0.0
     games = sum(1 for w in available if w in weeks_played)
-    return share, games, len(team_weeks) - len(available), len(available) / len(team_weeks)
+    counted = (len(available) + counted_fraction * len(hurt)) / len(team_weeks)
+    return share, games, counted
+
+
+def starter_shares(seasons, rooms_by_gsis):
+    """Typical starter snap share by room: average of the top (32 x starters per team) players' snap
+    share in the games they played (8+ games). A player at or above it is a full-time starter."""
+    sc = nfl.load_snap_counts(seasons).filter(pl.col("game_type") == "REG")
+    rw = nfl.load_rosters_weekly(seasons).select(["pfr_id", "gsis_id"]).drop_nulls().unique()
+    pfr_to_gsis = dict(rw.iter_rows())
+    agg = sc.group_by(["pfr_player_id", "season"]).agg(
+        pl.col("offense_pct").mean(), pl.col("defense_pct").mean(), pl.len().alias("g"))
+    by_room = {}
+    for pfr, season, off, dfn, g in agg.iter_rows():
+        room = rooms_by_gsis.get(pfr_to_gsis.get(pfr))
+        if room not in STARTERS_PER_TEAM or g < 8:
+            continue
+        share = off if room in OFFENSE else dfn
+        by_room.setdefault((room, season), []).append(share or 0.0)
+    out = {}
+    for room, n in STARTERS_PER_TEAM.items():
+        season_avgs = []
+        for (r, _season), vals in by_room.items():
+            if r == room:
+                top = sorted(vals, reverse=True)[: 32 * n]
+                season_avgs.append(sum(top) / len(top))
+        out[room] = sum(season_avgs) / len(season_avgs) if season_avgs else 1.0
+    return out
 
 
 def school_key(name):
@@ -294,6 +338,7 @@ def build(year, entries):
     for (s, _team), weeks in team_week.items():
         season_fraction[s] = max(season_fraction.get(s, 0), min(1.0, len(weeks) / SEASON_GAMES))
     single_season, _ = season_grades(seasons, rooms_by_contract, season_fraction)
+    starter_share = starter_shares(seasons, rooms_by_contract)
 
     players, not_graded = [], []
     for base in entries:
@@ -307,7 +352,8 @@ def build(year, entries):
             not_graded.append(base)
             continue
         side = "off" if room in OFFENSE else "def"
-        season_rows, weighted, total_weight = [], 0.0, 0.0
+        # Pass 1: each season's team, games and injured weeks
+        lines = []
         for s in seasons:
             weeks_played = player_week.get((pfr, s), {})
             # His team that season: where he played the most snaps, else where he was rostered
@@ -319,17 +365,32 @@ def build(year, entries):
             else:
                 team = roster_team.get((gsis, s))
             team_weeks = team_week.get((s, team), {}) if team else {}
-            hurt = hurt_weeks.get((gsis, s), {})
-            share, games, missed_hurt, available = season_line(side, weeks_played, team_weeks, hurt)
+            hurt = hurt_weeks_for(side, weeks_played, team_weeks, hurt_weeks.get((gsis, s), {}))
+            lines.append((s, team, weeks_played, team_weeks, hurt))
+        # Injury allowance: excuse injured games up to INJURY_ALLOWANCE of his team's games so far;
+        # beyond that, the extra share of injured games counts as games he didn't play.
+        total_games = sum(len(tw) for _, _, _, tw, _ in lines)
+        total_hurt = sum(len(h) for *_, h in lines)
+        allowed = INJURY_ALLOWANCE * total_games
+        counted_fraction = (total_hurt - allowed) / total_hurt if total_hurt > allowed else 0.0
+
+        # Pass 2: value per season
+        season_rows, weighted, total_weight = [], 0.0, 0.0
+        for s, team, weeks_played, team_weeks, hurt in lines:
+            share, games, counted = season_line(side, weeks_played, team_weeks, hurt, counted_fraction)
+            # Snap share relative to a typical starter at his position (a 62% RB is full-time)
+            rel_share = min(1.0, share / starter_share[room]) if starter_share.get(room) else share
             grade = single_season.get((gsis, s))
             mult = grade_multiplier(grade if grade is not None else NEUTRAL_GRADE)
-            value = pos_value[room] * share * mult
-            # Recent seasons count more (QB 5-2-1, others 3-2-1; the current season in full even mid-season); injured
-            # games are excused (only the share of the season he was available for counts).
-            weight = recency_weight(s, current, room) * (available if team_weeks else 1.0)
-            season_rows.append({"season": s, "team": team, "snap_share": round(share, 3), "games": games,
-                                "games_missed_injured": missed_hurt, "grade": grade,
-                                "weight": round(weight, 3), "value": round(value * 100, 3)})
+            value = pos_value[room] * rel_share * mult
+            # Recent seasons count more (QB 5-2-1, others 3-2-1; the current season in full even
+            # mid-season), and each season counts for the share of it that counts (see above).
+            weight = recency_weight(s, current, room) * (counted if team_weeks else 1.0)
+            season_rows.append({"season": s, "team": team, "snap_share": round(share, 3),
+                                "starter_share": round(rel_share, 3), "games": games,
+                                "games_missed_injured": len(hurt),
+                                "injured_games_counted": round(counted_fraction * len(hurt), 1),
+                                "grade": grade, "weight": round(weight, 3), "value": round(value * 100, 3)})
             weighted += value * weight
             total_weight += weight
         player_value = weighted / total_weight if total_weight else 0.0
