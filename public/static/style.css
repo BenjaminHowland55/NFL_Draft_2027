@@ -883,6 +883,19 @@ a.position:hover {
 
 .tab-all { margin-left: auto; }
 
+/* The value tables have many columns: tighter cell spacing so they fit the page */
+.value-table th,
+.value-table td {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.value-table th:first-child,
+.value-table td:first-child { padding-left: 16px; }
+
+.value-table th:last-child,
+.value-table td:last-child { padding-right: 16px; }
+
 .season-head {
   text-align: center !important;
   line-height: 1.2;
@@ -923,6 +936,24 @@ a.position:hover {
   font-size: 0.7rem;
   color: #f87171;
   cursor: help;
+}
+
+.score {
+  display: inline-block;
+  min-width: 2.6em;
+  padding: 1px 6px;
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+/* At or above market rate (70+) */
+.score.is-above {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 
 /* ---------- Scouting report index ---------- */

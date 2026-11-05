@@ -52,6 +52,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 31.98,
+   "score": 99.9,
    "seasons": [
     {
      "season": 2024,
@@ -61,7 +62,8 @@
      "games_missed_injured": 0,
      "grade": 39.4,
      "weight": 1.0,
-     "value": 11.589
+     "value": 11.589,
+     "score": 36.2
     },
     {
      "season": 2025,
@@ -71,7 +73,8 @@
      "games_missed_injured": 0,
      "grade": 100.0,
      "weight": 2.0,
-     "value": 38.698
+     "value": 38.698,
+     "score": 120.9
     },
     {
      "season": 2026,
@@ -81,7 +84,8 @@
      "games_missed_injured": 0,
      "grade": 82.8,
      "weight": 5.0,
-     "value": 33.37
+     "value": 33.37,
+     "score": 104.3
     }
    ],
    "value_rank": 1,
@@ -104,6 +108,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 26.074,
+   "score": 81.5,
    "seasons": [
     {
      "season": 2024,
@@ -113,7 +118,8 @@
      "games_missed_injured": 0,
      "grade": 78.8,
      "weight": 1.0,
-     "value": 29.88
+     "value": 29.88,
+     "score": 93.4
     },
     {
      "season": 2025,
@@ -123,7 +129,8 @@
      "games_missed_injured": 10,
      "grade": 19.7,
      "weight": 0.824,
-     "value": 10.456
+     "value": 10.456,
+     "score": 32.7
     },
     {
      "season": 2026,
@@ -133,7 +140,8 @@
      "games_missed_injured": 2,
      "grade": 75.9,
      "weight": 3.571,
-     "value": 28.61
+     "value": 28.61,
+     "score": 89.4
     }
    ],
    "value_rank": 2,
@@ -156,6 +164,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 24.194,
+   "score": 75.6,
    "seasons": [
     {
      "season": 2024,
@@ -165,7 +174,8 @@
      "games_missed_injured": 0,
      "grade": 21.2,
      "weight": 1.0,
-     "value": 11.94
+     "value": 11.94,
+     "score": 37.3
     },
     {
      "season": 2025,
@@ -175,7 +185,8 @@
      "games_missed_injured": 0,
      "grade": 22.6,
      "weight": 2.0,
-     "value": 12.46
+     "value": 12.46,
+     "score": 38.9
     },
     {
      "season": 2026,
@@ -185,7 +196,8 @@
      "games_missed_injured": 3,
      "grade": 89.7,
      "weight": 3.125,
-     "value": 35.625
+     "value": 35.625,
+     "score": 111.3
     }
    ],
    "value_rank": 3,
@@ -208,6 +220,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 16.467,
+   "score": 51.5,
    "seasons": [
     {
      "season": 2024,
@@ -217,7 +230,8 @@
      "games_missed_injured": 0,
      "grade": 51.5,
      "weight": 1.0,
-     "value": 22.646
+     "value": 22.646,
+     "score": 70.8
     },
     {
      "season": 2025,
@@ -227,7 +241,8 @@
      "games_missed_injured": 0,
      "grade": 48.4,
      "weight": 2.0,
-     "value": 21.75
+     "value": 21.75,
+     "score": 68.0
     },
     {
      "season": 2026,
@@ -237,7 +252,8 @@
      "games_missed_injured": 0,
      "grade": 24.1,
      "weight": 5.0,
-     "value": 13.117
+     "value": 13.117,
+     "score": 41.0
     }
    ],
    "value_rank": 4,
@@ -260,6 +276,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 15.002,
+   "score": 72.4,
    "seasons": [
     {
      "season": 2024,
@@ -269,7 +286,8 @@
      "games_missed_injured": 1,
      "grade": 43.9,
      "weight": 0.941,
-     "value": 3.724
+     "value": 3.724,
+     "score": 18.0
     },
     {
      "season": 2025,
@@ -279,7 +297,8 @@
      "games_missed_injured": 0,
      "grade": 62.2,
      "weight": 2.0,
-     "value": 11.45
+     "value": 11.45,
+     "score": 55.3
     },
     {
      "season": 2026,
@@ -289,7 +308,8 @@
      "games_missed_injured": 0,
      "grade": 99.1,
      "weight": 3.0,
-     "value": 20.907
+     "value": 20.907,
+     "score": 100.9
     }
    ],
    "value_rank": 5,
@@ -312,6 +332,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 14.161,
+   "score": 96.2,
    "seasons": [
     {
      "season": 2024,
@@ -321,7 +342,8 @@
      "games_missed_injured": 0,
      "grade": 74.4,
      "weight": 1.0,
-     "value": 13.395
+     "value": 13.395,
+     "score": 91.0
     },
     {
      "season": 2025,
@@ -331,7 +353,8 @@
      "games_missed_injured": 0,
      "grade": 91.5,
      "weight": 2.0,
-     "value": 15.252
+     "value": 15.252,
+     "score": 103.7
     },
     {
      "season": 2026,
@@ -341,7 +364,8 @@
      "games_missed_injured": 0,
      "grade": 79.1,
      "weight": 3.0,
-     "value": 13.689
+     "value": 13.689,
+     "score": 93.0
     }
    ],
    "value_rank": 6,
@@ -364,6 +388,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 13.305,
+   "score": 76.7,
    "seasons": [
     {
      "season": 2024,
@@ -373,7 +398,8 @@
      "games_missed_injured": 2,
      "grade": 80.7,
      "weight": 0.882,
-     "value": 16.481
+     "value": 16.481,
+     "score": 95.0
     },
     {
      "season": 2025,
@@ -383,7 +409,8 @@
      "games_missed_injured": 13,
      "grade": 51.4,
      "weight": 0.471,
-     "value": 9.687
+     "value": 9.687,
+     "score": 55.8
     },
     {
      "season": 2026,
@@ -393,7 +420,8 @@
      "games_missed_injured": 0,
      "grade": 74.7,
      "weight": 3.0,
-     "value": 12.939
+     "value": 12.939,
+     "score": 74.5
     }
    ],
    "value_rank": 7,
@@ -416,6 +444,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 13.267,
+   "score": 90.2,
    "seasons": [
     {
      "season": 2024,
@@ -425,7 +454,8 @@
      "games_missed_injured": 0,
      "grade": 58.1,
      "weight": 1.0,
-     "value": 7.423
+     "value": 7.423,
+     "score": 50.4
     },
     {
      "season": 2025,
@@ -435,7 +465,8 @@
      "games_missed_injured": 3,
      "grade": 71.2,
      "weight": 1.647,
-     "value": 12.747
+     "value": 12.747,
+     "score": 86.6
     },
     {
      "season": 2026,
@@ -445,7 +476,8 @@
      "games_missed_injured": 0,
      "grade": 83.6,
      "weight": 3.0,
-     "value": 15.5
+     "value": 15.5,
+     "score": 105.3
     }
    ],
    "value_rank": 8,
@@ -464,6 +496,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 12.609,
+   "score": 85.7,
    "seasons": [
     {
      "season": 2024,
@@ -473,7 +506,8 @@
      "games_missed_injured": 1,
      "grade": 65.0,
      "weight": 0.941,
-     "value": 9.892
+     "value": 9.892,
+     "score": 67.2
     },
     {
      "season": 2025,
@@ -483,7 +517,8 @@
      "games_missed_injured": 2,
      "grade": 89.0,
      "weight": 1.765,
-     "value": 14.509
+     "value": 14.509,
+     "score": 98.6
     },
     {
      "season": 2026,
@@ -493,7 +528,8 @@
      "games_missed_injured": 0,
      "grade": 65.5,
      "weight": 3.0,
-     "value": 12.344
+     "value": 12.344,
+     "score": 83.9
     }
    ],
    "value_rank": 9,
@@ -516,6 +552,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 12.508,
+   "score": 39.1,
    "seasons": [
     {
      "season": 2024,
@@ -525,7 +562,8 @@
      "games_missed_injured": 0,
      "grade": 50.6,
      "weight": 1.0,
-     "value": 4.551
+     "value": 4.551,
+     "score": 14.2
     },
     {
      "season": 2025,
@@ -535,7 +573,8 @@
      "games_missed_injured": 8,
      "grade": 16.1,
      "weight": 1.059,
-     "value": 9.559
+     "value": 9.559,
+     "score": 29.9
     },
     {
      "season": 2026,
@@ -545,7 +584,8 @@
      "games_missed_injured": 2,
      "grade": 31.0,
      "weight": 3.75,
-     "value": 15.463
+     "value": 15.463,
+     "score": 48.3
     }
    ],
    "value_rank": 10,
@@ -568,6 +608,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 12.359,
+   "score": 71.2,
    "seasons": [
     {
      "season": 2024,
@@ -577,7 +618,8 @@
      "games_missed_injured": 0,
      "grade": 28.4,
      "weight": 1.0,
-     "value": 6.677
+     "value": 6.677,
+     "score": 38.5
     },
     {
      "season": 2025,
@@ -587,7 +629,8 @@
      "games_missed_injured": 5,
      "grade": 59.7,
      "weight": 1.412,
-     "value": 12.351
+     "value": 12.351,
+     "score": 71.2
     },
     {
      "season": 2026,
@@ -597,7 +640,8 @@
      "games_missed_injured": 0,
      "grade": 73.3,
      "weight": 3.0,
-     "value": 14.257
+     "value": 14.257,
+     "score": 82.1
     }
    ],
    "value_rank": 11,
@@ -620,6 +664,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 11.83,
+   "score": 80.4,
    "seasons": [
     {
      "season": 2024,
@@ -629,7 +674,8 @@
      "games_missed_injured": 0,
      "grade": 57.3,
      "weight": 1.0,
-     "value": 7.064
+     "value": 7.064,
+     "score": 48.0
     },
     {
      "season": 2025,
@@ -639,7 +685,8 @@
      "games_missed_injured": 0,
      "grade": 82.2,
      "weight": 2.0,
-     "value": 14.607
+     "value": 14.607,
+     "score": 99.3
     },
     {
      "season": 2026,
@@ -649,7 +696,8 @@
      "games_missed_injured": 0,
      "grade": 58.2,
      "weight": 3.0,
-     "value": 11.568
+     "value": 11.568,
+     "score": 78.6
     }
    ],
    "value_rank": 12,
@@ -672,6 +720,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 11.247,
+   "score": 64.8,
    "seasons": [
     {
      "season": 2024,
@@ -681,7 +730,8 @@
      "games_missed_injured": 6,
      "grade": 24.9,
      "weight": 0.647,
-     "value": 4.908
+     "value": 4.908,
+     "score": 28.3
     },
     {
      "season": 2025,
@@ -691,7 +741,8 @@
      "games_missed_injured": 8,
      "grade": 87.0,
      "weight": 1.059,
-     "value": 15.121
+     "value": 15.121,
+     "score": 87.1
     },
     {
      "season": 2026,
@@ -701,7 +752,8 @@
      "games_missed_injured": 7,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 13,
@@ -724,6 +776,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 11.242,
+   "score": 54.3,
    "seasons": [
     {
      "season": 2024,
@@ -733,7 +786,8 @@
      "games_missed_injured": 0,
      "grade": 10.8,
      "weight": 1.0,
-     "value": 1.432
+     "value": 1.432,
+     "score": 6.9
     },
     {
      "season": 2025,
@@ -743,7 +797,8 @@
      "games_missed_injured": 7,
      "grade": 56.8,
      "weight": 1.176,
-     "value": 12.907
+     "value": 12.907,
+     "score": 62.3
     },
     {
      "season": 2026,
@@ -753,7 +808,8 @@
      "games_missed_injured": 0,
      "grade": 81.4,
      "weight": 3.0,
-     "value": 13.858
+     "value": 13.858,
+     "score": 66.9
     }
    ],
    "value_rank": 14,
@@ -776,6 +832,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 11.232,
+   "score": 54.2,
    "seasons": [
     {
      "season": 2024,
@@ -785,7 +842,8 @@
      "games_missed_injured": 0,
      "grade": 67.3,
      "weight": 1.0,
-     "value": 9.831
+     "value": 9.831,
+     "score": 47.5
     },
     {
      "season": 2025,
@@ -795,7 +853,8 @@
      "games_missed_injured": 2,
      "grade": 40.5,
      "weight": 1.765,
-     "value": 5.461
+     "value": 5.461,
+     "score": 26.4
     },
     {
      "season": 2026,
@@ -805,7 +864,8 @@
      "games_missed_injured": 1,
      "grade": 97.3,
      "weight": 2.571,
-     "value": 15.738
+     "value": 15.738,
+     "score": 76.0
     }
    ],
    "value_rank": 15,
@@ -828,6 +888,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 10.701,
+   "score": 51.7,
    "seasons": [
     {
      "season": 2024,
@@ -837,7 +898,8 @@
      "games_missed_injured": 0,
      "grade": 57.0,
      "weight": 1.0,
-     "value": 8.62
+     "value": 8.62,
+     "score": 41.6
     },
     {
      "season": 2025,
@@ -847,7 +909,8 @@
      "games_missed_injured": 1,
      "grade": 49.5,
      "weight": 1.882,
-     "value": 9.986
+     "value": 9.986,
+     "score": 48.2
     },
     {
      "season": 2026,
@@ -857,7 +920,8 @@
      "games_missed_injured": 0,
      "grade": 54.0,
      "weight": 3.0,
-     "value": 11.843
+     "value": 11.843,
+     "score": 57.2
     }
    ],
    "value_rank": 16,
@@ -876,6 +940,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 10.271,
+   "score": 102.0,
    "seasons": [
     {
      "season": 2024,
@@ -885,7 +950,8 @@
      "games_missed_injured": 4,
      "grade": 63.4,
      "weight": 0.765,
-     "value": 4.854
+     "value": 4.854,
+     "score": 48.2
     },
     {
      "season": 2025,
@@ -895,7 +961,8 @@
      "games_missed_injured": 1,
      "grade": 85.4,
      "weight": 1.882,
-     "value": 9.443
+     "value": 9.443,
+     "score": 93.8
     },
     {
      "season": 2026,
@@ -905,7 +972,8 @@
      "games_missed_injured": 0,
      "grade": 95.4,
      "weight": 3.0,
-     "value": 12.171
+     "value": 12.171,
+     "score": 120.8
     }
    ],
    "value_rank": 17,
@@ -928,6 +996,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 10.004,
+   "score": 68.0,
    "seasons": [
     {
      "season": 2024,
@@ -937,7 +1006,8 @@
      "games_missed_injured": 2,
      "grade": 29.1,
      "weight": 0.882,
-     "value": 4.453
+     "value": 4.453,
+     "score": 30.3
     },
     {
      "season": 2025,
@@ -947,7 +1017,8 @@
      "games_missed_injured": 0,
      "grade": 40.7,
      "weight": 2.0,
-     "value": 8.599
+     "value": 8.599,
+     "score": 58.4
     },
     {
      "season": 2026,
@@ -957,7 +1028,8 @@
      "games_missed_injured": 0,
      "grade": 71.8,
      "weight": 3.0,
-     "value": 12.574
+     "value": 12.574,
+     "score": 85.5
     }
    ],
    "value_rank": 18,
@@ -980,6 +1052,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 9.934,
+   "score": 57.2,
    "seasons": [
     {
      "season": 2024,
@@ -989,7 +1062,8 @@
      "games_missed_injured": 4,
      "grade": 58.0,
      "weight": 0.765,
-     "value": 9.958
+     "value": 9.958,
+     "score": 57.4
     },
     {
      "season": 2025,
@@ -999,7 +1073,8 @@
      "games_missed_injured": 0,
      "grade": 37.7,
      "weight": 2.0,
-     "value": 4.966
+     "value": 4.966,
+     "score": 28.6
     },
     {
      "season": 2026,
@@ -1009,7 +1084,8 @@
      "games_missed_injured": 0,
      "grade": 85.3,
      "weight": 3.0,
-     "value": 13.24
+     "value": 13.24,
+     "score": 76.3
     }
    ],
    "value_rank": 19,
@@ -1032,6 +1108,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 9.91,
+   "score": 67.3,
    "seasons": [
     {
      "season": 2024,
@@ -1041,7 +1118,8 @@
      "games_missed_injured": 2,
      "grade": 68.4,
      "weight": 0.882,
-     "value": 9.213
+     "value": 9.213,
+     "score": 62.6
     },
     {
      "season": 2025,
@@ -1051,7 +1129,8 @@
      "games_missed_injured": 0,
      "grade": 59.3,
      "weight": 2.0,
-     "value": 10.766
+     "value": 10.766,
+     "score": 73.2
     },
     {
      "season": 2026,
@@ -1061,7 +1140,8 @@
      "games_missed_injured": 0,
      "grade": 49.1,
      "weight": 3.0,
-     "value": 9.544
+     "value": 9.544,
+     "score": 64.9
     }
    ],
    "value_rank": 20,
@@ -1084,6 +1164,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 9.465,
+   "score": 64.3,
    "seasons": [
     {
      "season": 2024,
@@ -1093,7 +1174,8 @@
      "games_missed_injured": 3,
      "grade": 87.2,
      "weight": 0.824,
-     "value": 15.055
+     "value": 15.055,
+     "score": 102.3
     },
     {
      "season": 2025,
@@ -1103,7 +1185,8 @@
      "games_missed_injured": 1,
      "grade": 69.5,
      "weight": 1.882,
-     "value": 13.333
+     "value": 13.333,
+     "score": 90.6
     },
     {
      "season": 2026,
@@ -1113,7 +1196,8 @@
      "games_missed_injured": 0,
      "grade": 20.9,
      "weight": 3.0,
-     "value": 5.504
+     "value": 5.504,
+     "score": 37.4
     }
    ],
    "value_rank": 21,
@@ -1132,6 +1216,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 9.371,
+   "score": 54.0,
    "seasons": [
     {
      "season": 2024,
@@ -1141,7 +1226,8 @@
      "games_missed_injured": 1,
      "grade": 72.7,
      "weight": 0.941,
-     "value": 7.112
+     "value": 7.112,
+     "score": 41.0
     },
     {
      "season": 2025,
@@ -1151,7 +1237,8 @@
      "games_missed_injured": 4,
      "grade": 54.6,
      "weight": 1.529,
-     "value": 6.698
+     "value": 6.698,
+     "score": 38.6
     },
     {
      "season": 2026,
@@ -1161,7 +1248,8 @@
      "games_missed_injured": 0,
      "grade": 52.0,
      "weight": 3.0,
-     "value": 11.442
+     "value": 11.442,
+     "score": 65.9
     }
    ],
    "value_rank": 22,
@@ -1184,6 +1272,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 9.047,
+   "score": 61.5,
    "seasons": [
     {
      "season": 2024,
@@ -1193,7 +1282,8 @@
      "games_missed_injured": 3,
      "grade": 44.4,
      "weight": 0.824,
-     "value": 4.988
+     "value": 4.988,
+     "score": 33.9
     },
     {
      "season": 2025,
@@ -1203,7 +1293,8 @@
      "games_missed_injured": 1,
      "grade": 7.6,
      "weight": 1.882,
-     "value": 2.259
+     "value": 2.259,
+     "score": 15.4
     },
     {
      "season": 2026,
@@ -1213,7 +1304,8 @@
      "games_missed_injured": 0,
      "grade": 80.9,
      "weight": 3.0,
-     "value": 14.421
+     "value": 14.421,
+     "score": 98.0
     }
    ],
    "value_rank": 23,
@@ -1236,6 +1328,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 9.013,
+   "score": 63.1,
    "seasons": [
     {
      "season": 2024,
@@ -1245,7 +1338,8 @@
      "games_missed_injured": 3,
      "grade": 26.7,
      "weight": 0.824,
-     "value": 3.059
+     "value": 3.059,
+     "score": 21.4
     },
     {
      "season": 2025,
@@ -1255,7 +1349,8 @@
      "games_missed_injured": 0,
      "grade": 84.6,
      "weight": 2.0,
-     "value": 10.893
+     "value": 10.893,
+     "score": 76.3
     },
     {
      "season": 2026,
@@ -1265,7 +1360,8 @@
      "games_missed_injured": 0,
      "grade": 71.8,
      "weight": 3.0,
-     "value": 9.393
+     "value": 9.393,
+     "score": 65.8
     }
    ],
    "value_rank": 24,
@@ -1288,6 +1384,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 8.753,
+   "score": 50.4,
    "seasons": [
     {
      "season": 2024,
@@ -1297,7 +1394,8 @@
      "games_missed_injured": 1,
      "grade": 94.3,
      "weight": 0.941,
-     "value": 15.154
+     "value": 15.154,
+     "score": 87.3
     },
     {
      "season": 2025,
@@ -1307,7 +1405,8 @@
      "games_missed_injured": 0,
      "grade": 33.8,
      "weight": 2.0,
-     "value": 6.591
+     "value": 6.591,
+     "score": 38.0
     },
     {
      "season": 2026,
@@ -1317,7 +1416,8 @@
      "games_missed_injured": 1,
      "grade": 66.7,
      "weight": 2.571,
-     "value": 8.091
+     "value": 8.091,
+     "score": 46.6
     }
    ],
    "value_rank": 25,
@@ -1340,6 +1440,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 8.208,
+   "score": 55.8,
    "seasons": [
     {
      "season": 2024,
@@ -1349,7 +1450,8 @@
      "games_missed_injured": 3,
      "grade": 70.9,
      "weight": 0.824,
-     "value": 9.294
+     "value": 9.294,
+     "score": 63.2
     },
     {
      "season": 2025,
@@ -1359,7 +1461,8 @@
      "games_missed_injured": 0,
      "grade": 36.4,
      "weight": 2.0,
-     "value": 5.269
+     "value": 5.269,
+     "score": 35.8
     },
     {
      "season": 2026,
@@ -1369,7 +1472,8 @@
      "games_missed_injured": 0,
      "grade": 72.7,
      "weight": 3.0,
-     "value": 9.87
+     "value": 9.87,
+     "score": 67.1
     }
    ],
    "value_rank": 26,
@@ -1392,6 +1496,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 8.107,
+   "score": 39.1,
    "seasons": [
     {
      "season": 2024,
@@ -1401,7 +1506,8 @@
      "games_missed_injured": 0,
      "grade": 37.4,
      "weight": 1.0,
-     "value": 8.659
+     "value": 8.659,
+     "score": 41.8
     },
     {
      "season": 2025,
@@ -1411,7 +1517,8 @@
      "games_missed_injured": 0,
      "grade": 74.8,
      "weight": 2.0,
-     "value": 15.493
+     "value": 15.493,
+     "score": 74.8
     },
     {
      "season": 2026,
@@ -1421,7 +1528,8 @@
      "games_missed_injured": 0,
      "grade": 7.1,
      "weight": 3.0,
-     "value": 2.999
+     "value": 2.999,
+     "score": 14.5
     }
    ],
    "value_rank": 27,
@@ -1444,6 +1552,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 8.063,
+   "score": 56.4,
    "seasons": [
     {
      "season": 2024,
@@ -1453,7 +1562,8 @@
      "games_missed_injured": 0,
      "grade": 90.1,
      "weight": 1.0,
-     "value": 9.732
+     "value": 9.732,
+     "score": 68.1
     },
     {
      "season": 2025,
@@ -1463,7 +1573,8 @@
      "games_missed_injured": 0,
      "grade": 89.4,
      "weight": 2.0,
-     "value": 7.897
+     "value": 7.897,
+     "score": 55.3
     },
     {
      "season": 2026,
@@ -1473,7 +1584,8 @@
      "games_missed_injured": 0,
      "grade": 72.8,
      "weight": 3.0,
-     "value": 7.617
+     "value": 7.617,
+     "score": 53.3
     }
    ],
    "value_rank": 28,
@@ -1496,6 +1608,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 7.408,
+   "score": 97.8,
    "seasons": [
     {
      "season": 2024,
@@ -1505,7 +1618,8 @@
      "games_missed_injured": 0,
      "grade": 78.9,
      "weight": 1.0,
-     "value": 6.598
+     "value": 6.598,
+     "score": 87.1
     },
     {
      "season": 2025,
@@ -1515,7 +1629,8 @@
      "games_missed_injured": 5,
      "grade": 86.0,
      "weight": 1.412,
-     "value": 7.138
+     "value": 7.138,
+     "score": 94.3
     },
     {
      "season": 2026,
@@ -1525,7 +1640,8 @@
      "games_missed_injured": 2,
      "grade": 100.0,
      "weight": 2.25,
-     "value": 7.938
+     "value": 7.938,
+     "score": 104.8
     }
    ],
    "value_rank": 29,
@@ -1548,6 +1664,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 7.267,
+   "score": 50.9,
    "seasons": [
     {
      "season": 2024,
@@ -1557,7 +1674,8 @@
      "games_missed_injured": 1,
      "grade": null,
      "weight": 0.941,
-     "value": 0.182
+     "value": 0.182,
+     "score": 1.3
     },
     {
      "season": 2025,
@@ -1567,7 +1685,8 @@
      "games_missed_injured": 2,
      "grade": 95.2,
      "weight": 1.765,
-     "value": 8.218
+     "value": 8.218,
+     "score": 57.5
     },
     {
      "season": 2026,
@@ -1577,7 +1696,8 @@
      "games_missed_injured": 0,
      "grade": 89.3,
      "weight": 3.0,
-     "value": 8.93
+     "value": 8.93,
+     "score": 62.5
     }
    ],
    "value_rank": 30,
@@ -1600,6 +1720,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 7.058,
+   "score": 48.0,
    "seasons": [
     {
      "season": 2024,
@@ -1609,7 +1730,8 @@
      "games_missed_injured": 0,
      "grade": 70.1,
      "weight": 1.0,
-     "value": 11.78
+     "value": 11.78,
+     "score": 80.1
     },
     {
      "season": 2025,
@@ -1619,7 +1741,8 @@
      "games_missed_injured": 8,
      "grade": 49.2,
      "weight": 1.059,
-     "value": 7.104
+     "value": 7.104,
+     "score": 48.3
     },
     {
      "season": 2026,
@@ -1629,7 +1752,8 @@
      "games_missed_injured": 0,
      "grade": 51.8,
      "weight": 3.0,
-     "value": 5.468
+     "value": 5.468,
+     "score": 37.2
     }
    ],
    "value_rank": 31,
@@ -1648,6 +1772,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 6.695,
+   "score": 32.3,
    "seasons": [
     {
      "season": 2024,
@@ -1657,7 +1782,8 @@
      "games_missed_injured": 0,
      "grade": 30.1,
      "weight": 1.0,
-     "value": 2.333
+     "value": 2.333,
+     "score": 11.3
     },
     {
      "season": 2025,
@@ -1667,7 +1793,8 @@
      "games_missed_injured": 0,
      "grade": 66.7,
      "weight": 2.0,
-     "value": 11.492
+     "value": 11.492,
+     "score": 55.5
     },
     {
      "season": 2026,
@@ -1677,7 +1804,8 @@
      "games_missed_injured": 1,
      "grade": 21.2,
      "weight": 2.625,
-     "value": 4.701
+     "value": 4.701,
+     "score": 22.7
     }
    ],
    "value_rank": 32,
@@ -1700,6 +1828,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 6.656,
+   "score": 66.1,
    "seasons": [
     {
      "season": 2024,
@@ -1709,7 +1838,8 @@
      "games_missed_injured": 4,
      "grade": 17.2,
      "weight": 0.765,
-     "value": 2.379
+     "value": 2.379,
+     "score": 23.6
     },
     {
      "season": 2025,
@@ -1719,7 +1849,8 @@
      "games_missed_injured": 1,
      "grade": 43.8,
      "weight": 1.882,
-     "value": 5.828
+     "value": 5.828,
+     "score": 57.9
     },
     {
      "season": 2026,
@@ -1729,7 +1860,8 @@
      "games_missed_injured": 0,
      "grade": 64.4,
      "weight": 3.0,
-     "value": 8.266
+     "value": 8.266,
+     "score": 82.1
     }
    ],
    "value_rank": 33,
@@ -1752,6 +1884,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 6.544,
+   "score": 65.0,
    "seasons": [
     {
      "season": 2024,
@@ -1761,7 +1894,8 @@
      "games_missed_injured": 1,
      "grade": 96.8,
      "weight": 0.941,
-     "value": 9.377
+     "value": 9.377,
+     "score": 93.1
     },
     {
      "season": 2025,
@@ -1771,7 +1905,8 @@
      "games_missed_injured": 5,
      "grade": 50.6,
      "weight": 1.412,
-     "value": 6.607
+     "value": 6.607,
+     "score": 65.6
     },
     {
      "season": 2026,
@@ -1781,7 +1916,8 @@
      "games_missed_injured": 0,
      "grade": 82.8,
      "weight": 3.0,
-     "value": 5.627
+     "value": 5.627,
+     "score": 55.9
     }
    ],
    "value_rank": 34,
@@ -1804,6 +1940,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 6.41,
+   "score": 36.9,
    "seasons": [
     {
      "season": 2024,
@@ -1813,7 +1950,8 @@
      "games_missed_injured": 0,
      "grade": 83.0,
      "weight": 1.0,
-     "value": 14.755
+     "value": 14.755,
+     "score": 85.0
     },
     {
      "season": 2025,
@@ -1823,7 +1961,8 @@
      "games_missed_injured": 3,
      "grade": 41.6,
      "weight": 1.647,
-     "value": 8.16
+     "value": 8.16,
+     "score": 47.0
     },
     {
      "season": 2026,
@@ -1833,7 +1972,8 @@
      "games_missed_injured": 0,
      "grade": 18.5,
      "weight": 3.0,
-     "value": 2.668
+     "value": 2.668,
+     "score": 15.4
     }
    ],
    "value_rank": 35,
@@ -1856,6 +1996,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 6.404,
+   "score": 63.6,
    "seasons": [
     {
      "season": 2024,
@@ -1865,7 +2006,8 @@
      "games_missed_injured": 0,
      "grade": 93.5,
      "weight": 1.0,
-     "value": 10.827
+     "value": 10.827,
+     "score": 107.5
     },
     {
      "season": 2025,
@@ -1875,7 +2017,8 @@
      "games_missed_injured": 0,
      "grade": 62.9,
      "weight": 2.0,
-     "value": 8.144
+     "value": 8.144,
+     "score": 80.9
     },
     {
      "season": 2026,
@@ -1885,7 +2028,8 @@
      "games_missed_injured": 0,
      "grade": 21.8,
      "weight": 3.0,
-     "value": 3.77
+     "value": 3.77,
+     "score": 37.4
     }
    ],
    "value_rank": 36,
@@ -1908,6 +2052,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 6.169,
+   "score": 61.3,
    "seasons": [
     {
      "season": 2024,
@@ -1917,7 +2062,8 @@
      "games_missed_injured": 0,
      "grade": 2.2,
      "weight": 1.0,
-     "value": 0.542
+     "value": 0.542,
+     "score": 5.4
     },
     {
      "season": 2025,
@@ -1927,7 +2073,8 @@
      "games_missed_injured": 0,
      "grade": 86.5,
      "weight": 2.0,
-     "value": 10.314
+     "value": 10.314,
+     "score": 102.4
     },
     {
      "season": 2026,
@@ -1937,7 +2084,8 @@
      "games_missed_injured": 0,
      "grade": 35.6,
      "weight": 3.0,
-     "value": 5.281
+     "value": 5.281,
+     "score": 52.4
     }
    ],
    "value_rank": 37,
@@ -1960,6 +2108,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 6.03,
+   "score": 69.8,
    "seasons": [
     {
      "season": 2024,
@@ -1969,7 +2118,8 @@
      "games_missed_injured": 7,
      "grade": 58.2,
      "weight": 0.588,
-     "value": 0.509
+     "value": 0.509,
+     "score": 5.9
     },
     {
      "season": 2025,
@@ -1979,7 +2129,8 @@
      "games_missed_injured": 1,
      "grade": 94.1,
      "weight": 1.882,
-     "value": 9.364
+     "value": 9.364,
+     "score": 108.3
     },
     {
      "season": 2026,
@@ -1989,7 +2140,8 @@
      "games_missed_injured": 1,
      "grade": 97.3,
      "weight": 2.625,
-     "value": 4.876
+     "value": 4.876,
+     "score": 56.4
     }
    ],
    "value_rank": 38,
@@ -2012,6 +2164,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 6.006,
+   "score": 34.6,
    "seasons": [
     {
      "season": 2024,
@@ -2021,7 +2174,8 @@
      "games_missed_injured": 3,
      "grade": 19.7,
      "weight": 0.824,
-     "value": 2.787
+     "value": 2.787,
+     "score": 16.1
     },
     {
      "season": 2025,
@@ -2031,7 +2185,8 @@
      "games_missed_injured": 0,
      "grade": 3.9,
      "weight": 2.0,
-     "value": 1.826
+     "value": 1.826,
+     "score": 10.5
     },
     {
      "season": 2026,
@@ -2041,7 +2196,8 @@
      "games_missed_injured": 0,
      "grade": 48.0,
      "weight": 3.0,
-     "value": 9.676
+     "value": 9.676,
+     "score": 55.7
     }
    ],
    "value_rank": 39,
@@ -2064,6 +2220,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 5.838,
+   "score": 33.6,
    "seasons": [
     {
      "season": 2024,
@@ -2073,7 +2230,8 @@
      "games_missed_injured": 0,
      "grade": 47.7,
      "weight": 1.0,
-     "value": 9.236
+     "value": 9.236,
+     "score": 53.2
     },
     {
      "season": 2025,
@@ -2083,7 +2241,8 @@
      "games_missed_injured": 5,
      "grade": 66.2,
      "weight": 1.412,
-     "value": 10.975
+     "value": 10.975,
+     "score": 63.2
     },
     {
      "season": 2026,
@@ -2093,7 +2252,8 @@
      "games_missed_injured": 0,
      "grade": 17.3,
      "weight": 3.0,
-     "value": 2.288
+     "value": 2.288,
+     "score": 13.2
     }
    ],
    "value_rank": 40,
@@ -2112,6 +2272,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 5.836,
+   "score": 33.6,
    "seasons": [
     {
      "season": 2024,
@@ -2121,7 +2282,8 @@
      "games_missed_injured": 0,
      "grade": 36.6,
      "weight": 1.0,
-     "value": 1.272
+     "value": 1.272,
+     "score": 7.3
     },
     {
      "season": 2025,
@@ -2131,7 +2293,8 @@
      "games_missed_injured": 1,
      "grade": 63.6,
      "weight": 1.882,
-     "value": 6.477
+     "value": 6.477,
+     "score": 37.3
     },
     {
      "season": 2026,
@@ -2141,7 +2304,8 @@
      "games_missed_injured": 0,
      "grade": 36.0,
      "weight": 3.0,
-     "value": 6.955
+     "value": 6.955,
+     "score": 40.1
     }
    ],
    "value_rank": 41,
@@ -2164,6 +2328,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 5.744,
+   "score": 40.2,
    "seasons": [
     {
      "season": 2024,
@@ -2173,7 +2338,8 @@
      "games_missed_injured": 6,
      "grade": 46.3,
      "weight": 0.647,
-     "value": 1.673
+     "value": 1.673,
+     "score": 11.7
     },
     {
      "season": 2025,
@@ -2183,7 +2349,8 @@
      "games_missed_injured": 0,
      "grade": 55.8,
      "weight": 2.0,
-     "value": 5.929
+     "value": 5.929,
+     "score": 41.5
     },
     {
      "season": 2026,
@@ -2193,7 +2360,8 @@
      "games_missed_injured": 0,
      "grade": 77.7,
      "weight": 3.0,
-     "value": 6.498
+     "value": 6.498,
+     "score": 45.5
     }
    ],
    "value_rank": 42,
@@ -2216,6 +2384,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 5.696,
+   "score": 39.9,
    "seasons": [
     {
      "season": 2024,
@@ -2225,7 +2394,8 @@
      "games_missed_injured": 1,
      "grade": 45.5,
      "weight": 0.941,
-     "value": 4.718
+     "value": 4.718,
+     "score": 33.0
     },
     {
      "season": 2025,
@@ -2235,7 +2405,8 @@
      "games_missed_injured": 0,
      "grade": 88.5,
      "weight": 2.0,
-     "value": 6.156
+     "value": 6.156,
+     "score": 43.1
     },
     {
      "season": 2026,
@@ -2245,7 +2416,8 @@
      "games_missed_injured": 7,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 43,
@@ -2268,6 +2440,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 5.635,
+   "score": 27.2,
    "seasons": [
     {
      "season": 2024,
@@ -2277,7 +2450,8 @@
      "games_missed_injured": 0,
      "grade": 43.0,
      "weight": 1.0,
-     "value": 4.872
+     "value": 4.872,
+     "score": 23.5
     },
     {
      "season": 2025,
@@ -2287,7 +2461,8 @@
      "games_missed_injured": 4,
      "grade": 81.1,
      "weight": 1.529,
-     "value": 8.483
+     "value": 8.483,
+     "score": 41.0
     },
     {
      "season": 2026,
@@ -2297,7 +2472,8 @@
      "games_missed_injured": 2,
      "grade": 17.7,
      "weight": 2.25,
-     "value": 4.038
+     "value": 4.038,
+     "score": 19.5
     }
    ],
    "value_rank": 44,
@@ -2320,6 +2496,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 5.347,
+   "score": 37.4,
    "seasons": [
     {
      "season": 2024,
@@ -2329,7 +2506,8 @@
      "games_missed_injured": 11,
      "grade": 37.6,
      "weight": 0.353,
-     "value": 4.008
+     "value": 4.008,
+     "score": 28.1
     },
     {
      "season": 2025,
@@ -2339,7 +2517,8 @@
      "games_missed_injured": 2,
      "grade": 32.7,
      "weight": 1.765,
-     "value": 3.595
+     "value": 3.595,
+     "score": 25.2
     },
     {
      "season": 2026,
@@ -2349,7 +2528,8 @@
      "games_missed_injured": 0,
      "grade": 99.0,
      "weight": 3.0,
-     "value": 6.535
+     "value": 6.535,
+     "score": 45.7
     }
    ],
    "value_rank": 45,
@@ -2372,6 +2552,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 5.307,
+   "score": 30.6,
    "seasons": [
     {
      "season": 2024,
@@ -2381,7 +2562,8 @@
      "games_missed_injured": 0,
      "grade": 2.3,
      "weight": 1.0,
-     "value": 1.014
+     "value": 1.014,
+     "score": 5.8
     },
     {
      "season": 2025,
@@ -2391,7 +2573,8 @@
      "games_missed_injured": 0,
      "grade": 2.6,
      "weight": 2.0,
-     "value": 1.384
+     "value": 1.384,
+     "score": 8.0
     },
     {
      "season": 2026,
@@ -2401,7 +2584,8 @@
      "games_missed_injured": 4,
      "grade": 93.3,
      "weight": 1.5,
-     "value": 13.4
+     "value": 13.4,
+     "score": 77.2
     }
    ],
    "value_rank": 46,
@@ -2424,6 +2608,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 5.28,
+   "score": 35.9,
    "seasons": [
     {
      "season": 2024,
@@ -2433,7 +2618,8 @@
      "games_missed_injured": 0,
      "grade": 48.7,
      "weight": 1.0,
-     "value": 5.934
+     "value": 5.934,
+     "score": 40.3
     },
     {
      "season": 2025,
@@ -2443,7 +2629,8 @@
      "games_missed_injured": 0,
      "grade": 84.7,
      "weight": 2.0,
-     "value": 7.783
+     "value": 7.783,
+     "score": 52.9
     },
     {
      "season": 2026,
@@ -2453,7 +2640,8 @@
      "games_missed_injured": 0,
      "grade": 13.6,
      "weight": 3.0,
-     "value": 3.394
+     "value": 3.394,
+     "score": 23.1
     }
    ],
    "value_rank": 47,
@@ -2476,6 +2664,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 5.267,
+   "score": 52.3,
    "seasons": [
     {
      "season": 2024,
@@ -2485,7 +2674,8 @@
      "games_missed_injured": 2,
      "grade": 11.8,
      "weight": 0.882,
-     "value": 2.226
+     "value": 2.226,
+     "score": 22.1
     },
     {
      "season": 2025,
@@ -2495,7 +2685,8 @@
      "games_missed_injured": 0,
      "grade": 53.9,
      "weight": 2.0,
-     "value": 4.842
+     "value": 4.842,
+     "score": 48.1
     },
     {
      "season": 2026,
@@ -2505,7 +2696,8 @@
      "games_missed_injured": 0,
      "grade": 65.5,
      "weight": 3.0,
-     "value": 6.446
+     "value": 6.446,
+     "score": 64.0
     }
    ],
    "value_rank": 48,
@@ -2528,6 +2720,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 5.232,
+   "score": 16.4,
    "seasons": [
     {
      "season": 2024,
@@ -2537,7 +2730,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -2547,7 +2741,8 @@
      "games_missed_injured": 7,
      "grade": 1.4,
      "weight": 1.176,
-     "value": 4.523
+     "value": 4.523,
+     "score": 14.1
     },
     {
      "season": 2026,
@@ -2557,7 +2752,8 @@
      "games_missed_injured": 0,
      "grade": 63.6,
      "weight": 5.0,
-     "value": 5.399
+     "value": 5.399,
+     "score": 16.9
     }
    ],
    "value_rank": 49,
@@ -2580,6 +2776,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 5.23,
+   "score": 35.5,
    "seasons": [
     {
      "season": 2024,
@@ -2589,7 +2786,8 @@
      "games_missed_injured": 0,
      "grade": 20.5,
      "weight": 1.0,
-     "value": 2.861
+     "value": 2.861,
+     "score": 19.4
     },
     {
      "season": 2025,
@@ -2599,7 +2797,8 @@
      "games_missed_injured": 7,
      "grade": 5.9,
      "weight": 1.176,
-     "value": 1.929
+     "value": 1.929,
+     "score": 13.1
     },
     {
      "season": 2026,
@@ -2609,7 +2808,8 @@
      "games_missed_injured": 1,
      "grade": 61.8,
      "weight": 2.625,
-     "value": 7.612
+     "value": 7.612,
+     "score": 51.7
     }
    ],
    "value_rank": 50,
@@ -2628,6 +2828,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 4.905,
+   "score": 34.3,
    "seasons": [
     {
      "season": 2024,
@@ -2637,7 +2838,8 @@
      "games_missed_injured": 0,
      "grade": 37.5,
      "weight": 1.0,
-     "value": 0.997
+     "value": 0.997,
+     "score": 7.0
     },
     {
      "season": 2025,
@@ -2647,7 +2849,8 @@
      "games_missed_injured": 0,
      "grade": 68.3,
      "weight": 2.0,
-     "value": 6.733
+     "value": 6.733,
+     "score": 47.1
     },
     {
      "season": 2026,
@@ -2657,7 +2860,8 @@
      "games_missed_injured": 0,
      "grade": 42.7,
      "weight": 3.0,
-     "value": 4.99
+     "value": 4.99,
+     "score": 34.9
     }
    ],
    "value_rank": 51,
@@ -2680,6 +2884,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 4.613,
+   "score": 32.3,
    "seasons": [
     {
      "season": 2024,
@@ -2689,7 +2894,8 @@
      "games_missed_injured": 4,
      "grade": 68.3,
      "weight": 0.765,
-     "value": 5.654
+     "value": 5.654,
+     "score": 39.6
     },
     {
      "season": 2025,
@@ -2699,7 +2905,8 @@
      "games_missed_injured": 0,
      "grade": 13.5,
      "weight": 2.0,
-     "value": 1.218
+     "value": 1.218,
+     "score": 8.5
     },
     {
      "season": 2026,
@@ -2709,7 +2916,8 @@
      "games_missed_injured": 0,
      "grade": 63.1,
      "weight": 3.0,
-     "value": 6.61
+     "value": 6.61,
+     "score": 46.3
     }
    ],
    "value_rank": 52,
@@ -2732,6 +2940,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 4.496,
+   "score": 49.6,
    "seasons": [
     {
      "season": 2024,
@@ -2741,7 +2950,8 @@
      "games_missed_injured": 0,
      "grade": 59.6,
      "weight": 1.0,
-     "value": 1.945
+     "value": 1.945,
+     "score": 21.4
     },
     {
      "season": 2025,
@@ -2751,7 +2961,8 @@
      "games_missed_injured": 13,
      "grade": 40.3,
      "weight": 0.471,
-     "value": 1.28
+     "value": 1.28,
+     "score": 14.1
     },
     {
      "season": 2026,
@@ -2761,7 +2972,8 @@
      "games_missed_injured": 0,
      "grade": 74.5,
      "weight": 3.0,
-     "value": 5.851
+     "value": 5.851,
+     "score": 64.5
     }
    ],
    "value_rank": 53,
@@ -2784,6 +2996,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 4.408,
+   "score": 51.0,
    "seasons": [
     {
      "season": 2024,
@@ -2793,7 +3006,8 @@
      "games_missed_injured": 3,
      "grade": 69.9,
      "weight": 0.824,
-     "value": 4.405
+     "value": 4.405,
+     "score": 51.0
     },
     {
      "season": 2025,
@@ -2803,7 +3017,8 @@
      "games_missed_injured": 0,
      "grade": 32.9,
      "weight": 2.0,
-     "value": 4.104
+     "value": 4.104,
+     "score": 47.5
     },
     {
      "season": 2026,
@@ -2813,7 +3028,8 @@
      "games_missed_injured": 4,
      "grade": 47.3,
      "weight": 1.5,
-     "value": 4.813
+     "value": 4.813,
+     "score": 55.7
     }
    ],
    "value_rank": 54,
@@ -2836,6 +3052,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 4.343,
+   "score": 43.1,
    "seasons": [
     {
      "season": 2024,
@@ -2845,7 +3062,8 @@
      "games_missed_injured": 0,
      "grade": 45.2,
      "weight": 1.0,
-     "value": 3.0
+     "value": 3.0,
+     "score": 29.8
     },
     {
      "season": 2025,
@@ -2855,7 +3073,8 @@
      "games_missed_injured": 0,
      "grade": 60.7,
      "weight": 2.0,
-     "value": 6.213
+     "value": 6.213,
+     "score": 61.7
     },
     {
      "season": 2026,
@@ -2865,7 +3084,8 @@
      "games_missed_injured": 2,
      "grade": 29.9,
      "weight": 2.25,
-     "value": 3.278
+     "value": 3.278,
+     "score": 32.5
     }
    ],
    "value_rank": 55,
@@ -2888,6 +3108,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 4.293,
+   "score": 49.7,
    "seasons": [
     {
      "season": 2024,
@@ -2897,7 +3118,8 @@
      "games_missed_injured": 0,
      "grade": 67.5,
      "weight": 1.0,
-     "value": 3.489
+     "value": 3.489,
+     "score": 40.4
     },
     {
      "season": 2025,
@@ -2907,7 +3129,8 @@
      "games_missed_injured": 0,
      "grade": 69.4,
      "weight": 2.0,
-     "value": 4.986
+     "value": 4.986,
+     "score": 57.7
     },
     {
      "season": 2026,
@@ -2917,7 +3140,8 @@
      "games_missed_injured": 0,
      "grade": 36.5,
      "weight": 3.0,
-     "value": 4.099
+     "value": 4.099,
+     "score": 47.4
     }
    ],
    "value_rank": 56,
@@ -2936,6 +3160,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 4.245,
+   "score": 29.7,
    "seasons": [
     {
      "season": 2024,
@@ -2945,7 +3170,8 @@
      "games_missed_injured": 0,
      "grade": 49.2,
      "weight": 1.0,
-     "value": 0.053
+     "value": 0.053,
+     "score": 0.4
     },
     {
      "season": 2025,
@@ -2955,7 +3181,8 @@
      "games_missed_injured": 1,
      "grade": 36.5,
      "weight": 1.882,
-     "value": 3.582
+     "value": 3.582,
+     "score": 25.1
     },
     {
      "season": 2026,
@@ -2965,7 +3192,8 @@
      "games_missed_injured": 0,
      "grade": 51.5,
      "weight": 3.0,
-     "value": 6.057
+     "value": 6.057,
+     "score": 42.4
     }
    ],
    "value_rank": 57,
@@ -2988,6 +3216,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 4.157,
+   "score": 41.3,
    "seasons": [
     {
      "season": 2024,
@@ -2997,7 +3226,8 @@
      "games_missed_injured": 4,
      "grade": 68.8,
      "weight": 0.765,
-     "value": 8.792
+     "value": 8.792,
+     "score": 87.3
     },
     {
      "season": 2025,
@@ -3007,7 +3237,8 @@
      "games_missed_injured": 4,
      "grade": 44.9,
      "weight": 1.529,
-     "value": 5.981
+     "value": 5.981,
+     "score": 59.4
     },
     {
      "season": 2026,
@@ -3017,7 +3248,8 @@
      "games_missed_injured": 2,
      "grade": 3.4,
      "weight": 2.143,
-     "value": 1.201
+     "value": 1.201,
+     "score": 11.9
     }
    ],
    "value_rank": 58,
@@ -3036,6 +3268,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 4.074,
+   "score": 28.5,
    "seasons": [
     {
      "season": 2024,
@@ -3045,7 +3278,8 @@
      "games_missed_injured": 0,
      "grade": 38.6,
      "weight": 1.0,
-     "value": 3.483
+     "value": 3.483,
+     "score": 24.4
     },
     {
      "season": 2025,
@@ -3055,7 +3289,8 @@
      "games_missed_injured": 0,
      "grade": 42.3,
      "weight": 2.0,
-     "value": 5.954
+     "value": 5.954,
+     "score": 41.7
     },
     {
      "season": 2026,
@@ -3065,7 +3300,8 @@
      "games_missed_injured": 0,
      "grade": 71.9,
      "weight": 3.0,
-     "value": 3.018
+     "value": 3.018,
+     "score": 21.1
     }
    ],
    "value_rank": 59,
@@ -3084,6 +3320,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 4.072,
+   "score": 19.7,
    "seasons": [
     {
      "season": 2024,
@@ -3093,7 +3330,8 @@
      "games_missed_injured": 0,
      "grade": 2.2,
      "weight": 1.0,
-     "value": 0.928
+     "value": 0.928,
+     "score": 4.5
     },
     {
      "season": 2025,
@@ -3103,7 +3341,8 @@
      "games_missed_injured": 0,
      "grade": 58.6,
      "weight": 2.0,
-     "value": 5.644
+     "value": 5.644,
+     "score": 27.2
     },
     {
      "season": 2026,
@@ -3113,7 +3352,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 60,
@@ -3136,6 +3376,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 4.044,
+   "score": 27.5,
    "seasons": [
     {
      "season": 2024,
@@ -3145,7 +3386,8 @@
      "games_missed_injured": 0,
      "grade": 42.7,
      "weight": 1.0,
-     "value": 8.269
+     "value": 8.269,
+     "score": 56.2
     },
     {
      "season": 2025,
@@ -3155,7 +3397,8 @@
      "games_missed_injured": 0,
      "grade": 31.4,
      "weight": 2.0,
-     "value": 6.533
+     "value": 6.533,
+     "score": 44.4
     },
     {
      "season": 2026,
@@ -3165,7 +3408,8 @@
      "games_missed_injured": 0,
      "grade": 2.7,
      "weight": 3.0,
-     "value": 0.976
+     "value": 0.976,
+     "score": 6.6
     }
    ],
    "value_rank": 61,
@@ -3188,6 +3432,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 4.005,
+   "score": 23.1,
    "seasons": [
     {
      "season": 2024,
@@ -3197,7 +3442,8 @@
      "games_missed_injured": 0,
      "grade": 22.7,
      "weight": 1.0,
-     "value": 4.512
+     "value": 4.512,
+     "score": 26.0
     },
     {
      "season": 2025,
@@ -3207,7 +3453,8 @@
      "games_missed_injured": 3,
      "grade": 23.4,
      "weight": 1.647,
-     "value": 4.909
+     "value": 4.909,
+     "score": 28.3
     },
     {
      "season": 2026,
@@ -3217,7 +3464,8 @@
      "games_missed_injured": 0,
      "grade": 8.0,
      "weight": 3.0,
-     "value": 3.339
+     "value": 3.339,
+     "score": 19.2
     }
    ],
    "value_rank": 62,
@@ -3240,6 +3488,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 3.91,
+   "score": 43.1,
    "seasons": [
     {
      "season": 2024,
@@ -3249,7 +3498,8 @@
      "games_missed_injured": 0,
      "grade": 94.2,
      "weight": 1.0,
-     "value": 4.898
+     "value": 4.898,
+     "score": 54.0
     },
     {
      "season": 2025,
@@ -3259,7 +3509,8 @@
      "games_missed_injured": 7,
      "grade": 5.6,
      "weight": 1.176,
-     "value": 1.132
+     "value": 1.132,
+     "score": 12.5
     },
     {
      "season": 2026,
@@ -3269,7 +3520,8 @@
      "games_missed_injured": 0,
      "grade": 60.8,
      "weight": 3.0,
-     "value": 4.671
+     "value": 4.671,
+     "score": 51.5
     }
    ],
    "value_rank": 63,
@@ -3292,6 +3544,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 3.873,
+   "score": 22.3,
    "seasons": [
     {
      "season": 2024,
@@ -3301,7 +3554,8 @@
      "games_missed_injured": 4,
      "grade": 21.6,
      "weight": 0.765,
-     "value": 4.631
+     "value": 4.631,
+     "score": 26.7
     },
     {
      "season": 2025,
@@ -3311,7 +3565,8 @@
      "games_missed_injured": 13,
      "grade": 62.7,
      "weight": 0.471,
-     "value": 7.556
+     "value": 7.556,
+     "score": 43.5
     },
     {
      "season": 2026,
@@ -3321,7 +3576,8 @@
      "games_missed_injured": 6,
      "grade": 47.9,
      "weight": 0.75,
-     "value": 0.789
+     "value": 0.789,
+     "score": 4.5
     }
    ],
    "value_rank": 64,
@@ -3340,6 +3596,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 3.742,
+   "score": 18.1,
    "seasons": [
     {
      "season": 2024,
@@ -3349,7 +3606,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.352
+     "value": 0.352,
+     "score": 1.7
     },
     {
      "season": 2025,
@@ -3359,7 +3617,8 @@
      "games_missed_injured": 0,
      "grade": 63.1,
      "weight": 2.0,
-     "value": 7.2
+     "value": 7.2,
+     "score": 34.8
     },
     {
      "season": 2026,
@@ -3369,7 +3628,8 @@
      "games_missed_injured": 0,
      "grade": 8.0,
      "weight": 3.0,
-     "value": 2.567
+     "value": 2.567,
+     "score": 12.4
     }
    ],
    "value_rank": 65,
@@ -3392,6 +3652,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 3.709,
+   "score": 25.2,
    "seasons": [
     {
      "season": 2024,
@@ -3401,7 +3662,8 @@
      "games_missed_injured": 0,
      "grade": 70.5,
      "weight": 1.0,
-     "value": 1.467
+     "value": 1.467,
+     "score": 10.0
     },
     {
      "season": 2025,
@@ -3411,7 +3673,8 @@
      "games_missed_injured": 0,
      "grade": 28.6,
      "weight": 2.0,
-     "value": 1.284
+     "value": 1.284,
+     "score": 8.7
     },
     {
      "season": 2026,
@@ -3421,7 +3684,8 @@
      "games_missed_injured": 0,
      "grade": 88.2,
      "weight": 3.0,
-     "value": 6.074
+     "value": 6.074,
+     "score": 41.3
     }
    ],
    "value_rank": 66,
@@ -3444,6 +3708,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 3.676,
+   "score": 25.7,
    "seasons": [
     {
      "season": 2024,
@@ -3453,7 +3718,8 @@
      "games_missed_injured": 2,
      "grade": 39.6,
      "weight": 0.882,
-     "value": 4.118
+     "value": 4.118,
+     "score": 28.8
     },
     {
      "season": 2025,
@@ -3463,7 +3729,8 @@
      "games_missed_injured": 3,
      "grade": 30.8,
      "weight": 1.647,
-     "value": 3.763
+     "value": 3.763,
+     "score": 26.3
     },
     {
      "season": 2026,
@@ -3473,7 +3740,8 @@
      "games_missed_injured": 0,
      "grade": 82.7,
      "weight": 3.0,
-     "value": 3.497
+     "value": 3.497,
+     "score": 24.5
     }
    ],
    "value_rank": 67,
@@ -3496,6 +3764,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 3.609,
+   "score": 20.8,
    "seasons": [
     {
      "season": 2024,
@@ -3505,7 +3774,8 @@
      "games_missed_injured": 1,
      "grade": 13.6,
      "weight": 0.941,
-     "value": 3.572
+     "value": 3.572,
+     "score": 20.6
     },
     {
      "season": 2025,
@@ -3515,7 +3785,8 @@
      "games_missed_injured": 2,
      "grade": 7.8,
      "weight": 1.765,
-     "value": 2.713
+     "value": 2.713,
+     "score": 15.6
     },
     {
      "season": 2026,
@@ -3525,7 +3796,8 @@
      "games_missed_injured": 5,
      "grade": 42.4,
      "weight": 0.857,
-     "value": 5.496
+     "value": 5.496,
+     "score": 31.7
     }
    ],
    "value_rank": 68,
@@ -3544,6 +3816,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 3.596,
+   "score": 24.4,
    "seasons": [
     {
      "season": 2024,
@@ -3553,7 +3826,8 @@
      "games_missed_injured": 1,
      "grade": 24.8,
      "weight": 0.941,
-     "value": 0.883
+     "value": 0.883,
+     "score": 6.0
     },
     {
      "season": 2025,
@@ -3563,7 +3837,8 @@
      "games_missed_injured": 0,
      "grade": 37.1,
      "weight": 2.0,
-     "value": 0.664
+     "value": 0.664,
+     "score": 4.5
     },
     {
      "season": 2026,
@@ -3573,7 +3848,8 @@
      "games_missed_injured": 0,
      "grade": 94.5,
      "weight": 3.0,
-     "value": 6.403
+     "value": 6.403,
+     "score": 43.5
     }
    ],
    "value_rank": 69,
@@ -3596,6 +3872,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 3.558,
+   "score": 24.2,
    "seasons": [
     {
      "season": 2024,
@@ -3605,7 +3882,8 @@
      "games_missed_injured": 2,
      "grade": 98.3,
      "weight": 0.882,
-     "value": 5.175
+     "value": 5.175,
+     "score": 35.2
     },
     {
      "season": 2025,
@@ -3615,7 +3893,8 @@
      "games_missed_injured": 1,
      "grade": 47.5,
      "weight": 1.882,
-     "value": 6.184
+     "value": 6.184,
+     "score": 42.0
     },
     {
      "season": 2026,
@@ -3625,7 +3904,8 @@
      "games_missed_injured": 0,
      "grade": 34.1,
      "weight": 3.0,
-     "value": 1.435
+     "value": 1.435,
+     "score": 9.8
     }
    ],
    "value_rank": 70,
@@ -3644,6 +3924,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 3.452,
+   "score": 16.7,
    "seasons": [
     {
      "season": 2024,
@@ -3653,7 +3934,8 @@
      "games_missed_injured": 0,
      "grade": 63.6,
      "weight": 1.0,
-     "value": 1.29
+     "value": 1.29,
+     "score": 6.2
     },
     {
      "season": 2025,
@@ -3663,7 +3945,8 @@
      "games_missed_injured": 8,
      "grade": 74.6,
      "weight": 1.059,
-     "value": 7.922
+     "value": 7.922,
+     "score": 38.2
     },
     {
      "season": 2026,
@@ -3673,7 +3956,8 @@
      "games_missed_injured": 0,
      "grade": 38.1,
      "weight": 3.0,
-     "value": 2.595
+     "value": 2.595,
+     "score": 12.5
     }
    ],
    "value_rank": 71,
@@ -3696,6 +3980,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 3.178,
+   "score": 18.3,
    "seasons": [
     {
      "season": 2024,
@@ -3705,7 +3990,8 @@
      "games_missed_injured": 0,
      "grade": 47.8,
      "weight": 1.0,
-     "value": 0.602
+     "value": 0.602,
+     "score": 3.5
     },
     {
      "season": 2025,
@@ -3715,7 +4001,8 @@
      "games_missed_injured": 2,
      "grade": 56.5,
      "weight": 1.765,
-     "value": 2.448
+     "value": 2.448,
+     "score": 14.1
     },
     {
      "season": 2026,
@@ -3725,7 +4012,8 @@
      "games_missed_injured": 1,
      "grade": 43.1,
      "weight": 2.625,
-     "value": 4.65
+     "value": 4.65,
+     "score": 26.8
     }
    ],
    "value_rank": 72,
@@ -3748,6 +4036,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 3.135,
+   "score": 18.1,
    "seasons": [
     {
      "season": 2024,
@@ -3757,7 +4046,8 @@
      "games_missed_injured": 0,
      "grade": 0.0,
      "weight": 1.0,
-     "value": 0.851
+     "value": 0.851,
+     "score": 4.9
     },
     {
      "season": 2025,
@@ -3767,7 +4057,8 @@
      "games_missed_injured": 0,
      "grade": 22.1,
      "weight": 2.0,
-     "value": 3.953
+     "value": 3.953,
+     "score": 22.8
     },
     {
      "season": 2026,
@@ -3777,7 +4068,8 @@
      "games_missed_injured": 0,
      "grade": 26.6,
      "weight": 3.0,
-     "value": 3.351
+     "value": 3.351,
+     "score": 19.3
     }
    ],
    "value_rank": 73,
@@ -3800,6 +4092,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 3.095,
+   "score": 17.8,
    "seasons": [
     {
      "season": 2024,
@@ -3809,7 +4102,8 @@
      "games_missed_injured": 1,
      "grade": 35.0,
      "weight": 0.941,
-     "value": 3.095
+     "value": 3.095,
+     "score": 17.8
     },
     {
      "season": 2025,
@@ -3819,7 +4113,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -3829,7 +4124,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 74,
@@ -3848,6 +4144,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 3.007,
+   "score": 17.3,
    "seasons": [
     {
      "season": 2024,
@@ -3857,7 +4154,8 @@
      "games_missed_injured": 2,
      "grade": 56.4,
      "weight": 0.882,
-     "value": 3.957
+     "value": 3.957,
+     "score": 22.8
     },
     {
      "season": 2025,
@@ -3867,7 +4165,8 @@
      "games_missed_injured": 0,
      "grade": 27.6,
      "weight": 2.0,
-     "value": 3.043
+     "value": 3.043,
+     "score": 17.5
     },
     {
      "season": 2026,
@@ -3877,7 +4176,8 @@
      "games_missed_injured": 1,
      "grade": 41.5,
      "weight": 2.625,
-     "value": 2.661
+     "value": 2.661,
+     "score": 15.3
     }
    ],
    "value_rank": 75,
@@ -3900,6 +4200,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 2.963,
+   "score": 29.4,
    "seasons": [
     {
      "season": 2024,
@@ -3909,7 +4210,8 @@
      "games_missed_injured": 0,
      "grade": 36.6,
      "weight": 1.0,
-     "value": 1.33
+     "value": 1.33,
+     "score": 13.2
     },
     {
      "season": 2025,
@@ -3919,7 +4221,8 @@
      "games_missed_injured": 5,
      "grade": 93.3,
      "weight": 1.412,
-     "value": 6.491
+     "value": 6.491,
+     "score": 64.4
     },
     {
      "season": 2026,
@@ -3929,7 +4232,8 @@
      "games_missed_injured": 3,
      "grade": 22.5,
      "weight": 1.875,
-     "value": 1.176
+     "value": 1.176,
+     "score": 11.7
     }
    ],
    "value_rank": 76,
@@ -3952,6 +4256,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 2.959,
+   "score": 29.4,
    "seasons": [
     {
      "season": 2024,
@@ -3961,7 +4266,8 @@
      "games_missed_injured": 0,
      "grade": 98.9,
      "weight": 1.0,
-     "value": 3.85
+     "value": 3.85,
+     "score": 38.2
     },
     {
      "season": 2025,
@@ -3971,7 +4277,8 @@
      "games_missed_injured": 0,
      "grade": 29.2,
      "weight": 2.0,
-     "value": 2.042
+     "value": 2.042,
+     "score": 20.3
     },
     {
      "season": 2026,
@@ -3981,7 +4288,8 @@
      "games_missed_injured": 0,
      "grade": 33.3,
      "weight": 3.0,
-     "value": 3.273
+     "value": 3.273,
+     "score": 32.5
     }
    ],
    "value_rank": 77,
@@ -4004,6 +4312,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 2.956,
+   "score": 17.0,
    "seasons": [
     {
      "season": 2024,
@@ -4013,7 +4322,8 @@
      "games_missed_injured": 13,
      "grade": null,
      "weight": 0.235,
-     "value": 0.231
+     "value": 0.231,
+     "score": 1.3
     },
     {
      "season": 2025,
@@ -4023,7 +4333,8 @@
      "games_missed_injured": 0,
      "grade": 35.5,
      "weight": 2.0,
-     "value": 2.29
+     "value": 2.29,
+     "score": 13.2
     },
     {
      "season": 2026,
@@ -4033,7 +4344,8 @@
      "games_missed_injured": 3,
      "grade": 30.7,
      "weight": 1.875,
-     "value": 4.009
+     "value": 4.009,
+     "score": 23.1
     }
    ],
    "value_rank": 78,
@@ -4056,6 +4368,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 2.943,
+   "score": 20.6,
    "seasons": [
     {
      "season": 2024,
@@ -4065,7 +4378,8 @@
      "games_missed_injured": 0,
      "grade": 9.9,
      "weight": 1.0,
-     "value": 2.375
+     "value": 2.375,
+     "score": 16.6
     },
     {
      "season": 2025,
@@ -4075,7 +4389,8 @@
      "games_missed_injured": 5,
      "grade": 53.8,
      "weight": 1.412,
-     "value": 5.44
+     "value": 5.44,
+     "score": 38.1
     },
     {
      "season": 2026,
@@ -4085,7 +4400,8 @@
      "games_missed_injured": 1,
      "grade": 10.7,
      "weight": 2.625,
-     "value": 1.816
+     "value": 1.816,
+     "score": 12.7
     }
    ],
    "value_rank": 79,
@@ -4108,6 +4424,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 2.884,
+   "score": 31.8,
    "seasons": [
     {
      "season": 2024,
@@ -4117,7 +4434,8 @@
      "games_missed_injured": 0,
      "grade": 37.3,
      "weight": 1.0,
-     "value": 0.552
+     "value": 0.552,
+     "score": 6.1
     },
     {
      "season": 2025,
@@ -4127,7 +4445,8 @@
      "games_missed_injured": 0,
      "grade": 100.0,
      "weight": 2.0,
-     "value": 3.343
+     "value": 3.343,
+     "score": 36.9
     },
     {
      "season": 2026,
@@ -4137,7 +4456,8 @@
      "games_missed_injured": 0,
      "grade": 98.0,
      "weight": 3.0,
-     "value": 3.354
+     "value": 3.354,
+     "score": 37.0
     }
    ],
    "value_rank": 80,
@@ -4160,6 +4480,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 2.708,
+   "score": 19.0,
    "seasons": [
     {
      "season": 2024,
@@ -4169,7 +4490,8 @@
      "games_missed_injured": 4,
      "grade": 87.9,
      "weight": 0.765,
-     "value": 4.601
+     "value": 4.601,
+     "score": 32.2
     },
     {
      "season": 2025,
@@ -4179,7 +4501,8 @@
      "games_missed_injured": 8,
      "grade": 70.0,
      "weight": 1.059,
-     "value": 4.01
+     "value": 4.01,
+     "score": 28.1
     },
     {
      "season": 2026,
@@ -4189,7 +4512,8 @@
      "games_missed_injured": 3,
      "grade": 3.9,
      "weight": 1.875,
-     "value": 1.201
+     "value": 1.201,
+     "score": 8.4
     }
    ],
    "value_rank": 81,
@@ -4208,6 +4532,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 2.693,
+   "score": 35.6,
    "seasons": [
     {
      "season": 2024,
@@ -4217,7 +4542,8 @@
      "games_missed_injured": 0,
      "grade": 31.6,
      "weight": 1.0,
-     "value": 1.703
+     "value": 1.703,
+     "score": 22.5
     },
     {
      "season": 2025,
@@ -4227,7 +4553,8 @@
      "games_missed_injured": 0,
      "grade": 62.8,
      "weight": 2.0,
-     "value": 4.963
+     "value": 4.963,
+     "score": 65.5
     },
     {
      "season": 2026,
@@ -4237,7 +4564,8 @@
      "games_missed_injured": 0,
      "grade": 7.5,
      "weight": 3.0,
-     "value": 1.509
+     "value": 1.509,
+     "score": 19.9
     }
    ],
    "value_rank": 82,
@@ -4260,6 +4588,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 2.659,
+   "score": 35.1,
    "seasons": [
     {
      "season": 2024,
@@ -4269,7 +4598,8 @@
      "games_missed_injured": 5,
      "grade": 26.3,
      "weight": 0.706,
-     "value": 2.771
+     "value": 2.771,
+     "score": 36.6
     },
     {
      "season": 2025,
@@ -4279,7 +4609,8 @@
      "games_missed_injured": 2,
      "grade": 44.2,
      "weight": 1.765,
-     "value": 4.147
+     "value": 4.147,
+     "score": 54.8
     },
     {
      "season": 2026,
@@ -4289,7 +4620,8 @@
      "games_missed_injured": 2,
      "grade": 33.6,
      "weight": 2.143,
-     "value": 1.397
+     "value": 1.397,
+     "score": 18.5
     }
    ],
    "value_rank": 83,
@@ -4308,6 +4640,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 2.512,
+   "score": 17.1,
    "seasons": [
     {
      "season": 2024,
@@ -4317,7 +4650,8 @@
      "games_missed_injured": 12,
      "grade": 46.3,
      "weight": 0.294,
-     "value": 1.61
+     "value": 1.61,
+     "score": 10.9
     },
     {
      "season": 2025,
@@ -4327,7 +4661,8 @@
      "games_missed_injured": 1,
      "grade": 8.5,
      "weight": 1.882,
-     "value": 1.869
+     "value": 1.869,
+     "score": 12.7
     },
     {
      "season": 2026,
@@ -4337,7 +4672,8 @@
      "games_missed_injured": 0,
      "grade": 17.3,
      "weight": 3.0,
-     "value": 3.003
+     "value": 3.003,
+     "score": 20.4
     }
    ],
    "value_rank": 84,
@@ -4360,6 +4696,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 2.46,
+   "score": 17.2,
    "seasons": [
     {
      "season": 2024,
@@ -4369,7 +4706,8 @@
      "games_missed_injured": 5,
      "grade": 20.8,
      "weight": 0.706,
-     "value": 2.042
+     "value": 2.042,
+     "score": 14.3
     },
     {
      "season": 2025,
@@ -4379,7 +4717,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -4389,7 +4728,8 @@
      "games_missed_injured": 0,
      "grade": 24.3,
      "weight": 3.0,
-     "value": 2.558
+     "value": 2.558,
+     "score": 17.9
     }
    ],
    "value_rank": 85,
@@ -4412,6 +4752,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 2.265,
+   "score": 13.0,
    "seasons": [
     {
      "season": 2024,
@@ -4421,7 +4762,8 @@
      "games_missed_injured": 2,
      "grade": 52.2,
      "weight": 0.882,
-     "value": 1.38
+     "value": 1.38,
+     "score": 8.0
     },
     {
      "season": 2025,
@@ -4431,7 +4773,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -4441,7 +4784,8 @@
      "games_missed_injured": 0,
      "grade": 28.7,
      "weight": 3.0,
-     "value": 2.525
+     "value": 2.525,
+     "score": 14.5
     }
    ],
    "value_rank": 86,
@@ -4460,6 +4804,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 2.142,
+   "score": 15.0,
    "seasons": [
     {
      "season": 2024,
@@ -4469,7 +4814,8 @@
      "games_missed_injured": 0,
      "grade": 9.0,
      "weight": 1.0,
-     "value": 0.922
+     "value": 0.922,
+     "score": 6.5
     },
     {
      "season": 2025,
@@ -4479,7 +4825,8 @@
      "games_missed_injured": 0,
      "grade": 51.0,
      "weight": 2.0,
-     "value": 4.313
+     "value": 4.313,
+     "score": 30.2
     },
     {
      "season": 2026,
@@ -4489,7 +4836,8 @@
      "games_missed_injured": 0,
      "grade": 5.8,
      "weight": 3.0,
-     "value": 1.101
+     "value": 1.101,
+     "score": 7.7
     }
    ],
    "value_rank": 87,
@@ -4512,6 +4860,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 2.075,
+   "score": 24.0,
    "seasons": [
     {
      "season": 2024,
@@ -4521,7 +4870,8 @@
      "games_missed_injured": 0,
      "grade": 67.3,
      "weight": 1.0,
-     "value": 0.787
+     "value": 0.787,
+     "score": 9.1
     },
     {
      "season": 2025,
@@ -4531,7 +4881,8 @@
      "games_missed_injured": 0,
      "grade": 62.6,
      "weight": 2.0,
-     "value": 0.577
+     "value": 0.577,
+     "score": 6.7
     },
     {
      "season": 2026,
@@ -4541,7 +4892,8 @@
      "games_missed_injured": 0,
      "grade": 90.5,
      "weight": 3.0,
-     "value": 3.502
+     "value": 3.502,
+     "score": 40.5
     }
    ],
    "value_rank": 88,
@@ -4564,6 +4916,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 2.066,
+   "score": 23.9,
    "seasons": [
     {
      "season": 2024,
@@ -4573,7 +4926,8 @@
      "games_missed_injured": 0,
      "grade": 90.4,
      "weight": 1.0,
-     "value": 4.744
+     "value": 4.744,
+     "score": 54.9
     },
     {
      "season": 2025,
@@ -4583,7 +4937,8 @@
      "games_missed_injured": 0,
      "grade": 28.2,
      "weight": 2.0,
-     "value": 0.727
+     "value": 0.727,
+     "score": 8.4
     },
     {
      "season": 2026,
@@ -4593,7 +4948,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 89,
@@ -4616,6 +4972,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 2.057,
+   "score": 14.0,
    "seasons": [
     {
      "season": 2024,
@@ -4625,7 +4982,8 @@
      "games_missed_injured": 1,
      "grade": 40.2,
      "weight": 0.941,
-     "value": 7.924
+     "value": 7.924,
+     "score": 53.9
     },
     {
      "season": 2025,
@@ -4635,7 +4993,8 @@
      "games_missed_injured": 9,
      "grade": 12.7,
      "weight": 0.941,
-     "value": 2.748
+     "value": 2.748,
+     "score": 18.7
     },
     {
      "season": 2026,
@@ -4645,7 +5004,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 90,
@@ -4669,6 +5029,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 1.865,
+   "score": 13.1,
    "seasons": [
     {
      "season": 2024,
@@ -4678,7 +5039,8 @@
      "games_missed_injured": 0,
      "grade": 37.5,
      "weight": 1.0,
-     "value": 1.819
+     "value": 1.819,
+     "score": 12.7
     },
     {
      "season": 2025,
@@ -4688,7 +5050,8 @@
      "games_missed_injured": 0,
      "grade": 44.6,
      "weight": 2.0,
-     "value": 0.915
+     "value": 0.915,
+     "score": 6.4
     },
     {
      "season": 2026,
@@ -4698,7 +5061,8 @@
      "games_missed_injured": 0,
      "grade": 78.0,
      "weight": 3.0,
-     "value": 2.513
+     "value": 2.513,
+     "score": 17.6
     }
    ],
    "value_rank": 91,
@@ -4717,6 +5081,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 1.859,
+   "score": 20.5,
    "seasons": [
     {
      "season": 2024,
@@ -4726,7 +5091,8 @@
      "games_missed_injured": 0,
      "grade": 23.1,
      "weight": 1.0,
-     "value": 2.093
+     "value": 2.093,
+     "score": 23.1
     },
     {
      "season": 2025,
@@ -4736,7 +5102,8 @@
      "games_missed_injured": 2,
      "grade": 40.7,
      "weight": 1.765,
-     "value": 2.959
+     "value": 2.959,
+     "score": 32.6
     },
     {
      "season": 2026,
@@ -4746,7 +5113,8 @@
      "games_missed_injured": 0,
      "grade": 63.5,
      "weight": 3.0,
-     "value": 1.135
+     "value": 1.135,
+     "score": 12.5
     }
    ],
    "value_rank": 92,
@@ -4769,6 +5137,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 1.801,
+   "score": 12.2,
    "seasons": [
     {
      "season": 2024,
@@ -4778,7 +5147,8 @@
      "games_missed_injured": 0,
      "grade": 22.2,
      "weight": 1.0,
-     "value": 2.537
+     "value": 2.537,
+     "score": 17.2
     },
     {
      "season": 2025,
@@ -4788,7 +5158,8 @@
      "games_missed_injured": 2,
      "grade": 22.0,
      "weight": 1.765,
-     "value": 1.632
+     "value": 1.632,
+     "score": 11.1
     },
     {
      "season": 2026,
@@ -4798,7 +5169,8 @@
      "games_missed_injured": 0,
      "grade": 55.3,
      "weight": 3.0,
-     "value": 1.654
+     "value": 1.654,
+     "score": 11.2
     }
    ],
    "value_rank": 93,
@@ -4817,6 +5189,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 1.795,
+   "score": 23.7,
    "seasons": [
     {
      "season": 2024,
@@ -4826,7 +5199,8 @@
      "games_missed_injured": 0,
      "grade": 40.0,
      "weight": 1.0,
-     "value": 1.828
+     "value": 1.828,
+     "score": 24.1
     },
     {
      "season": 2025,
@@ -4836,7 +5210,8 @@
      "games_missed_injured": 13,
      "grade": 42.9,
      "weight": 0.471,
-     "value": 1.724
+     "value": 1.724,
+     "score": 22.8
     },
     {
      "season": 2026,
@@ -4846,7 +5221,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 94,
@@ -4865,6 +5241,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 1.715,
+   "score": 19.8,
    "seasons": [
     {
      "season": 2024,
@@ -4874,7 +5251,8 @@
      "games_missed_injured": 0,
      "grade": 77.1,
      "weight": 1.0,
-     "value": 4.24
+     "value": 4.24,
+     "score": 49.1
     },
     {
      "season": 2025,
@@ -4884,7 +5262,8 @@
      "games_missed_injured": 1,
      "grade": 27.1,
      "weight": 1.882,
-     "value": 1.126
+     "value": 1.126,
+     "score": 13.0
     },
     {
      "season": 2026,
@@ -4894,7 +5273,8 @@
      "games_missed_injured": 0,
      "grade": 45.8,
      "weight": 3.0,
-     "value": 1.243
+     "value": 1.243,
+     "score": 14.4
     }
    ],
    "value_rank": 95,
@@ -4917,6 +5297,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 1.656,
+   "score": 21.9,
    "seasons": [
     {
      "season": 2024,
@@ -4926,7 +5307,8 @@
      "games_missed_injured": 0,
      "grade": 44.0,
      "weight": 1.0,
-     "value": 1.281
+     "value": 1.281,
+     "score": 16.9
     },
     {
      "season": 2025,
@@ -4936,7 +5318,8 @@
      "games_missed_injured": 1,
      "grade": 39.2,
      "weight": 1.882,
-     "value": 1.515
+     "value": 1.515,
+     "score": 20.0
     },
     {
      "season": 2026,
@@ -4946,7 +5329,8 @@
      "games_missed_injured": 0,
      "grade": 43.9,
      "weight": 3.0,
-     "value": 1.87
+     "value": 1.87,
+     "score": 24.7
     }
    ],
    "value_rank": 96,
@@ -4965,6 +5349,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 1.623,
+   "score": 7.8,
    "seasons": [
     {
      "season": 2024,
@@ -4974,7 +5359,8 @@
      "games_missed_injured": 6,
      "grade": 37.6,
      "weight": 0.647,
-     "value": 3.031
+     "value": 3.031,
+     "score": 14.6
     },
     {
      "season": 2025,
@@ -4984,7 +5370,8 @@
      "games_missed_injured": 13,
      "grade": 48.8,
      "weight": 0.471,
-     "value": 3.196
+     "value": 3.196,
+     "score": 15.4
     },
     {
      "season": 2026,
@@ -4994,7 +5381,8 @@
      "games_missed_injured": 2,
      "grade": 42.8,
      "weight": 2.143,
-     "value": 0.853
+     "value": 0.853,
+     "score": 4.1
     }
    ],
    "value_rank": 97,
@@ -5017,6 +5405,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 1.619,
+   "score": 7.8,
    "seasons": [
     {
      "season": 2024,
@@ -5026,7 +5415,8 @@
      "games_missed_injured": 0,
      "grade": 65.4,
      "weight": 1.0,
-     "value": 5.323
+     "value": 5.323,
+     "score": 25.7
     },
     {
      "season": 2025,
@@ -5036,7 +5426,8 @@
      "games_missed_injured": 0,
      "grade": 22.4,
      "weight": 2.0,
-     "value": 2.195
+     "value": 2.195,
+     "score": 10.6
     },
     {
      "season": 2026,
@@ -5046,7 +5437,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 98,
@@ -5069,6 +5461,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 1.606,
+   "score": 5.0,
    "seasons": [
     {
      "season": 2024,
@@ -5078,7 +5471,8 @@
      "games_missed_injured": 0,
      "grade": 4.4,
      "weight": 1.0,
-     "value": 2.205
+     "value": 2.205,
+     "score": 6.9
     },
     {
      "season": 2025,
@@ -5088,7 +5482,8 @@
      "games_missed_injured": 1,
      "grade": 19.4,
      "weight": 1.882,
-     "value": 5.305
+     "value": 5.305,
+     "score": 16.6
     },
     {
      "season": 2026,
@@ -5098,7 +5493,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 5.0,
-     "value": 0.093
+     "value": 0.093,
+     "score": 0.3
     }
    ],
    "value_rank": 99,
@@ -5117,6 +5513,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 1.597,
+   "score": 9.2,
    "seasons": [
     {
      "season": 2024,
@@ -5126,7 +5523,8 @@
      "games_missed_injured": 0,
      "grade": 28.7,
      "weight": 1.0,
-     "value": 2.886
+     "value": 2.886,
+     "score": 16.6
     },
     {
      "season": 2025,
@@ -5136,7 +5534,8 @@
      "games_missed_injured": 8,
      "grade": 56.0,
      "weight": 1.059,
-     "value": 4.116
+     "value": 4.116,
+     "score": 23.7
     },
     {
      "season": 2026,
@@ -5146,7 +5545,8 @@
      "games_missed_injured": 0,
      "grade": 47.9,
      "weight": 3.0,
-     "value": 0.279
+     "value": 0.279,
+     "score": 1.6
     }
    ],
    "value_rank": 100,
@@ -5165,6 +5565,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 1.567,
+   "score": 11.0,
    "seasons": [
     {
      "season": 2024,
@@ -5174,7 +5575,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.628
+     "value": 0.628,
+     "score": 4.4
     },
     {
      "season": 2025,
@@ -5184,7 +5586,8 @@
      "games_missed_injured": 0,
      "grade": 47.8,
      "weight": 2.0,
-     "value": 0.678
+     "value": 0.678,
+     "score": 4.7
     },
     {
      "season": 2026,
@@ -5194,7 +5597,8 @@
      "games_missed_injured": 0,
      "grade": 33.0,
      "weight": 3.0,
-     "value": 2.473
+     "value": 2.473,
+     "score": 17.3
     }
    ],
    "value_rank": 101,
@@ -5213,6 +5617,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 1.546,
+   "score": 10.8,
    "seasons": [
     {
      "season": 2024,
@@ -5222,7 +5627,8 @@
      "games_missed_injured": 9,
      "grade": 33.8,
      "weight": 0.471,
-     "value": 1.53
+     "value": 1.53,
+     "score": 10.7
     },
     {
      "season": 2025,
@@ -5232,7 +5638,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.417
+     "value": 0.417,
+     "score": 2.9
     },
     {
      "season": 2026,
@@ -5242,7 +5649,8 @@
      "games_missed_injured": 0,
      "grade": 64.7,
      "weight": 3.0,
-     "value": 2.301
+     "value": 2.301,
+     "score": 16.1
     }
    ],
    "value_rank": 102,
@@ -5261,6 +5669,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 1.542,
+   "score": 17.8,
    "seasons": [
     {
      "season": 2024,
@@ -5270,7 +5679,8 @@
      "games_missed_injured": 2,
      "grade": 37.3,
      "weight": 0.882,
-     "value": 2.18
+     "value": 2.18,
+     "score": 25.2
     },
     {
      "season": 2025,
@@ -5280,7 +5690,8 @@
      "games_missed_injured": 5,
      "grade": 54.1,
      "weight": 1.412,
-     "value": 3.727
+     "value": 3.727,
+     "score": 43.1
     },
     {
      "season": 2026,
@@ -5290,7 +5701,8 @@
      "games_missed_injured": 0,
      "grade": 40.2,
      "weight": 3.0,
-     "value": 0.327
+     "value": 0.327,
+     "score": 3.8
     }
    ],
    "value_rank": 103,
@@ -5313,6 +5725,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 1.533,
+   "score": 16.9,
    "seasons": [
     {
      "season": 2024,
@@ -5322,7 +5735,8 @@
      "games_missed_injured": 3,
      "grade": 65.9,
      "weight": 0.824,
-     "value": 1.237
+     "value": 1.237,
+     "score": 13.6
     },
     {
      "season": 2025,
@@ -5332,7 +5746,8 @@
      "games_missed_injured": 13,
      "grade": 29.2,
      "weight": 0.471,
-     "value": 2.052
+     "value": 2.052,
+     "score": 22.6
     },
     {
      "season": 2026,
@@ -5342,7 +5757,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 104,
@@ -5365,6 +5781,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 1.492,
+   "score": 7.2,
    "seasons": [
     {
      "season": 2024,
@@ -5374,7 +5791,8 @@
      "games_missed_injured": 2,
      "grade": 71.1,
      "weight": 0.882,
-     "value": 2.71
+     "value": 2.71,
+     "score": 13.1
     },
     {
      "season": 2025,
@@ -5384,7 +5802,8 @@
      "games_missed_injured": 0,
      "grade": 26.9,
      "weight": 2.0,
-     "value": 1.839
+     "value": 1.839,
+     "score": 8.9
     },
     {
      "season": 2026,
@@ -5394,7 +5813,8 @@
      "games_missed_injured": 0,
      "grade": 36.2,
      "weight": 3.0,
-     "value": 0.903
+     "value": 0.903,
+     "score": 4.4
     }
    ],
    "value_rank": 105,
@@ -5417,6 +5837,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 1.478,
+   "score": 8.5,
    "seasons": [
     {
      "season": 2024,
@@ -5426,7 +5847,8 @@
      "games_missed_injured": 0,
      "grade": 44.0,
      "weight": 1.0,
-     "value": 0.855
+     "value": 0.855,
+     "score": 4.9
     },
     {
      "season": 2025,
@@ -5436,7 +5858,8 @@
      "games_missed_injured": 0,
      "grade": 36.4,
      "weight": 2.0,
-     "value": 1.703
+     "value": 1.703,
+     "score": 9.8
     },
     {
      "season": 2026,
@@ -5446,7 +5869,8 @@
      "games_missed_injured": 0,
      "grade": 50.0,
      "weight": 3.0,
-     "value": 1.536
+     "value": 1.536,
+     "score": 8.8
     }
    ],
    "value_rank": 106,
@@ -5469,6 +5893,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 1.478,
+   "score": 10.0,
    "seasons": [
     {
      "season": 2024,
@@ -5478,7 +5903,8 @@
      "games_missed_injured": 7,
      "grade": 51.3,
      "weight": 0.588,
-     "value": 0.303
+     "value": 0.303,
+     "score": 2.1
     },
     {
      "season": 2025,
@@ -5488,7 +5914,8 @@
      "games_missed_injured": 0,
      "grade": 65.4,
      "weight": 2.0,
-     "value": 1.669
+     "value": 1.669,
+     "score": 11.3
     },
     {
      "season": 2026,
@@ -5498,7 +5925,8 @@
      "games_missed_injured": 6,
      "grade": 56.4,
      "weight": 0.75,
-     "value": 1.892
+     "value": 1.892,
+     "score": 12.9
     }
    ],
    "value_rank": 107,
@@ -5517,6 +5945,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 1.465,
+   "score": 16.1,
    "seasons": [
     {
      "season": 2024,
@@ -5526,7 +5955,8 @@
      "games_missed_injured": 0,
      "grade": 28.0,
      "weight": 1.0,
-     "value": 0.652
+     "value": 0.652,
+     "score": 7.2
     },
     {
      "season": 2025,
@@ -5536,7 +5966,8 @@
      "games_missed_injured": 1,
      "grade": 20.4,
      "weight": 1.882,
-     "value": 1.489
+     "value": 1.489,
+     "score": 16.4
     },
     {
      "season": 2026,
@@ -5546,7 +5977,8 @@
      "games_missed_injured": 0,
      "grade": 45.5,
      "weight": 3.0,
-     "value": 1.72
+     "value": 1.72,
+     "score": 19.0
     }
    ],
    "value_rank": 108,
@@ -5569,6 +6001,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 1.376,
+   "score": 15.2,
    "seasons": [
     {
      "season": 2024,
@@ -5578,7 +6011,8 @@
      "games_missed_injured": 1,
      "grade": 52.8,
      "weight": 0.941,
-     "value": 0.158
+     "value": 0.158,
+     "score": 1.7
     },
     {
      "season": 2025,
@@ -5588,7 +6022,8 @@
      "games_missed_injured": 12,
      "grade": 49.5,
      "weight": 0.588,
-     "value": 0.018
+     "value": 0.018,
+     "score": 0.2
     },
     {
      "season": 2026,
@@ -5598,7 +6033,8 @@
      "games_missed_injured": 0,
      "grade": 69.9,
      "weight": 3.0,
-     "value": 2.024
+     "value": 2.024,
+     "score": 22.3
     }
    ],
    "value_rank": 109,
@@ -5621,6 +6057,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 1.363,
+   "score": 15.0,
    "seasons": [
     {
      "season": 2024,
@@ -5630,7 +6067,8 @@
      "games_missed_injured": 0,
      "grade": 76.9,
      "weight": 1.0,
-     "value": 2.204
+     "value": 2.204,
+     "score": 24.3
     },
     {
      "season": 2025,
@@ -5640,7 +6078,8 @@
      "games_missed_injured": 0,
      "grade": 86.8,
      "weight": 2.0,
-     "value": 1.497
+     "value": 1.497,
+     "score": 16.5
     },
     {
      "season": 2026,
@@ -5650,7 +6089,8 @@
      "games_missed_injured": 0,
      "grade": 64.3,
      "weight": 3.0,
-     "value": 0.994
+     "value": 0.994,
+     "score": 11.0
     }
    ],
    "value_rank": 110,
@@ -5673,6 +6113,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 1.308,
+   "score": 8.9,
    "seasons": [
     {
      "season": 2024,
@@ -5682,7 +6123,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -5692,7 +6134,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -5702,7 +6145,8 @@
      "games_missed_injured": 0,
      "grade": 65.3,
      "weight": 3.0,
-     "value": 2.615
+     "value": 2.615,
+     "score": 17.8
     }
    ],
    "value_rank": 111,
@@ -5721,6 +6165,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 1.299,
+   "score": 17.2,
    "seasons": [
     {
      "season": 2024,
@@ -5730,7 +6175,8 @@
      "games_missed_injured": 8,
      "grade": 33.5,
      "weight": 0.529,
-     "value": 1.635
+     "value": 1.635,
+     "score": 21.6
     },
     {
      "season": 2025,
@@ -5740,7 +6186,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -5750,7 +6197,8 @@
      "games_missed_injured": 1,
      "grade": 33.6,
      "weight": 2.571,
-     "value": 1.23
+     "value": 1.23,
+     "score": 16.2
     }
    ],
    "value_rank": 112,
@@ -5773,6 +6221,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 1.259,
+   "score": 13.9,
    "seasons": [
     {
      "season": 2024,
@@ -5782,7 +6231,8 @@
      "games_missed_injured": 14,
      "grade": 44.5,
      "weight": 0.176,
-     "value": 0.656
+     "value": 0.656,
+     "score": 7.2
     },
     {
      "season": 2025,
@@ -5792,7 +6242,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -5802,7 +6253,8 @@
      "games_missed_injured": 5,
      "grade": 42.8,
      "weight": 0.857,
-     "value": 1.384
+     "value": 1.384,
+     "score": 15.3
     }
    ],
    "value_rank": 113,
@@ -5821,6 +6273,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 1.242,
+   "score": 16.4,
    "seasons": [
     {
      "season": 2024,
@@ -5830,7 +6283,8 @@
      "games_missed_injured": 2,
      "grade": 18.6,
      "weight": 0.882,
-     "value": 1.057
+     "value": 1.057,
+     "score": 14.0
     },
     {
      "season": 2025,
@@ -5840,7 +6294,8 @@
      "games_missed_injured": 8,
      "grade": 30.3,
      "weight": 1.059,
-     "value": 1.583
+     "value": 1.583,
+     "score": 20.9
     },
     {
      "season": 2026,
@@ -5850,7 +6305,8 @@
      "games_missed_injured": 0,
      "grade": 41.8,
      "weight": 3.0,
-     "value": 1.176
+     "value": 1.176,
+     "score": 15.5
     }
    ],
    "value_rank": 114,
@@ -5869,6 +6325,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 1.207,
+   "score": 14.0,
    "seasons": [
     {
      "season": 2024,
@@ -5878,7 +6335,8 @@
      "games_missed_injured": 6,
      "grade": 56.2,
      "weight": 0.647,
-     "value": 0.46
+     "value": 0.46,
+     "score": 5.3
     },
     {
      "season": 2025,
@@ -5888,7 +6346,8 @@
      "games_missed_injured": 3,
      "grade": 57.6,
      "weight": 1.647,
-     "value": 3.701
+     "value": 3.701,
+     "score": 42.8
     },
     {
      "season": 2026,
@@ -5898,7 +6357,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 115,
@@ -5917,6 +6377,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 1.206,
+   "score": 13.3,
    "seasons": [
     {
      "season": 2024,
@@ -5926,7 +6387,8 @@
      "games_missed_injured": 0,
      "grade": 71.8,
      "weight": 1.0,
-     "value": 0.884
+     "value": 0.884,
+     "score": 9.7
     },
     {
      "season": 2025,
@@ -5936,7 +6398,8 @@
      "games_missed_injured": 1,
      "grade": 71.0,
      "weight": 1.882,
-     "value": 2.418
+     "value": 2.418,
+     "score": 26.7
     },
     {
      "season": 2026,
@@ -5946,7 +6409,8 @@
      "games_missed_injured": 0,
      "grade": 48.7,
      "weight": 3.0,
-     "value": 0.554
+     "value": 0.554,
+     "score": 6.1
     }
    ],
    "value_rank": 116,
@@ -5969,6 +6433,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 1.191,
+   "score": 8.1,
    "seasons": [
     {
      "season": 2024,
@@ -5978,7 +6443,8 @@
      "games_missed_injured": 10,
      "grade": 8.0,
      "weight": 0.412,
-     "value": 1.892
+     "value": 1.892,
+     "score": 12.9
     },
     {
      "season": 2025,
@@ -5988,7 +6454,8 @@
      "games_missed_injured": 10,
      "grade": 37.5,
      "weight": 0.824,
-     "value": 3.925
+     "value": 3.925,
+     "score": 26.7
     },
     {
      "season": 2026,
@@ -5998,7 +6465,8 @@
      "games_missed_injured": 0,
      "grade": 54.6,
      "weight": 3.0,
-     "value": 0.345
+     "value": 0.345,
+     "score": 2.3
     }
    ],
    "value_rank": 117,
@@ -6021,6 +6489,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 1.143,
+   "score": 5.5,
    "seasons": [
     {
      "season": 2024,
@@ -6030,7 +6499,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -6040,7 +6510,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -6050,7 +6521,8 @@
      "games_missed_injured": 0,
      "grade": 23.1,
      "weight": 3.0,
-     "value": 1.143
+     "value": 1.143,
+     "score": 5.5
     }
    ],
    "value_rank": 118,
@@ -6069,6 +6541,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 1.049,
+   "score": 10.4,
    "seasons": [
     {
      "season": 2024,
@@ -6078,7 +6551,8 @@
      "games_missed_injured": 7,
      "grade": 58.2,
      "weight": 0.588,
-     "value": 2.838
+     "value": 2.838,
+     "score": 28.2
     },
     {
      "season": 2025,
@@ -6088,7 +6562,8 @@
      "games_missed_injured": 12,
      "grade": null,
      "weight": 0.588,
-     "value": 0.043
+     "value": 0.043,
+     "score": 0.4
     },
     {
      "season": 2026,
@@ -6098,7 +6573,8 @@
      "games_missed_injured": 2,
      "grade": 1.1,
      "weight": 2.25,
-     "value": 0.845
+     "value": 0.845,
+     "score": 8.4
     }
    ],
    "value_rank": 119,
@@ -6121,6 +6597,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.987,
+   "score": 6.7,
    "seasons": [
     {
      "season": 2024,
@@ -6130,7 +6607,8 @@
      "games_missed_injured": 8,
      "grade": 43.5,
      "weight": 0.529,
-     "value": 0.708
+     "value": 0.708,
+     "score": 4.8
     },
     {
      "season": 2025,
@@ -6140,7 +6618,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -6150,7 +6629,8 @@
      "games_missed_injured": 0,
      "grade": 15.7,
      "weight": 3.0,
-     "value": 1.036
+     "value": 1.036,
+     "score": 7.0
     }
    ],
    "value_rank": 120,
@@ -6173,6 +6653,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.901,
+   "score": 5.2,
    "seasons": [
     {
      "season": 2024,
@@ -6182,7 +6663,8 @@
      "games_missed_injured": 1,
      "grade": 43.0,
      "weight": 0.941,
-     "value": 1.392
+     "value": 1.392,
+     "score": 8.0
     },
     {
      "season": 2025,
@@ -6192,7 +6674,8 @@
      "games_missed_injured": 1,
      "grade": 38.9,
      "weight": 1.882,
-     "value": 2.091
+     "value": 2.091,
+     "score": 12.0
     },
     {
      "season": 2026,
@@ -6202,7 +6685,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 121,
@@ -6221,6 +6705,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.899,
+   "score": 10.4,
    "seasons": [
     {
      "season": 2024,
@@ -6230,7 +6715,8 @@
      "games_missed_injured": 9,
      "grade": 52.6,
      "weight": 0.471,
-     "value": 0.179
+     "value": 0.179,
+     "score": 2.1
     },
     {
      "season": 2025,
@@ -6240,7 +6726,8 @@
      "games_missed_injured": 0,
      "grade": 28.2,
      "weight": 2.0,
-     "value": 1.265
+     "value": 1.265,
+     "score": 14.6
     },
     {
      "season": 2026,
@@ -6250,7 +6737,8 @@
      "games_missed_injured": 5,
      "grade": null,
      "weight": 0.857,
-     "value": 0.439
+     "value": 0.439,
+     "score": 5.1
     }
    ],
    "value_rank": 122,
@@ -6269,6 +6757,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.867,
+   "score": 10.0,
    "seasons": [
     {
      "season": 2024,
@@ -6278,7 +6767,8 @@
      "games_missed_injured": 4,
      "grade": 13.3,
      "weight": 0.765,
-     "value": 1.584
+     "value": 1.584,
+     "score": 18.3
     },
     {
      "season": 2025,
@@ -6288,7 +6778,8 @@
      "games_missed_injured": 5,
      "grade": 15.3,
      "weight": 1.412,
-     "value": 2.323
+     "value": 2.323,
+     "score": 26.9
     },
     {
      "season": 2026,
@@ -6298,7 +6789,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 123,
@@ -6321,6 +6813,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.833,
+   "score": 9.2,
    "seasons": [
     {
      "season": 2024,
@@ -6330,7 +6823,8 @@
      "games_missed_injured": 4,
      "grade": 28.2,
      "weight": 0.765,
-     "value": 0.672
+     "value": 0.672,
+     "score": 7.4
     },
     {
      "season": 2025,
@@ -6340,7 +6834,8 @@
      "games_missed_injured": 0,
      "grade": 80.6,
      "weight": 2.0,
-     "value": 1.523
+     "value": 1.523,
+     "score": 16.8
     },
     {
      "season": 2026,
@@ -6350,7 +6845,8 @@
      "games_missed_injured": 2,
      "grade": 44.9,
      "weight": 2.25,
-     "value": 0.274
+     "value": 0.274,
+     "score": 3.0
     }
    ],
    "value_rank": 124,
@@ -6373,6 +6869,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 0.783,
+   "score": 3.8,
    "seasons": [
     {
      "season": 2024,
@@ -6382,7 +6879,8 @@
      "games_missed_injured": 7,
      "grade": 20.9,
      "weight": 0.588,
-     "value": 2.874
+     "value": 2.874,
+     "score": 13.9
     },
     {
      "season": 2025,
@@ -6392,7 +6890,8 @@
      "games_missed_injured": 2,
      "grade": 22.3,
      "weight": 1.765,
-     "value": 1.418
+     "value": 1.418,
+     "score": 6.8
     },
     {
      "season": 2026,
@@ -6402,7 +6901,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 125,
@@ -6425,6 +6925,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.77,
+   "score": 8.5,
    "seasons": [
     {
      "season": 2024,
@@ -6434,7 +6935,8 @@
      "games_missed_injured": 1,
      "grade": 33.7,
      "weight": 0.941,
-     "value": 0.279
+     "value": 0.279,
+     "score": 3.1
     },
     {
      "season": 2025,
@@ -6444,7 +6946,8 @@
      "games_missed_injured": 2,
      "grade": 38.0,
      "weight": 1.765,
-     "value": 0.642
+     "value": 0.642,
+     "score": 7.1
     },
     {
      "season": 2026,
@@ -6454,7 +6957,8 @@
      "games_missed_injured": 3,
      "grade": 20.2,
      "weight": 1.875,
-     "value": 1.137
+     "value": 1.137,
+     "score": 12.5
     }
    ],
    "value_rank": 126,
@@ -6477,6 +6981,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.748,
+   "score": 8.2,
    "seasons": [
     {
      "season": 2024,
@@ -6486,7 +6991,8 @@
      "games_missed_injured": 1,
      "grade": 90.4,
      "weight": 0.941,
-     "value": 2.338
+     "value": 2.338,
+     "score": 25.8
     },
     {
      "season": 2025,
@@ -6496,7 +7002,8 @@
      "games_missed_injured": 0,
      "grade": 50.0,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -6506,7 +7013,8 @@
      "games_missed_injured": 7,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 127,
@@ -6525,6 +7033,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.732,
+   "score": 8.5,
    "seasons": [
     {
      "season": 2024,
@@ -6534,7 +7043,8 @@
      "games_missed_injured": 4,
      "grade": 45.3,
      "weight": 0.765,
-     "value": 1.029
+     "value": 1.029,
+     "score": 11.9
     },
     {
      "season": 2025,
@@ -6544,7 +7054,8 @@
      "games_missed_injured": 0,
      "grade": 23.3,
      "weight": 2.0,
-     "value": 0.618
+     "value": 0.618,
+     "score": 7.2
     },
     {
      "season": 2026,
@@ -6554,7 +7065,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 128,
@@ -6577,6 +7089,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.722,
+   "score": 8.0,
    "seasons": [
     {
      "season": 2024,
@@ -6586,7 +7099,8 @@
      "games_missed_injured": 10,
      "grade": 46.5,
      "weight": 0.412,
-     "value": 0.136
+     "value": 0.136,
+     "score": 1.5
     },
     {
      "season": 2025,
@@ -6596,7 +7110,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -6606,7 +7121,8 @@
      "games_missed_injured": 0,
      "grade": 9.8,
      "weight": 3.0,
-     "value": 0.803
+     "value": 0.803,
+     "score": 8.9
     }
    ],
    "value_rank": 129,
@@ -6625,6 +7141,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.707,
+   "score": 4.8,
    "seasons": [
     {
      "season": 2024,
@@ -6634,7 +7151,8 @@
      "games_missed_injured": 1,
      "grade": 48.3,
      "weight": 0.941,
-     "value": 0.456
+     "value": 0.456,
+     "score": 3.1
     },
     {
      "season": 2025,
@@ -6644,7 +7162,8 @@
      "games_missed_injured": 2,
      "grade": 36.0,
      "weight": 1.765,
-     "value": 2.008
+     "value": 2.008,
+     "score": 13.6
     },
     {
      "season": 2026,
@@ -6654,7 +7173,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.019
+     "value": 0.019,
+     "score": 0.1
     }
    ],
    "value_rank": 130,
@@ -6673,6 +7193,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.651,
+   "score": 3.7,
    "seasons": [
     {
      "season": 2024,
@@ -6682,7 +7203,8 @@
      "games_missed_injured": 3,
      "grade": 48.9,
      "weight": 0.824,
-     "value": 0.114
+     "value": 0.114,
+     "score": 0.7
     },
     {
      "season": 2025,
@@ -6692,7 +7214,8 @@
      "games_missed_injured": 3,
      "grade": 41.8,
      "weight": 1.647,
-     "value": 2.104
+     "value": 2.104,
+     "score": 12.1
     },
     {
      "season": 2026,
@@ -6702,7 +7225,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 131,
@@ -6721,6 +7245,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 0.638,
+   "score": 4.5,
    "seasons": [
     {
      "season": 2024,
@@ -6730,7 +7255,8 @@
      "games_missed_injured": 4,
      "grade": 38.1,
      "weight": 0.765,
-     "value": 2.289
+     "value": 2.289,
+     "score": 16.0
     },
     {
      "season": 2025,
@@ -6740,7 +7266,8 @@
      "games_missed_injured": 0,
      "grade": 36.7,
      "weight": 2.0,
-     "value": 0.964
+     "value": 0.964,
+     "score": 6.7
     },
     {
      "season": 2026,
@@ -6750,7 +7277,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 132,
@@ -6769,6 +7297,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.62,
+   "score": 7.2,
    "seasons": [
     {
      "season": 2024,
@@ -6778,7 +7307,8 @@
      "games_missed_injured": 1,
      "grade": 47.1,
      "weight": 0.941,
-     "value": 0.103
+     "value": 0.103,
+     "score": 1.2
     },
     {
      "season": 2025,
@@ -6788,7 +7318,8 @@
      "games_missed_injured": 0,
      "grade": 52.7,
      "weight": 2.0,
-     "value": 0.71
+     "value": 0.71,
+     "score": 8.2
     },
     {
      "season": 2026,
@@ -6798,7 +7329,8 @@
      "games_missed_injured": 1,
      "grade": 5.4,
      "weight": 2.625,
-     "value": 0.737
+     "value": 0.737,
+     "score": 8.5
     }
    ],
    "value_rank": 133,
@@ -6821,6 +7353,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.591,
+   "score": 3.4,
    "seasons": [
     {
      "season": 2024,
@@ -6830,7 +7363,8 @@
      "games_missed_injured": 2,
      "grade": 17.0,
      "weight": 0.882,
-     "value": 2.599
+     "value": 2.599,
+     "score": 15.0
     },
     {
      "season": 2025,
@@ -6840,7 +7374,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -6850,7 +7385,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 134,
@@ -6873,6 +7409,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 0.573,
+   "score": 7.6,
    "seasons": [
     {
      "season": 2024,
@@ -6882,7 +7419,8 @@
      "games_missed_injured": 1,
      "grade": 28.9,
      "weight": 0.941,
-     "value": 1.934
+     "value": 1.934,
+     "score": 25.5
     },
     {
      "season": 2025,
@@ -6892,7 +7430,8 @@
      "games_missed_injured": 4,
      "grade": 8.2,
      "weight": 1.529,
-     "value": 0.858
+     "value": 0.858,
+     "score": 11.3
     },
     {
      "season": 2026,
@@ -6902,7 +7441,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 135,
@@ -6925,6 +7465,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.521,
+   "score": 6.0,
    "seasons": [
     {
      "season": 2024,
@@ -6934,7 +7475,8 @@
      "games_missed_injured": 3,
      "grade": 37.0,
      "weight": 0.824,
-     "value": 0.41
+     "value": 0.41,
+     "score": 4.7
     },
     {
      "season": 2025,
@@ -6944,7 +7486,8 @@
      "games_missed_injured": 0,
      "grade": 65.2,
      "weight": 2.0,
-     "value": 0.595
+     "value": 0.595,
+     "score": 6.9
     },
     {
      "season": 2026,
@@ -6954,7 +7497,8 @@
      "games_missed_injured": 0,
      "grade": 8.9,
      "weight": 3.0,
-     "value": 0.501
+     "value": 0.501,
+     "score": 5.8
     }
    ],
    "value_rank": 136,
@@ -6977,6 +7521,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.505,
+   "score": 5.6,
    "seasons": [
     {
      "season": 2024,
@@ -6986,7 +7531,8 @@
      "games_missed_injured": 0,
      "grade": 13.0,
      "weight": 1.0,
-     "value": 0.389
+     "value": 0.389,
+     "score": 4.3
     },
     {
      "season": 2025,
@@ -6996,7 +7542,8 @@
      "games_missed_injured": 2,
      "grade": 29.5,
      "weight": 1.765,
-     "value": 0.619
+     "value": 0.619,
+     "score": 6.8
     },
     {
      "season": 2026,
@@ -7006,7 +7553,8 @@
      "games_missed_injured": 1,
      "grade": 24.5,
      "weight": 2.571,
-     "value": 0.473
+     "value": 0.473,
+     "score": 5.2
     }
    ],
    "value_rank": 137,
@@ -7025,6 +7573,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.498,
+   "score": 3.4,
    "seasons": [
     {
      "season": 2024,
@@ -7034,7 +7583,8 @@
      "games_missed_injured": 5,
      "grade": 17.9,
      "weight": 0.706,
-     "value": 3.514
+     "value": 3.514,
+     "score": 23.9
     },
     {
      "season": 2025,
@@ -7044,7 +7594,8 @@
      "games_missed_injured": 2,
      "grade": 52.2,
      "weight": 1.765,
-     "value": 0.139
+     "value": 0.139,
+     "score": 0.9
     },
     {
      "season": 2026,
@@ -7054,7 +7605,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 138,
@@ -7077,6 +7629,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 0.485,
+   "score": 2.3,
    "seasons": [
     {
      "season": 2024,
@@ -7086,7 +7639,8 @@
      "games_missed_injured": 0,
      "grade": 43.8,
      "weight": 1.0,
-     "value": 2.53
+     "value": 2.53,
+     "score": 12.2
     },
     {
      "season": 2025,
@@ -7096,7 +7650,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.19
+     "value": 0.19,
+     "score": 0.9
     },
     {
      "season": 2026,
@@ -7106,7 +7661,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 139,
@@ -7125,6 +7681,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.478,
+   "score": 5.5,
    "seasons": [
     {
      "season": 2024,
@@ -7134,7 +7691,8 @@
      "games_missed_injured": 1,
      "grade": 60.5,
      "weight": 0.941,
-     "value": 0.788
+     "value": 0.788,
+     "score": 9.1
     },
     {
      "season": 2025,
@@ -7144,7 +7702,8 @@
      "games_missed_injured": 1,
      "grade": 63.5,
      "weight": 1.882,
-     "value": 0.582
+     "value": 0.582,
+     "score": 6.7
     },
     {
      "season": 2026,
@@ -7154,7 +7713,8 @@
      "games_missed_injured": 1,
      "grade": 40.1,
      "weight": 2.625,
-     "value": 0.292
+     "value": 0.292,
+     "score": 3.4
     }
    ],
    "value_rank": 140,
@@ -7173,6 +7733,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 0.437,
+   "score": 3.1,
    "seasons": [
     {
      "season": 2024,
@@ -7182,7 +7743,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -7192,7 +7754,8 @@
      "games_missed_injured": 0,
      "grade": 55.1,
      "weight": 2.0,
-     "value": 0.437
+     "value": 0.437,
+     "score": 3.1
     },
     {
      "season": 2026,
@@ -7202,7 +7765,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 141,
@@ -7225,6 +7789,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 0.418,
+   "score": 2.9,
    "seasons": [
     {
      "season": 2024,
@@ -7234,7 +7799,8 @@
      "games_missed_injured": 6,
      "grade": 33.4,
      "weight": 0.647,
-     "value": 1.805
+     "value": 1.805,
+     "score": 12.6
     },
     {
      "season": 2025,
@@ -7244,7 +7810,8 @@
      "games_missed_injured": 0,
      "grade": 56.8,
      "weight": 2.0,
-     "value": 0.596
+     "value": 0.596,
+     "score": 4.2
     },
     {
      "season": 2026,
@@ -7254,7 +7821,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 142,
@@ -7273,6 +7841,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 0.399,
+   "score": 1.2,
    "seasons": [
     {
      "season": 2024,
@@ -7282,7 +7851,8 @@
      "games_missed_injured": 0,
      "grade": 56.2,
      "weight": 1.0,
-     "value": 1.374
+     "value": 1.374,
+     "score": 4.3
     },
     {
      "season": 2025,
@@ -7292,7 +7862,8 @@
      "games_missed_injured": 0,
      "grade": 46.4,
      "weight": 2.0,
-     "value": 0.908
+     "value": 0.908,
+     "score": 2.8
     },
     {
      "season": 2026,
@@ -7302,7 +7873,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 5.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 143,
@@ -7321,6 +7893,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.398,
+   "score": 2.3,
    "seasons": [
     {
      "season": 2024,
@@ -7330,7 +7903,8 @@
      "games_missed_injured": 9,
      "grade": 41.8,
      "weight": 0.471,
-     "value": 2.938
+     "value": 2.938,
+     "score": 16.9
     },
     {
      "season": 2025,
@@ -7340,7 +7914,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -7350,7 +7925,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 144,
@@ -7369,6 +7945,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.373,
+   "score": 4.1,
    "seasons": [
     {
      "season": 2024,
@@ -7378,7 +7955,8 @@
      "games_missed_injured": 0,
      "grade": 49.5,
      "weight": 1.0,
-     "value": 0.011
+     "value": 0.011,
+     "score": 0.1
     },
     {
      "season": 2025,
@@ -7388,7 +7966,8 @@
      "games_missed_injured": 0,
      "grade": 44.5,
      "weight": 2.0,
-     "value": 0.157
+     "value": 0.157,
+     "score": 1.7
     },
     {
      "season": 2026,
@@ -7398,7 +7977,8 @@
      "games_missed_injured": 0,
      "grade": 46.1,
      "weight": 3.0,
-     "value": 0.637
+     "value": 0.637,
+     "score": 7.0
     }
    ],
    "value_rank": 145,
@@ -7421,6 +8001,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.368,
+   "score": 4.3,
    "seasons": [
     {
      "season": 2024,
@@ -7430,7 +8011,8 @@
      "games_missed_injured": 6,
      "grade": 52.2,
      "weight": 0.647,
-     "value": 2.072
+     "value": 2.072,
+     "score": 24.0
     },
     {
      "season": 2025,
@@ -7440,7 +8022,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -7450,7 +8033,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 146,
@@ -7469,6 +8053,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 0.366,
+   "score": 1.8,
    "seasons": [
     {
      "season": 2024,
@@ -7478,7 +8063,8 @@
      "games_missed_injured": 0,
      "grade": 42.5,
      "weight": 1.0,
-     "value": 0.538
+     "value": 0.538,
+     "score": 2.6
     },
     {
      "season": 2025,
@@ -7488,7 +8074,8 @@
      "games_missed_injured": 13,
      "grade": null,
      "weight": 0.471,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -7498,7 +8085,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 147,
@@ -7517,6 +8105,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.34,
+   "score": 2.0,
    "seasons": [
     {
      "season": 2024,
@@ -7526,7 +8115,8 @@
      "games_missed_injured": 0,
      "grade": 50.8,
      "weight": 1.0,
-     "value": 0.17
+     "value": 0.17,
+     "score": 1.0
     },
     {
      "season": 2025,
@@ -7536,7 +8126,8 @@
      "games_missed_injured": 6,
      "grade": 48.0,
      "weight": 1.294,
-     "value": 1.011
+     "value": 1.011,
+     "score": 5.8
     },
     {
      "season": 2026,
@@ -7546,7 +8137,8 @@
      "games_missed_injured": 2,
      "grade": 50.0,
      "weight": 2.25,
-     "value": 0.03
+     "value": 0.03,
+     "score": 0.2
     }
    ],
    "value_rank": 148,
@@ -7565,6 +8157,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.313,
+   "score": 3.4,
    "seasons": [
     {
      "season": 2024,
@@ -7574,7 +8167,8 @@
      "games_missed_injured": 10,
      "grade": 44.2,
      "weight": 0.412,
-     "value": 0.37
+     "value": 0.37,
+     "score": 4.1
     },
     {
      "season": 2025,
@@ -7584,7 +8178,8 @@
      "games_missed_injured": 0,
      "grade": 41.7,
      "weight": 2.0,
-     "value": 0.646
+     "value": 0.646,
+     "score": 7.1
     },
     {
      "season": 2026,
@@ -7594,7 +8189,8 @@
      "games_missed_injured": 0,
      "grade": 46.4,
      "weight": 3.0,
-     "value": 0.083
+     "value": 0.083,
+     "score": 0.9
     }
    ],
    "value_rank": 149,
@@ -7613,6 +8209,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 0.277,
+   "score": 1.9,
    "seasons": [
     {
      "season": 2024,
@@ -7622,7 +8219,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.328
+     "value": 0.328,
+     "score": 2.3
     },
     {
      "season": 2025,
@@ -7632,7 +8230,8 @@
      "games_missed_injured": 0,
      "grade": 55.9,
      "weight": 2.0,
-     "value": 0.666
+     "value": 0.666,
+     "score": 4.7
     },
     {
      "season": 2026,
@@ -7642,7 +8241,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 150,
@@ -7661,6 +8261,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 0.269,
+   "score": 1.9,
    "seasons": [
     {
      "season": 2024,
@@ -7670,7 +8271,8 @@
      "games_missed_injured": 0,
      "grade": 45.3,
      "weight": 1.0,
-     "value": 1.175
+     "value": 1.175,
+     "score": 8.2
     },
     {
      "season": 2025,
@@ -7680,7 +8282,8 @@
      "games_missed_injured": 0,
      "grade": 45.8,
      "weight": 2.0,
-     "value": 0.22
+     "value": 0.22,
+     "score": 1.5
     },
     {
      "season": 2026,
@@ -7690,7 +8293,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 151,
@@ -7709,6 +8313,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 0.251,
+   "score": 2.5,
    "seasons": [
     {
      "season": 2024,
@@ -7718,7 +8323,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.443
+     "value": 0.443,
+     "score": 4.4
     },
     {
      "season": 2025,
@@ -7728,7 +8334,8 @@
      "games_missed_injured": 0,
      "grade": 40.4,
      "weight": 2.0,
-     "value": 0.362
+     "value": 0.362,
+     "score": 3.6
     },
     {
      "season": 2026,
@@ -7738,7 +8345,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.113
+     "value": 0.113,
+     "score": 1.1
     }
    ],
    "value_rank": 152,
@@ -7761,6 +8369,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.205,
+   "score": 1.2,
    "seasons": [
     {
      "season": 2024,
@@ -7770,7 +8379,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -7780,7 +8390,8 @@
      "games_missed_injured": 0,
      "grade": 45.0,
      "weight": 2.0,
-     "value": 0.513
+     "value": 0.513,
+     "score": 3.0
     },
     {
      "season": 2026,
@@ -7790,7 +8401,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 153,
@@ -7813,6 +8425,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.197,
+   "score": 1.1,
    "seasons": [
     {
      "season": 2024,
@@ -7822,7 +8435,8 @@
      "games_missed_injured": 1,
      "grade": 36.3,
      "weight": 0.941,
-     "value": 1.169
+     "value": 1.169,
+     "score": 6.7
     },
     {
      "season": 2025,
@@ -7832,7 +8446,8 @@
      "games_missed_injured": 3,
      "grade": null,
      "weight": 1.647,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -7842,7 +8457,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 154,
@@ -7861,6 +8477,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.197,
+   "score": 2.2,
    "seasons": [
     {
      "season": 2024,
@@ -7870,7 +8487,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -7880,7 +8498,8 @@
      "games_missed_injured": 0,
      "grade": 27.8,
      "weight": 2.0,
-     "value": 0.279
+     "value": 0.279,
+     "score": 3.1
     },
     {
      "season": 2026,
@@ -7890,7 +8509,8 @@
      "games_missed_injured": 0,
      "grade": 54.8,
      "weight": 3.0,
-     "value": 0.209
+     "value": 0.209,
+     "score": 2.3
     }
    ],
    "value_rank": 155,
@@ -7909,6 +8529,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.189,
+   "score": 1.3,
    "seasons": [
     {
      "season": 2024,
@@ -7918,7 +8539,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -7928,7 +8550,8 @@
      "games_missed_injured": 1,
      "grade": 50.7,
      "weight": 1.882,
-     "value": 0.366
+     "value": 0.366,
+     "score": 2.5
     },
     {
      "season": 2026,
@@ -7938,7 +8561,8 @@
      "games_missed_injured": 0,
      "grade": 47.4,
      "weight": 3.0,
-     "value": 0.141
+     "value": 0.141,
+     "score": 1.0
     }
    ],
    "value_rank": 156,
@@ -7957,6 +8581,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 0.176,
+   "score": 0.8,
    "seasons": [
     {
      "season": 2024,
@@ -7966,7 +8591,8 @@
      "games_missed_injured": 0,
      "grade": 27.5,
      "weight": 1.0,
-     "value": 1.055
+     "value": 1.055,
+     "score": 5.1
     },
     {
      "season": 2025,
@@ -7976,7 +8602,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -7986,7 +8613,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 157,
@@ -8009,6 +8637,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 0.173,
+   "score": 0.8,
    "seasons": [
     {
      "season": 2024,
@@ -8018,7 +8647,8 @@
      "games_missed_injured": 0,
      "grade": 54.3,
      "weight": 1.0,
-     "value": 0.379
+     "value": 0.379,
+     "score": 1.8
     },
     {
      "season": 2025,
@@ -8028,7 +8658,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.069
+     "value": 0.069,
+     "score": 0.3
     },
     {
      "season": 2026,
@@ -8038,7 +8669,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 158,
@@ -8057,6 +8689,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 0.169,
+   "score": 1.7,
    "seasons": [
     {
      "season": 2024,
@@ -8066,7 +8699,8 @@
      "games_missed_injured": 2,
      "grade": null,
      "weight": 0.882,
-     "value": 0.158
+     "value": 0.158,
+     "score": 1.6
     },
     {
      "season": 2025,
@@ -8076,7 +8710,8 @@
      "games_missed_injured": 0,
      "grade": 40.9,
      "weight": 2.0,
-     "value": 0.426
+     "value": 0.426,
+     "score": 4.2
     },
     {
      "season": 2026,
@@ -8086,7 +8721,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 159,
@@ -8105,6 +8741,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 0.162,
+   "score": 1.6,
    "seasons": [
     {
      "season": 2024,
@@ -8114,7 +8751,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -8124,7 +8762,8 @@
      "games_missed_injured": 0,
      "grade": 40.8,
      "weight": 2.0,
-     "value": 0.333
+     "value": 0.333,
+     "score": 3.3
     },
     {
      "season": 2026,
@@ -8134,7 +8773,8 @@
      "games_missed_injured": 0,
      "grade": 52.2,
      "weight": 3.0,
-     "value": 0.102
+     "value": 0.102,
+     "score": 1.0
     }
    ],
    "value_rank": 160,
@@ -8157,6 +8797,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.156,
+   "score": 0.9,
    "seasons": [
     {
      "season": 2024,
@@ -8166,7 +8807,8 @@
      "games_missed_injured": 2,
      "grade": 46.0,
      "weight": 0.882,
-     "value": 1.042
+     "value": 1.042,
+     "score": 6.0
     },
     {
      "season": 2025,
@@ -8176,7 +8818,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8186,7 +8829,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 161,
@@ -8209,6 +8853,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.152,
+   "score": 0.9,
    "seasons": [
     {
      "season": 2024,
@@ -8218,7 +8863,8 @@
      "games_missed_injured": 6,
      "grade": 41.2,
      "weight": 0.647,
-     "value": 1.331
+     "value": 1.331,
+     "score": 7.7
     },
     {
      "season": 2025,
@@ -8228,7 +8874,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8238,7 +8885,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 162,
@@ -8261,6 +8909,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.145,
+   "score": 1.0,
    "seasons": [
     {
      "season": 2024,
@@ -8270,7 +8919,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -8280,7 +8930,8 @@
      "games_missed_injured": 0,
      "grade": 55.6,
      "weight": 2.0,
-     "value": 0.362
+     "value": 0.362,
+     "score": 2.5
     },
     {
      "season": 2026,
@@ -8290,7 +8941,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 163,
@@ -8309,6 +8961,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 0.133,
+   "score": 1.8,
    "seasons": [
     {
      "season": 2024,
@@ -8318,7 +8971,8 @@
      "games_missed_injured": 10,
      "grade": 48.6,
      "weight": 0.412,
-     "value": 1.013
+     "value": 1.013,
+     "score": 13.4
     },
     {
      "season": 2025,
@@ -8328,7 +8982,8 @@
      "games_missed_injured": 0,
      "grade": 50.3,
      "weight": 2.0,
-     "value": 0.134
+     "value": 0.134,
+     "score": 1.8
     },
     {
      "season": 2026,
@@ -8338,7 +8993,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.012
+     "value": 0.012,
+     "score": 0.2
     }
    ],
    "value_rank": 164,
@@ -8357,6 +9013,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 0.131,
+   "score": 1.3,
    "seasons": [
     {
      "season": 2024,
@@ -8366,7 +9023,8 @@
      "games_missed_injured": 1,
      "grade": 51.9,
      "weight": 0.941,
-     "value": 0.075
+     "value": 0.075,
+     "score": 0.7
     },
     {
      "season": 2025,
@@ -8376,7 +9034,8 @@
      "games_missed_injured": 11,
      "grade": 53.2,
      "weight": 0.706,
-     "value": 0.76
+     "value": 0.76,
+     "score": 7.5
     },
     {
      "season": 2026,
@@ -8386,7 +9045,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 165,
@@ -8405,6 +9065,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.127,
+   "score": 0.9,
    "seasons": [
     {
      "season": 2024,
@@ -8414,7 +9075,8 @@
      "games_missed_injured": 0,
      "grade": 41.8,
      "weight": 1.0,
-     "value": 0.761
+     "value": 0.761,
+     "score": 5.2
     },
     {
      "season": 2025,
@@ -8424,7 +9086,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8434,7 +9097,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 166,
@@ -8453,6 +9117,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 0.124,
+   "score": 1.6,
    "seasons": [
     {
      "season": 2024,
@@ -8462,7 +9127,8 @@
      "games_missed_injured": 0,
      "grade": 58.6,
      "weight": 1.0,
-     "value": 0.216
+     "value": 0.216,
+     "score": 2.9
     },
     {
      "season": 2025,
@@ -8472,7 +9138,8 @@
      "games_missed_injured": 0,
      "grade": 50.6,
      "weight": 2.0,
-     "value": 0.264
+     "value": 0.264,
+     "score": 3.5
     },
     {
      "season": 2026,
@@ -8482,7 +9149,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 167,
@@ -8501,6 +9169,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.116,
+   "score": 0.8,
    "seasons": [
     {
      "season": 2024,
@@ -8510,7 +9179,8 @@
      "games_missed_injured": 0,
      "grade": 40.0,
      "weight": 1.0,
-     "value": 0.466
+     "value": 0.466,
+     "score": 3.2
     },
     {
      "season": 2025,
@@ -8520,7 +9190,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8530,7 +9201,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 168,
@@ -8549,6 +9221,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.113,
+   "score": 0.8,
    "seasons": [
     {
      "season": 2024,
@@ -8558,7 +9231,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -8568,7 +9242,8 @@
      "games_missed_injured": 0,
      "grade": 49.8,
      "weight": 2.0,
-     "value": 0.34
+     "value": 0.34,
+     "score": 2.3
     },
     {
      "season": 2026,
@@ -8578,7 +9253,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 169,
@@ -8602,6 +9278,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 0.106,
+   "score": 0.5,
    "seasons": [
     {
      "season": 2024,
@@ -8611,7 +9288,8 @@
      "games_missed_injured": 11,
      "grade": 49.0,
      "weight": 0.353,
-     "value": 1.227
+     "value": 1.227,
+     "score": 5.9
     },
     {
      "season": 2025,
@@ -8621,7 +9299,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.068
+     "value": 0.068,
+     "score": 0.3
     },
     {
      "season": 2026,
@@ -8631,7 +9310,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 170,
@@ -8654,6 +9334,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 0.104,
+   "score": 0.5,
    "seasons": [
     {
      "season": 2024,
@@ -8663,7 +9344,8 @@
      "games_missed_injured": 3,
      "grade": 48.0,
      "weight": 0.824,
-     "value": 0.482
+     "value": 0.482,
+     "score": 2.3
     },
     {
      "season": 2025,
@@ -8673,7 +9355,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8683,7 +9366,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 171,
@@ -8702,6 +9386,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.098,
+   "score": 1.1,
    "seasons": [
     {
      "season": 2024,
@@ -8711,7 +9396,8 @@
      "games_missed_injured": 0,
      "grade": 39.6,
      "weight": 1.0,
-     "value": 0.294
+     "value": 0.294,
+     "score": 3.4
     },
     {
      "season": 2025,
@@ -8721,7 +9407,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8731,7 +9418,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 172,
@@ -8750,6 +9438,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.098,
+   "score": 1.1,
    "seasons": [
     {
      "season": 2024,
@@ -8759,7 +9448,8 @@
      "games_missed_injured": 3,
      "grade": 50.0,
      "weight": 0.824,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -8769,7 +9459,8 @@
      "games_missed_injured": 0,
      "grade": 49.1,
      "weight": 2.0,
-     "value": 0.038
+     "value": 0.038,
+     "score": 0.4
     },
     {
      "season": 2026,
@@ -8779,7 +9470,8 @@
      "games_missed_injured": 5,
      "grade": 47.9,
      "weight": 0.857,
-     "value": 0.332
+     "value": 0.332,
+     "score": 3.8
     }
    ],
    "value_rank": 173,
@@ -8798,6 +9490,7 @@
    "room": "EDGE",
    "positional_value": 14.5,
    "value": 0.093,
+   "score": 0.5,
    "seasons": [
     {
      "season": 2024,
@@ -8807,7 +9500,8 @@
      "games_missed_injured": 0,
      "grade": 52.7,
      "weight": 1.0,
-     "value": 0.28
+     "value": 0.28,
+     "score": 1.4
     },
     {
      "season": 2025,
@@ -8817,7 +9511,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8827,7 +9522,8 @@
      "games_missed_injured": 7,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 174,
@@ -8846,6 +9542,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.086,
+   "score": 1.0,
    "seasons": [
     {
      "season": 2024,
@@ -8855,7 +9552,8 @@
      "games_missed_injured": 0,
      "grade": 56.1,
      "weight": 1.0,
-     "value": 0.342
+     "value": 0.342,
+     "score": 4.0
     },
     {
      "season": 2025,
@@ -8865,7 +9563,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8875,7 +9574,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 175,
@@ -8894,6 +9594,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.081,
+   "score": 0.5,
    "seasons": [
     {
      "season": 2024,
@@ -8903,7 +9604,8 @@
      "games_missed_injured": 0,
      "grade": 47.0,
      "weight": 1.0,
-     "value": 0.486
+     "value": 0.486,
+     "score": 2.8
     },
     {
      "season": 2025,
@@ -8913,7 +9615,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8923,7 +9626,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 176,
@@ -8942,6 +9646,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 0.072,
+   "score": 0.5,
    "seasons": [
     {
      "season": 2024,
@@ -8951,17 +9656,19 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
-     "team": "HOU",
+     "team": "KC",
      "snap_share": 0.0,
      "games": 0,
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -8971,7 +9678,8 @@
      "games_missed_injured": 0,
      "grade": 47.8,
      "weight": 3.0,
-     "value": 0.143
+     "value": 0.143,
+     "score": 1.0
     }
    ],
    "value_rank": 177,
@@ -8990,6 +9698,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 0.062,
+   "score": 0.8,
    "seasons": [
     {
      "season": 2024,
@@ -8999,17 +9708,19 @@
      "games_missed_injured": 0,
      "grade": 45.7,
      "weight": 1.0,
-     "value": 0.375
+     "value": 0.375,
+     "score": 5.0
     },
     {
      "season": 2025,
-     "team": "PIT",
+     "team": "PHI",
      "snap_share": 0.0,
      "games": 0,
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9019,7 +9730,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 178,
@@ -9038,6 +9750,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.018,
+   "score": 0.2,
    "seasons": [
     {
      "season": 2024,
@@ -9047,7 +9760,8 @@
      "games_missed_injured": 7,
      "grade": 43.5,
      "weight": 0.588,
-     "value": 0.171
+     "value": 0.171,
+     "score": 1.9
     },
     {
      "season": 2025,
@@ -9057,7 +9771,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9067,7 +9782,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 179,
@@ -9086,6 +9802,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.014,
+   "score": 0.2,
    "seasons": [
     {
      "season": 2024,
@@ -9095,7 +9812,8 @@
      "games_missed_injured": 2,
      "grade": null,
      "weight": 0.882,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9105,7 +9823,8 @@
      "games_missed_injured": 5,
      "grade": null,
      "weight": 1.412,
-     "value": 0.025
+     "value": 0.025,
+     "score": 0.3
     },
     {
      "season": 2026,
@@ -9115,7 +9834,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.013
+     "value": 0.013,
+     "score": 0.2
     }
    ],
    "value_rank": 180,
@@ -9134,6 +9854,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.014,
+   "score": 0.1,
    "seasons": [
     {
      "season": 2024,
@@ -9143,7 +9864,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9153,7 +9875,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.043
+     "value": 0.043,
+     "score": 0.2
     },
     {
      "season": 2026,
@@ -9163,7 +9886,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 181,
@@ -9182,6 +9906,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 0.01,
+   "score": 0.1,
    "seasons": [
     {
      "season": 2024,
@@ -9191,7 +9916,8 @@
      "games_missed_injured": 11,
      "grade": null,
      "weight": 0.353,
-     "value": 0.149
+     "value": 0.149,
+     "score": 1.5
     },
     {
      "season": 2025,
@@ -9201,7 +9927,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9211,7 +9938,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 182,
@@ -9234,6 +9962,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.007,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9243,7 +9972,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9253,7 +9983,8 @@
      "games_missed_injured": 0,
      "grade": 49.7,
      "weight": 2.0,
-     "value": 0.021
+     "value": 0.021,
+     "score": 0.1
     },
     {
      "season": 2026,
@@ -9263,7 +9994,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 183,
@@ -9286,6 +10018,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.006,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9295,7 +10028,8 @@
      "games_missed_injured": 10,
      "grade": null,
      "weight": 0.412,
-     "value": 0.083
+     "value": 0.083,
+     "score": 0.5
     },
     {
      "season": 2025,
@@ -9305,7 +10039,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9315,7 +10050,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 184,
@@ -9334,6 +10070,7 @@
    "room": "RB",
    "positional_value": 6.35,
    "value": 0.005,
+   "score": 0.1,
    "seasons": [
     {
      "season": 2024,
@@ -9343,7 +10080,8 @@
      "games_missed_injured": 11,
      "grade": 50.0,
      "weight": 0.353,
-     "value": 0.078
+     "value": 0.078,
+     "score": 0.9
     },
     {
      "season": 2025,
@@ -9353,7 +10091,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9363,7 +10102,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 185,
@@ -9382,6 +10122,7 @@
    "room": "TE",
    "positional_value": 5.3,
    "value": 0.004,
+   "score": 0.1,
    "seasons": [
     {
      "season": 2024,
@@ -9391,7 +10132,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.023
+     "value": 0.023,
+     "score": 0.3
     },
     {
      "season": 2025,
@@ -9401,7 +10143,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9411,7 +10154,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 186,
@@ -9434,6 +10178,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9443,7 +10188,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9453,7 +10199,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9463,7 +10210,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 187,
@@ -9482,6 +10230,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9491,7 +10240,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9501,7 +10251,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9511,7 +10262,8 @@
      "games_missed_injured": 1,
      "grade": null,
      "weight": 2.625,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 188,
@@ -9530,6 +10282,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9539,7 +10292,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9549,7 +10303,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9559,7 +10314,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 5.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 189,
@@ -9578,6 +10334,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9587,7 +10344,8 @@
      "games_missed_injured": 17,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9597,7 +10355,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9607,7 +10366,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 190,
@@ -9626,6 +10386,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9635,7 +10396,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9645,7 +10407,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9655,7 +10418,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 191,
@@ -9674,6 +10438,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9683,7 +10448,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9693,7 +10459,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9703,7 +10470,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 5.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 192,
@@ -9722,6 +10490,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9731,7 +10500,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9741,7 +10511,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9751,7 +10522,8 @@
      "games_missed_injured": 8,
      "grade": null,
      "weight": 0.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 193,
@@ -9770,6 +10542,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9779,7 +10552,8 @@
      "games_missed_injured": 6,
      "grade": null,
      "weight": 0.647,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9789,7 +10563,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9799,7 +10574,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 194,
@@ -9818,6 +10594,7 @@
    "room": "CB",
    "positional_value": 10.3,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9827,7 +10604,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9837,7 +10615,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9847,7 +10626,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 195,
@@ -9866,6 +10646,7 @@
    "room": "LB",
    "positional_value": 6.05,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9875,7 +10656,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9885,7 +10667,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9895,7 +10678,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 196,
@@ -9914,6 +10698,7 @@
    "room": "IDL",
    "positional_value": 10.0,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9923,7 +10708,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9933,7 +10719,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9943,7 +10730,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 197,
@@ -9962,6 +10750,7 @@
    "room": "QB",
    "positional_value": 22.4,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -9971,7 +10760,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -9981,7 +10771,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -9991,7 +10782,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 5.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 198,
@@ -10014,6 +10806,7 @@
    "room": "WR",
    "positional_value": 12.15,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -10023,7 +10816,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -10033,7 +10827,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -10043,7 +10838,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 199,
@@ -10062,6 +10858,7 @@
    "room": "S",
    "positional_value": 7.05,
    "value": 0.0,
+   "score": 0.0,
    "seasons": [
     {
      "season": 2024,
@@ -10071,7 +10868,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 1.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2025,
@@ -10081,7 +10879,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 2.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     },
     {
      "season": 2026,
@@ -10091,7 +10890,8 @@
      "games_missed_injured": 0,
      "grade": null,
      "weight": 3.0,
-     "value": 0.0
+     "value": 0.0,
+     "score": 0.0
     }
    ],
    "value_rank": 200,

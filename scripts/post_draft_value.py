@@ -20,6 +20,10 @@ high, and one who has dropped off falls.
 
 Undrafted players from your big board are found among that year's undrafted rookies and valued the same way.
 
+Score = SCORE_AT_MARKET x player value / his position's market rate: 70 = playing like a full-time,
+market-rate starter at his position (average grade, every snap); higher = outplaying it (best possible
+~126); 35 = half that value. Comparable across positions.
+
 Value rank = rank of player value within the draft class (1 = most valuable). Kickers, punters and long
 snappers are left out. Offensive linemen are listed but not ranked until individual OL data is added.
 
@@ -46,6 +50,7 @@ OUT_DIR = REPO / "app" / "data"
 SEASON_GAMES = 17
 GRADE_MIN_MULT, GRADE_MAX_MULT = 0.2, 1.8
 NEUTRAL_GRADE = 50
+SCORE_AT_MARKET = 70  # score for a full-time, average-graded starter at his position's market rate
 # Season weights by how long ago it was (this season, last season, two ago, ...): built for
 # looking ahead, so recent play counts most.
 RECENCY_WEIGHTS = {
@@ -327,8 +332,12 @@ def build(year, entries):
                                 "weight": round(weight, 3), "value": round(value * 100, 3)})
             weighted += value * weight
             total_weight += weight
+        player_value = weighted / total_weight if total_weight else 0.0
+        for row in season_rows:
+            row["score"] = round(SCORE_AT_MARKET * row["value"] / (pos_value[room] * 100), 1)
         players.append({**base, "positional_value": round(pos_value[room] * 100, 2),
-                        "value": round(weighted / total_weight * 100, 3) if total_weight else 0.0,
+                        "value": round(player_value * 100, 3),
+                        "score": round(SCORE_AT_MARKET * player_value / pos_value[room], 1),
                         "seasons": season_rows})
 
     players.sort(key=lambda r: -r["value"])
