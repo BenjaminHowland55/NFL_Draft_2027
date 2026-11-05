@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}NFL Draft Archive{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="{{ url_for('index') }}"><span class="brand-accent">NFL</span> Draft Archive</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="{{ url_for('about') }}" {% if active == 'about' %}aria-current="page"{% endif %}>About</a>
+      </nav>
+    </div>
+    <nav class="year-nav" aria-label="Draft years">
+      <div class="wrap year-row">
+        {% for y in years %}
+        <a href="{{ url_for('year_page', year=y) }}" {% if year == y %}class="active" aria-current="page"{% endif %}>
+          {{ y }}{% if y == current_year %}<span class="tag">Current</span>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span class="footer-label">Theme</span>
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button type="button" data-set-theme="midnight">Midnight</button>
+        <button type="button" data-set-theme="turf">Turf</button>
+        <button type="button" data-set-theme="broadcast">Broadcast</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll("[data-set-theme]");
+      function apply(theme) {
+        root.dataset.theme = theme;
+        buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.setTheme === theme); });
+      }
+      apply(root.dataset.theme);
+      buttons.forEach(function (b) {
+        b.addEventListener("click", function () {
+          apply(b.dataset.setTheme);
+          try { localStorage.setItem("theme", b.dataset.setTheme); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

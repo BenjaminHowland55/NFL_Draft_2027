@@ -1,13 +1,34 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NFL Draft 2027</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-  it works
-  <p><a href="{{ url_for('about') }}">About</a></p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}{{ year }} Draft · NFL Draft Archive{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <p class="eyebrow">Draft Class</p>
+  <h1>{{ year }} NFL Draft</h1>
+  <p class="lede">Big board, positional rankings, and scouting reports.</p>
+</section>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>Big Board</h2>
+    <span class="stat">0<small>players ranked</small></span>
+  </div>
+  <p class="empty">Rankings coming soon.</p>
+</section>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>Positions</h2>
+    <span class="stat">0<small>reports</small></span>
+  </div>
+  <div class="position-grid">
+    {% for pos in positions %}
+    <div class="position">
+      <span class="pos">{{ pos }}</span>
+      <span class="count">0 reports</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
