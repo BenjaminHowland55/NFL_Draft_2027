@@ -857,6 +857,74 @@ a.position:hover {
   color: var(--muted);
 }
 
+/* ---------- Post-draft analysis ---------- */
+
+.method { margin-top: 24px; }
+
+.method summary {
+  padding: 14px 20px;
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.method-body {
+  padding: 0 20px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.method-body ul { padding-left: 18px; }
+.method-body li + li { margin-top: 6px; }
+.method-body p.muted { font-size: 0.9rem; }
+
+.tab-all { margin-left: auto; }
+
+.season-head {
+  text-align: center !important;
+  line-height: 1.2;
+}
+
+.season-head .sub {
+  display: block;
+  font-family: "Barlow", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+.season-head .live {
+  margin-left: 6px;
+  padding: 0 4px;
+  font-size: 0.6rem;
+  border-radius: 3px;
+  color: var(--accent-ink);
+  background: var(--accent);
+}
+
+.season-cell {
+  text-align: center !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.season-cell .snap { font-weight: 600; }
+
+.season-cell .sgrade {
+  margin-left: 6px;
+  color: var(--muted);
+}
+
+.season-cell .inj {
+  margin-left: 4px;
+  font-size: 0.7rem;
+  color: #f87171;
+  cursor: help;
+}
+
 /* ---------- Scouting report index ---------- */
 
 .report-group { scroll-margin-top: 16px; }
