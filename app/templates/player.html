@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}{{ player.name }} · {{ year }} · NFL Draft Archive{% endblock %}
+
+{% macro body_text(items) -%}
+  {# Report text is rendered exactly as written in the Word doc. #}
+  {%- set ns = namespace(open=false) -%}
+  {%- for item in items -%}
+    {%- if item.bullet and not ns.open %}<ul>{% set ns.open = true %}{% endif -%}
+    {%- if not item.bullet and ns.open %}</ul>{% set ns.open = false %}{% endif -%}
+    {%- if item.bullet %}<li>{{ item.text }}</li>{% else %}<p>{{ item.text }}</p>{% endif -%}
+  {%- endfor -%}
+  {%- if ns.open %}</ul>{% endif -%}
+{%- endmacro %}
+
+{% block content %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="{{ url_for('year_page', year=year) }}">{{ year }} Draft</a>
+  {% if player.group %}
+  <span aria-hidden="true">/</span>
+  <a href="{{ url_for('position_page', year=year, pos=player.group) }}">{{ player.group }}</a>
+  {% endif %}
+  <span aria-hidden="true">/</span>
+  <span>{{ player.name }}</span>
+</nav>
+
+<header class="player-head">
+  <div class="player-id">
+    <p class="eyebrow">
+      {% if player.rank %}#{{ player.rank }} Overall{% endif %}
+      {% if player.rank and player.tier %} · {% endif %}{{ player.tier or '' }}
+    </p>
+    <h1>{{ player.name }}</h1>
+    <p class="player-sub">
+      {{ player.position or '' }}{% if player.school %} · {{ player.school }}{% endif %}{% if player['class'] %} · {{ player['class'] }}{% endif %}
+    </p>
+  </div>
+  <div class="player-grade">
+    <span class="grade-value">{{ player.grade|grade }}</span>
+    <span class="grade-label">Grade</span>
+  </div>
+</header>
+
+<dl class="stat-strip">
+  <div><dt>Height</dt><dd>{{ player.height or '—' }}</dd></div>
+  <div><dt>Weight</dt><dd>{{ player.weight or '—' }}</dd></div>
+  <div><dt>{{ player.group or 'Pos' }} Rank</dt><dd>{{ player.position_rank or '—' }}</dd></div>
+  {% if 'size_score' in cols %}<div><dt>Size</dt><dd>{{ player.size_score|grade(1) }}</dd></div>{% endif %}
+  {% if 'athleticism' in cols %}<div><dt>Athleticism</dt><dd>{{ player.athleticism|grade(1) }}</dd></div>{% endif %}
+  {% if 'tape_grade' in cols %}<div><dt>Tape</dt><dd>{{ player.tape_grade|grade(1) }}</dd></div>{% endif %}
+</dl>
+
+{% if not player.reports %}
+<section class="panel"><p class="empty">No scouting report for this player yet.</p></section>
+{% endif %}
+
+{% if player.reports and player.reports|length > 1 %}
+<nav class="pos-tabs report-tabs" aria-label="Reports">
+  {% for r in player.reports %}
+  <a href="#report-{{ loop.index }}">{{ r.label }} Report</a>
+  {% endfor %}
+</nav>
+{% endif %}
+
+{% for r in player.reports or [] %}
+<article class="report" id="report-{{ loop.index }}">
+  {% if player.reports|length > 1 %}
+  <h2 class="report-title">{{ r.label }} Report</h2>
+  {% endif %}
+
+  {% set summary = r.sections|selectattr('title', 'equalto', 'Summary')|list %}
+  {% set others = r.sections|rejectattr('title', 'equalto', 'Summary')|list %}
+
+  {% for s in summary %}
+  <section class="panel report-summary">
+    <h3 class="block-title">{{ s.title }}</h3>
+    {{ body_text(s.body) }}
+  </section>
+  {% endfor %}
+
+  {% if r.traits %}
+  <div class="card-row cols-{{ r.traits|length }}">
+    {% for s in r.traits %}
+    <section class="panel card">
+      <h3 class="block-title">{{ s.title }}</h3>
+      {{ body_text(s.body) }}
+    </section>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if others %}
+  <div class="card-row cols-{{ others|length }}">
+    {% for s in others %}
+    <section class="panel card {% if s.title.lower().startswith('strength') %}is-plus{% elif s.title.lower().startswith('weak') %}is-minus{% endif %}">
+      <h3 class="block-title">{{ s.title }}</h3>
+      {{ body_text(s.body) }}
+    </section>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if r.profiles %}
+  <div class="card-row cols-{{ r.profiles|length }}">
+    {% for prof in r.profiles %}
+    <section class="panel card profile">
+      <h3 class="block-title">{{ prof.title }}</h3>
+      <ul class="score-list">
+        {% for t in prof.traits %}
+        <li>
+          <span class="score-name">{{ t.name }}</span>
+          <span class="score-val">{% if t.score %}{{ t.score }}{% if t.max %}<small>/{{ t.max }}</small>{% endif %}{% else %}—{% endif %}</span>
+          {% if t.score and t.max %}
+          {% set pct = (t.score|float / t.max|float * 100) %}
+          <span class="bar" aria-hidden="true"><span style="width: {{ [pct, 100]|min }}%"></span></span>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% if prof.total %}
+      <div class="score-total">
+        <span>{{ prof.total.name }}</span>
+        <span class="score-val">{% if prof.total.score %}{{ prof.total.score }}{% if prof.total.max %}<small>/{{ prof.total.max }}</small>{% endif %}{% else %}—{% endif %}</span>
+      </div>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if r.combine %}
+  <section class="panel">
+    <div class="panel-head"><h3 class="block-title">Combine</h3></div>
+    <dl class="stat-strip in-panel">
+      {% for c in r.combine %}
+      <div><dt>{{ c.label }}</dt><dd>{{ c.value or '—' }}</dd></div>
+      {% endfor %}
+    </dl>
+  </section>
+  {% endif %}
+
+  {% if r.grades %}
+  <section class="panel grades">
+    {% for g in r.grades %}
+    <div class="grade-box">
+      <span class="grade-label">{{ g.label }}</span>
+      <span class="grade-value">{{ g.value or '—' }}</span>
+      {% if g.note %}<span class="grade-note">{{ g.note }}</span>{% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% for n in r.notes %}<p class="footnote">{{ n }}</p>{% endfor %}
+  {% endif %}
+</article>
+{% endfor %}
+{% endblock %}

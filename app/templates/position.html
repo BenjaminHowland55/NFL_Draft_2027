@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}{{ year }} {{ pos }} Rankings · NFL Draft Archive{% endblock %}
+
+{% block content %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="{{ url_for('year_page', year=year) }}">{{ year }} Draft</a>
+  <span aria-hidden="true">/</span>
+  <span>{{ pos }}</span>
+</nav>
+
+<section class="page-head">
+  <p class="eyebrow">{{ year }} Position Rankings</p>
+  <h1>{{ pos }}</h1>
+</section>
+
+<nav class="pos-tabs" aria-label="Positions">
+  {% for p in positions %}
+  <a href="{{ url_for('position_page', year=year, pos=p) }}" {% if p == pos %}class="active" aria-current="page"{% endif %}>{{ p }}</a>
+  {% endfor %}
+</nav>
+
+<section class="panel">
+  <div class="table-scroll">
+    <table class="rank-table">
+      <thead>
+        <tr>
+          <th class="num">{{ pos }} Rk</th>
+          <th>Player</th>
+          <th>Pos</th>
+          <th>School</th>
+          <th>Class</th>
+          <th class="num">Ht</th>
+          <th class="num">Wt</th>
+          {% if 'size_score' in cols %}<th class="num">Size</th>{% endif %}
+          {% if 'athleticism' in cols %}<th class="num">Athl.</th>{% endif %}
+          {% if 'tape_grade' in cols %}<th class="num">Tape</th>{% endif %}
+          <th class="num">Grade</th>
+          <th class="num">Overall</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in players %}
+        <tr>
+          <td class="num rank">{{ p.position_rank or '—' }}</td>
+          <td class="player-cell">
+            {% if p.reports %}<a href="{{ url_for('player_page', year=year, slug=p.slug) }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}
+          </td>
+          <td>{{ p.position or '' }}</td>
+          <td class="muted">{{ p.school or '' }}</td>
+          <td class="muted">{{ p['class'] or '' }}</td>
+          <td class="num">{{ p.height or '—' }}</td>
+          <td class="num">{{ p.weight or '—' }}</td>
+          {% if 'size_score' in cols %}<td class="num">{{ p.size_score|grade(1) }}</td>{% endif %}
+          {% if 'athleticism' in cols %}<td class="num">{{ p.athleticism|grade(1) }}</td>{% endif %}
+          {% if 'tape_grade' in cols %}<td class="num">{{ p.tape_grade|grade(1) }}</td>{% endif %}
+          <td class="num strong">{{ p.grade|grade }}</td>
+          <td class="num muted">{{ p.rank or '—' }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="{{ 9 + cols|length }}" class="empty">No players ranked at {{ pos }}.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

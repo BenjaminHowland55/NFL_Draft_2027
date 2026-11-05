@@ -11,24 +11,61 @@
 
 <section class="panel">
   <div class="panel-head">
-    <h2>Big Board</h2>
-    <span class="stat">0<small>players ranked</small></span>
+    <h2>Positions</h2>
+    <span class="stat">{{ report_count }}<small>scouting reports</small></span>
   </div>
-  <p class="empty">Rankings coming soon.</p>
+  <div class="position-grid">
+    {% for pos in positions %}
+      {% set c = position_counts.get(pos) %}
+      {% if c and c.players %}
+      <a class="position" href="{{ url_for('position_page', year=year, pos=pos) }}">
+        <span class="pos">{{ pos }}</span>
+        <span class="count">{{ c.players }} ranked</span>
+      </a>
+      {% else %}
+      <div class="position is-empty">
+        <span class="pos">{{ pos }}</span>
+        <span class="count">0 ranked</span>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </section>
 
 <section class="panel">
   <div class="panel-head">
-    <h2>Positions</h2>
-    <span class="stat">0<small>reports</small></span>
+    <h2>Big Board</h2>
+    <span class="stat">{{ data.big_board|length if data else 0 }}<small>players ranked</small></span>
   </div>
-  <div class="position-grid">
-    {% for pos in positions %}
-    <div class="position">
-      <span class="pos">{{ pos }}</span>
-      <span class="count">0 reports</span>
+  {% if data and data.board_by_tier %}
+    {% for tier in data.board_by_tier %}
+    <div class="tier">
+      <h3 class="tier-name">{{ tier.name }}</h3>
+      <div class="table-scroll">
+        <table class="rank-table">
+          <thead>
+            <tr><th class="num">Rk</th><th>Player</th><th>Pos</th><th>School</th><th class="num">Grade</th></tr>
+          </thead>
+          <tbody>
+            {% for e in tier.entries %}
+              {% set p = data.by_slug.get(e.slug) if e.slug else None %}
+              <tr>
+                <td class="num rank">{{ e.rank }}</td>
+                <td class="player-cell">
+                  {% if p and p.reports %}<a href="{{ url_for('player_page', year=year, slug=p.slug) }}">{{ p.name }}</a>{% elif p %}{{ p.name }}{% else %}{{ e.name }}{% endif %}
+                </td>
+                <td>{{ p.position if p else e.detail }}</td>
+                <td class="muted">{{ p.school if p and p.school else '' }}</td>
+                <td class="num">{{ e.grade|grade }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
     {% endfor %}
-  </div>
+  {% else %}
+    <p class="empty">Rankings coming soon.</p>
+  {% endif %}
 </section>
 {% endblock %}

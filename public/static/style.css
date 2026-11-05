@@ -76,7 +76,9 @@ a { color: inherit; }
 }
 
 /* Condensed display type: headings, labels, numbers */
-.brand, .main-nav a, .year-row a, .eyebrow, h1, h2, .stat, .pos {
+.brand, .main-nav a, .year-row a, .eyebrow, h1, h2, h3, .stat, .pos,
+.rank-table th, .crumbs, .pos-tabs a, .player-sub, .stat-strip dt,
+.grade-label, .grade-note, .score-total {
   font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
   text-transform: uppercase;
 }
@@ -254,6 +256,383 @@ h2 {
 }
 
 .count {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+a.position {
+  text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+a.position:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+.position.is-empty {
+  border-left-color: var(--border);
+  opacity: 0.6;
+}
+
+/* ---------- Ranking tables ---------- */
+
+.tier + .tier { border-top: 1px solid var(--border); }
+
+/* Same column widths in every tier so the board lines up */
+.tier .rank-table {
+  table-layout: fixed;
+  min-width: 560px;
+}
+
+.tier .rank-table th:nth-child(1) { width: 64px; }
+.tier .rank-table th:nth-child(2) { width: 34%; }
+.tier .rank-table th:nth-child(3) { width: 14%; }
+.tier .rank-table th:nth-child(5) { width: 96px; }
+
+.tier .rank-table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tier-name {
+  margin: 0;
+  padding: 14px 20px 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.rank-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.rank-table th,
+.rank-table td {
+  padding: 9px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.rank-table th:first-child,
+.rank-table td:first-child { padding-left: 20px; }
+
+.rank-table th:last-child,
+.rank-table td:last-child { padding-right: 20px; }
+
+.rank-table th {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.rank-table tbody tr + tr td { border-top: 1px solid var(--border); }
+
+.rank-table tbody tr:hover td { background: var(--surface-2); }
+
+.rank-table .num { text-align: right; }
+
+.rank-table .rank {
+  width: 1%;
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.player-cell { font-weight: 600; }
+
+.player-cell a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.player-cell a:hover {
+  color: var(--accent);
+  border-bottom-color: currentColor;
+}
+
+.muted { color: var(--muted); }
+.strong { font-weight: 600; }
+
+/* ---------- Breadcrumbs / tabs ---------- */
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.crumbs a { text-decoration: none; }
+.crumbs a:hover { color: var(--accent); }
+
+.pos-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 24px;
+}
+
+.pos-tabs a {
+  padding: 5px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.pos-tabs a:hover { color: var(--text); }
+
+.pos-tabs a.active {
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.pos-tabs + .panel { margin-top: 16px; }
+
+/* ---------- Player page ---------- */
+
+.player-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.player-sub {
+  margin: 10px 0 0;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.player-grade {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.player-grade .grade-value {
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  margin: 28px 0 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.stat-strip.in-panel {
+  margin: 0;
+  border: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+.stat-strip div {
+  padding: 14px 18px;
+  border-right: 1px solid var(--border);
+}
+
+.stat-strip div:last-child { border-right: 0; }
+
+.stat-strip dt {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.stat-strip dd {
+  margin: 2px 0 0;
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.report-tabs { margin-top: 32px; }
+
+.report-title {
+  margin: 48px 0 0;
+  padding-bottom: 8px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--accent);
+}
+
+.report { scroll-margin-top: 16px; }
+
+.block-title {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.panel-head .block-title { margin: 0; }
+
+.report-summary {
+  padding: 20px 24px;
+  border-left: 3px solid var(--accent);
+}
+
+.report-summary p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.report-summary p + p { margin-top: 12px; }
+
+.card-row {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card-row > .panel { margin-top: 0; }
+
+@media (min-width: 760px) {
+  .card-row.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .card-row.cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card { padding: 18px 20px; }
+
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.card li + li { margin-top: 6px; }
+
+.card li::marker { color: var(--accent); }
+
+.card p { margin: 0 0 8px; }
+
+.card.is-plus { border-top: 3px solid var(--accent); }
+
+.card.is-minus { border-top: 3px solid #f87171; }
+.card.is-minus .block-title { color: #f87171; }
+.card.is-minus li::marker { color: #f87171; }
+
+/* Profile scores (2025 format) */
+.card .score-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.score-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+
+.score-list li + li { margin-top: 12px; }
+
+.score-val {
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.score-val small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.bar {
+  grid-column: 1 / -1;
+  height: 4px;
+  background: var(--surface-2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.score-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Grades */
+.grades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.grade-box {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 22px;
+  border-right: 1px solid var(--border);
+}
+
+.grade-box:last-child { border-right: 0; }
+
+.grade-label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.grade-value {
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+.grade-note {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.footnote {
+  margin: 8px 0 0;
   font-size: 0.85rem;
   color: var(--muted);
 }
