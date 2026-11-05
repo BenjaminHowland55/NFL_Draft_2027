@@ -15,10 +15,12 @@
 
 {% block content %}
 <nav class="crumbs" aria-label="Breadcrumb">
-  <a href="{{ url_for('year_page', year=year) }}">{{ year }} Draft</a>
+  <a href="{{ url_for('big_board', year=year) }}">{{ year }} Draft</a>
+  <span aria-hidden="true">/</span>
+  <a href="{{ url_for('reports', year=year) }}">Scouting Reports</a>
   {% if player.group %}
   <span aria-hidden="true">/</span>
-  <a href="{{ url_for('position_page', year=year, pos=player.group) }}">{{ player.group }}</a>
+  <a href="{{ url_for('reports', year=year) }}#{{ player.group|lower }}">{{ player.group }}</a>
   {% endif %}
   <span aria-hidden="true">/</span>
   <span>{{ player.name }}</span>

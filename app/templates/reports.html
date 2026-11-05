@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}{{ year }} Scouting Reports · NFL Draft Archive{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <p class="eyebrow">{{ year }} NFL Draft</p>
+  <h1>Scouting Reports</h1>
+</section>
+
+{% if report_count %}
+<nav class="pos-tabs" aria-label="Jump to position">
+  {% for pos, group in groups.items() if group %}
+  <a href="#{{ pos|lower }}">{{ pos }}</a>
+  {% endfor %}
+</nav>
+
+{% for pos, group in groups.items() if group %}
+<section class="panel report-group" id="{{ pos|lower }}">
+  <div class="panel-head">
+    <h2>{{ pos }}</h2>
+    <span class="stat">{{ group|length }}<small>report{{ 's' if group|length != 1 }}</small></span>
+  </div>
+  <ul class="report-list">
+    {% for p in group %}
+    <li class="{% if p.tier_num %}tier-{{ p.tier_num }}{% endif %}">
+      <a href="{{ url_for('player_page', year=year, slug=p.slug) }}">
+        <span class="swatch" aria-hidden="true"></span>
+        <span class="report-name">{{ p.name }}</span>
+        <span class="report-meta">{{ p.position or pos }}{% if p.school %} · {{ p.school }}{% endif %}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+{% else %}
+<section class="panel">
+  <p class="empty">{{ year }} scouting reports are coming soon.</p>
+</section>
+{% endif %}
+{% endblock %}

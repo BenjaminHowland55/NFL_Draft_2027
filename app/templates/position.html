@@ -5,7 +5,9 @@
 
 {% block content %}
 <nav class="crumbs" aria-label="Breadcrumb">
-  <a href="{{ url_for('year_page', year=year) }}">{{ year }} Draft</a>
+  <a href="{{ url_for('big_board', year=year) }}">{{ year }} Draft</a>
+  <span aria-hidden="true">/</span>
+  <a href="{{ url_for('rankings', year=year) }}">Rankings</a>
   <span aria-hidden="true">/</span>
   <span>{{ pos }}</span>
 </nav>

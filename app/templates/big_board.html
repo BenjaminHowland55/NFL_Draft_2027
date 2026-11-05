@@ -1,41 +1,17 @@
 {% extends "base.html" %}
 {% from "_macros.html" import grade_meter %}
 
-{% block title %}{{ year }} Draft · NFL Draft Archive{% endblock %}
+{% block title %}{{ year }} Big Board · NFL Draft Archive{% endblock %}
 
 {% block content %}
 <section class="page-head">
-  <p class="eyebrow">Draft Class</p>
-  <h1>{{ year }} NFL Draft</h1>
-  <p class="lede">Big board, positional rankings, and scouting reports.</p>
+  <p class="eyebrow">{{ year }} NFL Draft</p>
+  <h1>Big Board</h1>
 </section>
 
 <section class="panel">
   <div class="panel-head">
-    <h2>Positions</h2>
-    <span class="stat">{{ report_count }}<small>scouting reports</small></span>
-  </div>
-  <div class="position-grid">
-    {% for pos in positions %}
-      {% set c = position_counts.get(pos) %}
-      {% if c and c.players %}
-      <a class="position" href="{{ url_for('position_page', year=year, pos=pos) }}">
-        <span class="pos">{{ pos }}</span>
-        <span class="count">{{ c.players }} ranked</span>
-      </a>
-      {% else %}
-      <div class="position is-empty">
-        <span class="pos">{{ pos }}</span>
-        <span class="count">0 ranked</span>
-      </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
-
-<section class="panel">
-  <div class="panel-head">
-    <h2>Big Board</h2>
+    <h2>Rankings by Tier</h2>
     <span class="stat">{{ data.big_board|length if data else 0 }}<small>players ranked</small></span>
   </div>
   {% if data and data.board_by_tier %}
@@ -69,7 +45,7 @@
     </div>
     {% endfor %}
   {% else %}
-    <p class="empty">Rankings coming soon.</p>
+    <p class="empty">The {{ year }} big board is coming soon.</p>
   {% endif %}
 </section>
 {% endblock %}

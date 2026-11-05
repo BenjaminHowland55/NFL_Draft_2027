@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ year }} Position Rankings · NFL Draft Archive{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <p class="eyebrow">{{ year }} NFL Draft</p>
+  <h1>Position Rankings</h1>
+</section>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>Positions</h2>
+    <span class="stat">{{ data.players|length if data else 0 }}<small>players ranked</small></span>
+  </div>
+  {% if data %}
+  <div class="position-grid">
+    {% for pos in positions %}
+      {% set group = groups[pos] %}
+      {% if group %}
+      <a class="position" href="{{ url_for('position_page', year=year, pos=pos) }}">
+        <span class="pos">{{ pos }}</span>
+        <span class="count">{{ group|length }} ranked</span>
+        <span class="count top">#1 {{ group[0].name }}</span>
+      </a>
+      {% else %}
+      <div class="position is-empty">
+        <span class="pos">{{ pos }}</span>
+        <span class="count">0 ranked</span>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">The {{ year }} position rankings are coming soon.</p>
+  {% endif %}
+</section>
+{% endblock %}

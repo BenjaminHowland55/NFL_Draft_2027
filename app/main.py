@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from flask import Flask, abort, render_template
+from flask import Flask, abort, redirect, render_template, url_for
 
 # Static files live in public/ so Vercel's CDN serves them; Flask serves the
 # same folder at /static when running locally.
@@ -86,52 +86,14 @@ def inject_site_data():
 
 # ---------------------------------------------------------------- routes
 
-def render_year(year):
-    data = year_data(year)
-    position_counts = {}
-    if data:
-        for pos in POSITIONS:
-            group = [p for p in data["players"] if p.get("group") == pos]
-            position_counts[pos] = {
-                "players": len(group),
-                "reports": sum(1 for p in group if p.get("reports")),
-            }
-    return render_template(
-        "index.html",
-        year=year,
-        data=data,
-        positions=POSITIONS,
-        position_counts=position_counts,
-        player_count=len(data["players"]) if data else 0,
-        report_count=sum(1 for p in data["players"] if p.get("reports")) if data else 0,
-    )
-
-
-@app.route("/")
-def index():
-    return render_year(CURRENT_YEAR)
-
-
-@app.route("/<int:year>")
-def year_page(year):
-    return render_year(year)
-
-
-@app.route("/<int:year>/<pos>")
-def position_page(year, pos):
-    data = year_data(year)
-    pos = pos.upper()
-    if not data or pos not in POSITIONS:
-        abort(404)
-    players = sorted(
-        (p for p in data["players"] if p.get("group") == pos),
-        key=lambda p: p.get("position_rank") or 999,
-    )
-    return render_template(
-        "position.html", year=year, pos=pos, players=players, positions=POSITIONS,
-        cols=available_columns(data["players"]),
-    )
-
+# The per-year dropdown menu: (view function name, label)
+SECTIONS = [
+    ("big_board", "Big Board"),
+    ("rankings", "Rankings"),
+    ("reports", "Scouting Reports"),
+    ("post_draft", "Post-Draft Analysis"),
+]
+app.jinja_env.globals["sections"] = SECTIONS
 
 OPTIONAL_COLUMNS = ["size_score", "athleticism", "tape_grade"]
 
@@ -141,13 +103,83 @@ def available_columns(players):
     return {c for c in OPTIONAL_COLUMNS if any(p.get(c) is not None for p in players)}
 
 
+def players_by_position(data, with_reports_only=False):
+    groups = {}
+    for pos in POSITIONS:
+        group = [p for p in (data["players"] if data else []) if p.get("group") == pos]
+        if with_reports_only:
+            group = [p for p in group if p.get("reports")]
+        groups[pos] = sorted(group, key=lambda p: p.get("position_rank") or 999)
+    return groups
+
+
+@app.route("/")
+def index():
+    return big_board(CURRENT_YEAR)
+
+
+@app.route("/<int:year>")
+@app.route("/<int:year>/big-board")
+def big_board(year):
+    data = year_data(year)
+    return render_template("big_board.html", year=year, section="big_board", data=data)
+
+
+@app.route("/<int:year>/rankings")
+def rankings(year):
+    data = year_data(year)
+    return render_template(
+        "rankings.html", year=year, section="rankings", data=data,
+        positions=POSITIONS, groups=players_by_position(data),
+    )
+
+
+@app.route("/<int:year>/rankings/<pos>")
+def position_page(year, pos):
+    data = year_data(year)
+    pos = pos.upper()
+    if not data or pos not in POSITIONS:
+        abort(404)
+    return render_template(
+        "position.html", year=year, section="rankings", pos=pos, positions=POSITIONS,
+        players=players_by_position(data)[pos], cols=available_columns(data["players"]),
+    )
+
+
+@app.route("/<int:year>/<pos>")
+def old_position_url(year, pos):
+    # Position pages used to live at /<year>/<POS>
+    if pos.upper() not in POSITIONS:
+        abort(404)
+    return redirect(url_for("position_page", year=year, pos=pos.upper()), code=301)
+
+
+@app.route("/<int:year>/reports")
+def reports(year):
+    data = year_data(year)
+    groups = players_by_position(data, with_reports_only=True)
+    return render_template(
+        "reports.html", year=year, section="reports", data=data, groups=groups,
+        report_count=sum(len(g) for g in groups.values()),
+    )
+
+
+@app.route("/<int:year>/post-draft")
+def post_draft(year):
+    year_data(year)  # 404 for unknown years
+    return render_template("post_draft.html", year=year, section="post_draft")
+
+
 @app.route("/<int:year>/player/<slug>")
 def player_page(year, slug):
     data = year_data(year)
     if not data or slug not in data["by_slug"]:
         abort(404)
     player = data["by_slug"][slug]
-    return render_template("player.html", year=year, player=player, cols=available_columns(data["players"]))
+    return render_template(
+        "player.html", year=year, section="reports", player=player,
+        cols=available_columns(data["players"]),
+    )
 
 
 @app.route("/about")

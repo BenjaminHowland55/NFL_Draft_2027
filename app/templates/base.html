@@ -20,9 +20,17 @@
     <nav class="year-nav" aria-label="Draft years">
       <div class="wrap year-row">
         {% for y in years %}
-        <a href="{{ url_for('year_page', year=y) }}" {% if year == y %}class="active" aria-current="page"{% endif %}>
-          {{ y }}{% if y == current_year %}<span class="tag">Current</span>{% endif %}
-        </a>
+        <div class="year-menu{% if year == y %} active{% endif %}">
+          <button type="button" class="year-btn" aria-expanded="false" aria-controls="year-menu-{{ y }}">
+            {{ y }}{% if y == current_year %}<span class="tag">Current</span>{% endif %}
+            <svg class="chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="year-dropdown" id="year-menu-{{ y }}">
+            {% for endpoint, label in sections %}
+            <li><a href="{{ url_for(endpoint, year=y) }}" {% if year == y and section == endpoint %}aria-current="page"{% endif %}>{{ label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
         {% endfor %}
       </div>
     </nav>
@@ -31,5 +39,39 @@
   <main class="wrap">
     {% block content %}{% endblock %}
   </main>
+
+  <script>
+    // Year dropdowns: click/tap to open (hover also opens on mouse devices, via CSS).
+    (function () {
+      var menus = document.querySelectorAll(".year-menu");
+      function closeAll(except) {
+        menus.forEach(function (m) {
+          if (m !== except) {
+            m.classList.remove("open");
+            m.querySelector(".year-btn").setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+      menus.forEach(function (menu) {
+        var btn = menu.querySelector(".year-btn");
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          var open = !menu.classList.contains("open");
+          closeAll(menu);
+          menu.classList.toggle("open", open);
+          btn.setAttribute("aria-expanded", String(open));
+          if (open) menu.querySelector(".year-dropdown a").focus();
+        });
+      });
+      document.addEventListener("click", function () { closeAll(); });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          var openMenu = document.querySelector(".year-menu.open");
+          closeAll();
+          if (openMenu) openMenu.querySelector(".year-btn").focus();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
