@@ -45,7 +45,7 @@ import pymysql
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from import_data import name_key, near_match, split_name  # noqa: E402
-from season_grades import season_grades  # noqa: E402
+from season_grades import pfr_gsis_map, season_grades  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 OUT_DIR = REPO / "app" / "data"
@@ -56,7 +56,7 @@ NEUTRAL_GRADE = 50
 # games count as not playing (one bad injury year is forgiven, being hurt every year isn't)
 INJURY_ALLOWANCE = 0.25
 # Starters per team at each position, for the typical starter snap share (starter_shares)
-STARTERS_PER_TEAM = {"QB": 1, "RB": 1, "WR": 3, "TE": 1, "EDGE": 2, "IDL": 2, "LB": 2, "CB": 3, "S": 2}
+STARTERS_PER_TEAM = {"QB": 1, "RB": 1, "WR": 3, "TE": 1, "OT": 2, "IOL": 3, "EDGE": 2, "IDL": 2, "LB": 2, "CB": 3, "S": 2}
 SCORE_AT_MARKET = 70  # score for a full-time, average-graded starter at his position's market rate
 # Season weights by how long ago it was (this season, last season, two ago, ...): built for
 # looking ahead, so recent play counts most.
@@ -66,6 +66,7 @@ RECENCY_WEIGHTS = {
 }
 SPECIALISTS = {"K", "P", "LS"}
 # Offensive linemen have no individual grades yet; they are listed but left out of the value rank for now.
+# Offensive linemen have no individual grades in free data; they are listed but left out of the value rank.
 NOT_GRADED = {"OT", "IOL", "OL"}
 
 # Rooms used for value. A room's positional value is the median of its top MARKET_TOP veteran contracts:
@@ -244,8 +245,7 @@ def starter_shares(seasons, rooms_by_gsis):
     """Typical starter snap share by room: average of the top (32 x starters per team) players' snap
     share in the games they played (8+ games). A player at or above it is a full-time starter."""
     sc = nfl.load_snap_counts(seasons).filter(pl.col("game_type") == "REG")
-    rw = nfl.load_rosters_weekly(seasons).select(["pfr_id", "gsis_id"]).drop_nulls().unique()
-    pfr_to_gsis = dict(rw.iter_rows())
+    pfr_to_gsis = pfr_gsis_map(seasons)
     agg = sc.group_by(["pfr_player_id", "season"]).agg(
         pl.col("offense_pct").mean(), pl.col("defense_pct").mean(), pl.len().alias("g"))
     by_room = {}
@@ -341,7 +341,9 @@ def build(year, entries, through=None):
     season_fraction = {}
     for (s, _team), weeks in team_week.items():
         season_fraction[s] = max(season_fraction.get(s, 0), min(1.0, len(weeks) / SEASON_GAMES))
-    single_season, _ = season_grades(seasons, rooms_by_contract, season_fraction)
+    single_season, grade_rows = season_grades(seasons, rooms_by_contract, season_fraction)
+    # Offensive linemen drafted as plain "OL": tackle or interior from their depth chart spot
+    ol_room = {g: r["room"] for (g, _s), r in grade_rows.items() if r.get("room") in ("OT", "IOL")}
     starter_share = starter_shares(seasons, rooms_by_contract)
 
     players, not_graded = [], []
@@ -349,6 +351,8 @@ def build(year, entries, through=None):
         gsis, pfr = base["gsis_id"], base["pfr_id"]
         room = (grades.get(gsis, {}).get("room") or rooms_by_contract.get(gsis)
                 or DRAFT_ROOM.get(base["draft_position"]))
+        if room == "OL":
+            room = ol_room.get(gsis, "IOL")
         base = {**base, "room": room}
         if room in SPECIALISTS or room is None:
             continue

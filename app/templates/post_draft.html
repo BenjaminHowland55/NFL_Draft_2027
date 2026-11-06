@@ -62,7 +62,8 @@
       <li><strong>Positional value</strong> is what the NFL pays the position (median of the top 10 veteran contracts, as a share of the cap). The score is measured against it; the All Positions view ranks by raw draft value (% of the cap), where it does matter, so quarterbacks lead.</li>
       <li><strong>Recent seasons count most.</strong> Quarterbacks: this season 5×, last season 2×, two seasons ago 1×. Other positions, whose play depends more on circumstances: 3×, 2×, 1×. The current season counts in full while it's in progress.</li>
     </ul>
-    <p class="muted">Each season cell shows snap share and that season's grade{% if value.seasons %}; {{ value.seasons[-1] }} is in progress{% endif %}. A small +N marks games missed to injury. An asterisk on a grade means the season is in progress and, for non-quarterbacks, it's blended with his track record in proportion to games played (hover to see). Offensive linemen aren't graded yet.</p>
+    <p class="muted">Each season cell shows snap share and that season's grade{% if value.seasons %}; {{ value.seasons[-1] }} is in progress{% endif %}. A small +N marks games missed to injury. An asterisk on a grade means the season is in progress and, for non-quarterbacks, it's blended with his track record in proportion to games played (hover to see). </p>
+    <p class="muted">Offensive linemen aren't graded: free data has no individual blocking stats (pressures or sacks allowed), so they're listed without a value score.</p>
   </div>
 </details>
 
@@ -70,7 +71,9 @@
   {% for room in value.rooms %}
   <a href="{{ url_for('post_draft', year=year, pos=room) }}" {% if view == room %}class="active" aria-current="page"{% endif %}>{{ room }}</a>
   {% endfor %}
+  {% if value.not_graded %}
   <a href="{{ url_for('post_draft', year=year, pos='OL') }}" {% if view == 'OL' %}class="active" aria-current="page"{% endif %}>OL</a>
+  {% endif %}
   <a href="{{ url_for('post_draft', year=year, pos='DRAFT') }}" class="tab-all{% if view == 'DRAFT' %} active{% endif %}" {% if view == 'DRAFT' %}aria-current="page"{% endif %}>Draft order</a>
   <a href="{{ url_for('post_draft', year=year, pos='ALL') }}" {% if view == 'ALL' %}class="active" aria-current="page"{% endif %}>All positions</a>
 </nav>

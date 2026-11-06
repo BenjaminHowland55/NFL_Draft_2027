@@ -44,9 +44,30 @@ STATS = {
            ("missed_tackle_rate", 0.2, True), ("int_rate", 0.15, False)],
     "S": [("yards_allowed_per_snap", 0.25, True), ("rating_allowed", 0.15, True), ("int_rate", 0.15, False),
           ("missed_tackle_rate", 0.15, True), ("tackle_rate", 0.1, False), ("tackles_per_game", 0.2, False)],
+    # Offensive line: an ESTIMATE from free data (no individual pressures/sacks allowed exist in it).
+    # Run blocking = runs through the gaps he's responsible for; pass protection = his team's sack and
+    # QB-hit rates on dropbacks in his games; penalties are charged to him individually. Run and pass
+    # results are shared with teammates, so this separates good units and sides more than individuals.
+    "OT": [("gap_run_epa", 0.35, False), ("gap_run_success", 0.15, False), ("sack_rate_allowed", 0.15, True),
+           ("qb_hit_rate_allowed", 0.1, True), ("penalty_rate", 0.25, True)],
+    "IOL": [("gap_run_epa", 0.35, False), ("gap_run_success", 0.15, False), ("sack_rate_allowed", 0.15, True),
+            ("qb_hit_rate_allowed", 0.1, True), ("penalty_rate", 0.25, True)],
 }
 # Opportunities needed in a full season to count as a regular (prorated for a partial season)
-REGULAR = {"QB": 250, "RB": 100, "WR": 50, "TE": 35, "EDGE": 300, "IDL": 300, "LB": 300, "CB": 300, "S": 300}
+REGULAR = {"QB": 250, "RB": 100, "WR": 50, "TE": 35, "EDGE": 300, "IDL": 300, "LB": 300, "CB": 300, "S": 300,
+           "OT": 400, "IOL": 400}
+# Run gaps each offensive line spot is responsible for: (run_location, run_gap) -> weight
+OL_GAPS = {
+    "LT": {("left", "end"): 1.0, ("left", "tackle"): 1.0, ("left", "guard"): 0.3},
+    "LG": {("left", "tackle"): 0.5, ("left", "guard"): 1.0, ("middle", None): 0.5},
+    "C": {("middle", None): 1.0, ("left", "guard"): 0.5, ("right", "guard"): 0.5},
+    "RG": {("right", "tackle"): 0.5, ("right", "guard"): 1.0, ("middle", None): 0.5},
+    "RT": {("right", "end"): 1.0, ("right", "tackle"): 1.0, ("right", "guard"): 0.3},
+}
+OL_SPOT_ROOM = {"LT": "OT", "RT": "OT", "LG": "IOL", "C": "IOL", "RG": "IOL"}
+OFFENSIVE_PENALTIES = {"Offensive Holding", "False Start", "Illegal Use of Hands", "Chop Block",
+                       "Clipping", "Illegal Block Above the Waist", "Low Block", "Offensive Offside",
+                       "Illegal Formation", "Tripping", "Unnecessary Roughness", "Personal Foul"}
 OFFENSE_POS = {"QB": "QB", "RB": "RB", "FB": "RB", "HB": "RB", "WR": "WR", "TE": "TE"}
 # Pro Football Reference defensive positions -> room (fallback when the contract position is unknown)
 PFR_POS = {"DE": "EDGE", "OLB": "EDGE", "EDGE": "EDGE", "DT": "IDL", "NT": "IDL", "DL": "IDL",
@@ -181,11 +202,118 @@ def grade_rows(rows, season_fraction):
             r["grade"] = round(50 + (pct - 50) * trust, 1)
 
 
+def pfr_gsis_map(seasons):
+    """Pro Football Reference id -> NFL gsis id. The players table covers nearly everyone (weekly rosters
+    leave pfr_id blank for many players, e.g. most offensive linemen); rosters fill any gaps."""
+    out = {p: g for g, p in nfl.load_players().select(["gsis_id", "pfr_id"]).drop_nulls().iter_rows()}
+    for g, p in nfl.load_rosters_weekly(seasons).select(["gsis_id", "pfr_id"]).drop_nulls().unique().iter_rows():
+        out.setdefault(p, g)
+    return out
+
+
+def ol_positions(seasons):
+    """(gsis_id, season) -> his main offensive line spot (LT/LG/C/RG/RT) from the depth charts."""
+    out = {}
+    for season in seasons:
+        dc = nfl.load_depth_charts([season])
+        # Two formats: newer seasons have pos_abb / pos_rank; older ones (through 2024) have
+        # depth_position / depth_team ("1" = starter). The spot names (LT, LG, C, RG, RT) match.
+        if "pos_abb" not in dc.columns:
+            dc = dc.filter(pl.col("game_type") == "REG").select(
+                "gsis_id", pl.col("depth_position").str.strip_chars().alias("pos_abb"),
+                pl.col("depth_team").cast(pl.Int64, strict=False).alias("pos_rank"))
+        dc = dc.filter(pl.col("pos_abb").is_in(list(OL_GAPS)))
+        starters = dc.filter(pl.col("pos_rank") == 1)
+        counts = {}
+        for g, spot in (starters if starters.height else dc).select(["gsis_id", "pos_abb"]).iter_rows():
+            if g:
+                counts.setdefault(g, {}).setdefault(spot, 0)
+                counts[g][spot] += 1
+        # Players who never started: use any depth chart spot
+        for g, spot in dc.select(["gsis_id", "pos_abb"]).iter_rows():
+            if g and g not in counts:
+                counts.setdefault(g, {}).setdefault(spot, 0)
+        for g, c in counts.items():
+            out[(g, season)] = max(c, key=c.get)
+    return out
+
+
+def offensive_line_table(seasons, pfr_to_gsis):
+    """One row per (gsis_id, season) for offensive linemen; opportunities = offensive snaps."""
+    spots = ol_positions(seasons)
+    sc = nfl.load_snap_counts(seasons).filter(
+        (pl.col("game_type") == "REG") & pl.col("position").is_in(["T", "G", "C", "OL", "OT", "OG"]))
+    pbp = nfl.load_pbp(seasons).filter(pl.col("season_type") == "REG")
+    runs = pbp.filter(pl.col("play_type") == "run").select(
+        ["game_id", "posteam", "run_location", "run_gap", "epa", "success"])
+    drops = pbp.filter(pl.col("qb_dropback") == 1).select(["game_id", "posteam", "sack", "qb_hit"])
+    pens = pbp.filter((pl.col("penalty") == 1) & pl.col("penalty_type").is_in(list(OFFENSIVE_PENALTIES))
+                      & pl.col("penalty_player_id").is_not_null())
+
+    # Per team-game: run results by gap, and dropback totals
+    run_by = {}
+    for gid, team, loc, gap, epa, succ in runs.iter_rows():
+        if epa is None:
+            continue
+        key = (loc, gap if loc != "middle" else None)
+        rec = run_by.setdefault((gid, team), {}).setdefault(key, [0, 0.0, 0.0])
+        rec[0] += 1
+        rec[1] += epa
+        rec[2] += succ or 0
+    drop_by = {}
+    for gid, team, sack, hit in drops.iter_rows():
+        rec = drop_by.setdefault((gid, team), [0, 0, 0])
+        rec[0] += 1
+        rec[1] += sack or 0
+        rec[2] += hit or 0
+    pen_by = {}
+    for g, season in pens.select(["penalty_player_id", "season"]).iter_rows():
+        pen_by[(g, season)] = pen_by.get((g, season), 0) + 1
+
+    acc = {}
+    for gid, season, team, pfr, snaps, pct, name in sc.select(
+            ["game_id", "season", "team", "pfr_player_id", "offense_snaps", "offense_pct", "player"]).iter_rows():
+        gsis = pfr_to_gsis.get(pfr)
+        spot = spots.get((gsis, season))
+        if not gsis or not spot or not snaps:
+            continue
+        a = acc.setdefault((gsis, season), {"name": name, "spot": spot, "snaps": 0.0, "games": 0,
+                                            "runs": 0.0, "run_epa": 0.0, "run_succ": 0.0,
+                                            "drops": 0.0, "sacks": 0.0, "hits": 0.0})
+        w = pct or 0.0  # his share of the team's snaps that game
+        a["snaps"] += snaps
+        a["games"] += 1
+        for key, gap_w in OL_GAPS[spot].items():
+            r = run_by.get((gid, team), {}).get(key)
+            if r:
+                a["runs"] += w * gap_w * r[0]
+                a["run_epa"] += w * gap_w * r[1]
+                a["run_succ"] += w * gap_w * r[2]
+        d = drop_by.get((gid, team))
+        if d:
+            a["drops"] += w * d[0]
+            a["sacks"] += w * d[1]
+            a["hits"] += w * d[2]
+
+    rows = {}
+    for (gsis, season), a in acc.items():
+        rows[(gsis, season)] = {
+            "room": OL_SPOT_ROOM[a["spot"]], "spot": a["spot"], "name": a["name"], "opps": a["snaps"],
+            "gap_run_epa": _safe(a["run_epa"], a["runs"]),
+            "gap_run_success": _safe(a["run_succ"], a["runs"]),
+            "sack_rate_allowed": _safe(a["sacks"], a["drops"]),
+            "qb_hit_rate_allowed": _safe(a["hits"], a["drops"]),
+            "penalty_rate": _safe(pen_by.get((gsis, season), 0), a["snaps"]),
+        }
+    return rows
+
+
 def season_grades(seasons, room_by_gsis, season_fraction):
-    """(gsis_id, season) -> grade for every offensive skill player and defender."""
-    rosters = nfl.load_rosters_weekly(seasons).select(["gsis_id", "pfr_id"]).drop_nulls().unique()
-    pfr_to_gsis = {p: g for g, p in rosters.iter_rows()}
+    """(gsis_id, season) -> grade for every offensive skill player, offensive lineman and defender."""
+    pfr_to_gsis = pfr_gsis_map(seasons)
     rows = offense_table(seasons)
     rows.update(defense_table(seasons, room_by_gsis, pfr_to_gsis))
+    # Offensive line estimate (offensive_line_table) is not used: free data can't separate a lineman
+    # from his teammates well enough (it graded whole lines, not players). Linemen stay ungraded.
     grade_rows(rows, season_fraction)
     return {k: r["grade"] for k, r in rows.items()}, rows
