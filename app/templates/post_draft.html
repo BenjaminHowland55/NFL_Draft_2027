@@ -10,6 +10,12 @@
   {%- if p.slug %}<a href="{{ url_for('player_page', year=year, slug=p.slug) }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif -%}
 {%- endmacro %}
 
+{% macro verdict(diff, label) -%}
+  {%- if diff is not none and label -%}
+  <span class="verdict v-{{ label|lower|replace(' ', '-') }}"><span class="v-num">{{ '%+.1f'|format(diff) }}</span> {{ label }}</span>
+  {%- endif -%}
+{%- endmacro %}
+
 {% macro season_cells(p) -%}
   {%- for s in p.seasons -%}
   <td class="season-cell">
@@ -65,16 +71,66 @@
   <a href="{{ url_for('post_draft', year=year, pos=room) }}" {% if view == room %}class="active" aria-current="page"{% endif %}>{{ room }}</a>
   {% endfor %}
   <a href="{{ url_for('post_draft', year=year, pos='OL') }}" {% if view == 'OL' %}class="active" aria-current="page"{% endif %}>OL</a>
-  <a href="{{ url_for('post_draft', year=year, pos='ALL') }}" class="tab-all{% if view == 'ALL' %} active{% endif %}" {% if view == 'ALL' %}aria-current="page"{% endif %}>All positions</a>
+  <a href="{{ url_for('post_draft', year=year, pos='DRAFT') }}" class="tab-all{% if view == 'DRAFT' %} active{% endif %}" {% if view == 'DRAFT' %}aria-current="page"{% endif %}>Draft order</a>
+  <a href="{{ url_for('post_draft', year=year, pos='ALL') }}" {% if view == 'ALL' %}class="active" aria-current="page"{% endif %}>All positions</a>
 </nav>
 
 <section class="panel">
   <div class="panel-head">
-    <h2>{% if view == 'ALL' %}Draft Value · All Positions{% elif view == 'OL' %}Offensive Line{% else %}{{ view }} Rankings{% endif %}</h2>
+    <h2>{% if view == 'ALL' %}Draft Value · All Positions{% elif view == 'DRAFT' %}Pick by Pick{% elif view == 'OL' %}Offensive Line{% else %}{{ view }} Rankings{% endif %}</h2>
     <span class="stat">{{ rows|length }}<small>players</small></span>
   </div>
 
-  {% if view == 'OL' %}
+  {% if view == 'DRAFT' %}
+  {% if value.expectation %}
+  <p class="draft-note">Each score is compared with what a typical player taken at that pick becomes (from the
+    {{ value.expectation.classes[0] }}–{{ value.expectation.classes[-1] }} draft classes, {{ value.expectation.players }} players,
+    measured over their first {{ value.expectation.seasons_measured }} seasons). <strong>Vs. your rank</strong> holds him to the
+    expectation of a pick at your big board rank. Steal +30 or more · Above +10 · As expected within 10 · Below −10 · Miss −30 or worse.</p>
+  {% endif %}
+  <div class="table-scroll">
+    <table class="rank-table value-table draft-table">
+      <thead>
+        <tr>
+          <th class="num">Pick</th>
+          <th>Team</th>
+          <th>Player</th>
+          <th>Pos</th>
+          <th class="num">Score</th>
+          <th class="num" title="Expected score for a player taken at this pick">Exp.</th>
+          <th>Vs. pick</th>
+          <th class="num">Your Rk</th>
+          <th>Vs. your rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in rows %}
+        {% if not p.pick and loop.previtem is defined and loop.previtem.pick %}
+        <tr class="divider-row"><td colspan="9">Undrafted (on your board)</td></tr>
+        {% endif %}
+        <tr>
+          <td class="num rank">{% if p.pick %}{{ p.pick }}<span class="rd">R{{ p['round'] }}</span>{% else %}—{% endif %}</td>
+          <td class="muted">{{ p.team or '' }}</td>
+          <td class="player-cell">{{ player_name(p) }}</td>
+          <td>{{ p.room or p.draft_position }}</td>
+          {% if p.score is defined %}
+          <td class="num"><span class="score{% if p.score >= 70 %} is-above{% endif %}">{{ '%.1f'|format(p.score) }}</span></td>
+          <td class="num muted">{{ '%.1f'|format(p.expected_at_pick) if p.expected_at_pick is defined else '—' }}</td>
+          <td>{{ verdict(p.vs_pick, p.vs_pick_label) }}</td>
+          <td class="num muted">{{ p.board_rank or '—' }}</td>
+          <td>{{ verdict(p.vs_board, p.vs_board_label) }}</td>
+          {% else %}
+          <td class="num muted" colspan="3">Not graded yet</td>
+          <td class="num muted">{{ p.board_rank or '—' }}</td>
+          <td></td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% elif view == 'OL' %}
   <p class="empty">Offensive linemen aren't graded yet (individual line data still to come). Listed in draft order.</p>
   <div class="table-scroll">
     <table class="rank-table">

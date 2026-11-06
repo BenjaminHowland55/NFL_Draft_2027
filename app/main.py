@@ -189,10 +189,15 @@ def post_draft(year):
     value = VALUE.get(year)
     view = request.args.get("pos", "QB").upper()
     if value:
-        valid = value["rooms"] + ["OL", "ALL"]
+        valid = value["rooms"] + ["OL", "ALL", "DRAFT"]
         if view not in valid:
             view = valid[0]
-        if view == "ALL":
+        if view == "DRAFT":
+            # Every pick in order (offensive linemen included), then undrafted players from your board
+            everyone = value["players"] + value["not_graded"]
+            rows = sorted((p for p in everyone if p.get("pick")), key=lambda p: p["pick"])
+            rows += sorted((p for p in everyone if not p.get("pick")), key=lambda p: p.get("board_rank") or 999)
+        elif view == "ALL":
             rows = value["players"]
         elif view == "OL":
             rows = sorted(value["not_graded"], key=lambda p: p.get("pick") or 999)

@@ -323,11 +323,15 @@ def recency_weight(season, current, room=None):
     return weights[ago] if ago < len(weights) else weights[-1]
 
 
-def build(year, entries):
-    """Value every entry (draft picks plus undrafted players from your board)."""
-    current = nfl.get_current_season()
+def build(year, entries, through=None):
+    """Value every entry (draft picks plus undrafted players from your board).
+
+    `through` stops at that season and treats it as the current one (used to measure past classes at the
+    same stage of their careers, for the expected-score curve).
+    """
+    current = through or nfl.get_current_season()
     seasons = list(range(year, current + 1))
-    pos_value = positional_values(current)
+    pos_value = positional_values(nfl.get_current_season())
     rooms_by_contract = contract_rooms()
     team_week, player_week = weekly_snaps(seasons)
     hurt_weeks = injured_weeks(seasons)
@@ -429,11 +433,61 @@ def build(year, entries):
     return players, not_graded, pos_value, seasons, season_fraction, current
 
 
-def main(year):
+# Labels for score minus expected score (vs. pick, vs. your rank)
+EXPECTATION_LABELS = [(30, "Steal"), (10, "Above"), (-10, "As expected"), (-30, "Below"), (float("-inf"), "Miss")]
+
+
+def expectation_label(diff):
+    """Steal: +30 or more. Above: +10 to +30. As expected: within 10 either way. Below: -10 to -30.
+    Miss: worse than -30."""
+    if diff >= 30:
+        return "Steal"
+    if diff >= 10:
+        return "Above"
+    if diff > -10:
+        return "As expected"
+    if diff >= -30:
+        return "Below"
+    return "Miss"
+
+
+def attach_expectations(players):
+    """Compare each score with what's expected at his draft slot and at your board rank.
+
+    Expected scores come from app/data/expected_by_pick.json (scripts/expected_curve.py: past classes
+    measured over their first three seasons). Your board rank is treated like a pick number.
+    """
+    path = OUT_DIR / "expected_by_pick.json"
+    if not path.exists():
+        print("expected_by_pick.json not found: run scripts/expected_curve.py for vs. pick / vs. your rank")
+        return None
+    curve = json.loads(path.read_text(encoding="utf-8"))
+    by_pick = {int(k): v for k, v in curve["by_pick"].items()}
+    last = max(by_pick)
+    for p in players:
+        if p.get("pick"):
+            exp = by_pick[min(p["pick"], last)]
+            p["expected_at_pick"] = exp
+            p["vs_pick"] = round(p["score"] - exp, 1)
+            p["vs_pick_label"] = expectation_label(p["vs_pick"])
+        if p.get("board_rank"):
+            exp = by_pick[min(p["board_rank"], last)]
+            p["expected_at_board"] = exp
+            p["vs_board"] = round(p["score"] - exp, 1)
+            p["vs_board_label"] = expectation_label(p["vs_board"])
+    return {"classes": curve["classes"], "seasons_measured": curve["seasons_measured"],
+            "players": curve["players"], "labels": [[f, l] for f, l in EXPECTATION_LABELS[:-1]]}
+
+
+def draft_entries(year):
     picks = nfl.load_draft_picks([year]).sort("pick")
-    entries = [{"name": p["pfr_player_name"], "pick": p["pick"], "round": p["round"], "team": p["team"],
-                "draft_position": p["position"], "college": p["college"],
-                "gsis_id": p["gsis_id"], "pfr_id": p["pfr_player_id"]} for p in picks.iter_rows(named=True)]
+    return [{"name": p["pfr_player_name"], "pick": p["pick"], "round": p["round"], "team": p["team"],
+             "draft_position": p["position"], "college": p["college"],
+             "gsis_id": p["gsis_id"], "pfr_id": p["pfr_player_id"]} for p in picks.iter_rows(named=True)]
+
+
+def main(year):
+    entries = draft_entries(year)
 
     board_path = OUT_DIR / f"{year}.json"
     board = json.loads(board_path.read_text(encoding="utf-8"))["players"] if board_path.exists() else []
@@ -458,6 +512,7 @@ def main(year):
             e["slug"] = b["slug"] if b.get("reports") else None
 
     players, not_graded, pos_value, seasons, season_fraction, current = build(year, entries)
+    expectation = attach_expectations(players)
     data = {
         "year": year,
         "seasons": seasons,
@@ -468,6 +523,7 @@ def main(year):
         "players": players,
         "not_graded": not_graded,
         "board_not_found": not_found,
+        "expectation": expectation,
     }
     out = OUT_DIR / f"{year}_value.json"
     out.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
