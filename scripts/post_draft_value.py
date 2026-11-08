@@ -219,7 +219,37 @@ def hurt_weeks_for(side, weeks_played, team_weeks, injury):
     hurt = set(injury.get("out", ())) | {
         w for w in injury.get("listed", ())
         if w not in weeks_played or not weeks_played[w][1 + idx]}
-    return {w for w in hurt if w in team_weeks}
+    hurt = {w for w in hurt if w in team_weeks}
+    return hurt | left_hurt_weeks(idx, weeks_played, team_weeks, hurt), hurt
+
+
+# A game he left hurt: he played under this share of his usual snaps, and he was hurt the next week
+LEFT_HURT_SHARE = 0.5
+
+
+def left_hurt_weeks(idx, weeks_played, team_weeks, hurt):
+    """Games he played part of and then got hurt in (he's out or injured the following game).
+
+    "Part of" = under half his usual snap share (the median of his other games that season; if he
+    has none, under half the team's snaps). These are excused like games missed injured, so leaving
+    a game hurt doesn't look like a benching.
+    """
+    def share(w):
+        team = team_weeks[w][idx]
+        return weeks_played[w][1 + idx] / team if team else 0.0
+
+    order = sorted(team_weeks)
+    played = [w for w in order if w in weeks_played and w not in hurt and weeks_played[w][1 + idx]]
+    left = set()
+    for w in played:
+        later = [x for x in order if x > w]
+        if not later or later[0] not in hurt:
+            continue
+        others = sorted(share(x) for x in played if x != w)
+        usual = others[len(others) // 2] if others else 1.0
+        if share(w) < LEFT_HURT_SHARE * usual:
+            left.add(w)
+    return left
 
 
 def season_line(side, weeks_played, team_weeks, hurt, counted_fraction):
@@ -373,20 +403,23 @@ def build(year, entries, through=None):
             else:
                 team = roster_team.get((gsis, s))
             team_weeks = team_week.get((s, team), {}) if team else {}
-            hurt = hurt_weeks_for(side, weeks_played, team_weeks, hurt_weeks.get((gsis, s), {}))
-            lines.append((s, team, weeks_played, team_weeks, hurt))
+            # hurt = games missed injured plus games he left hurt (both excused); missed = the first kind
+            hurt, missed = hurt_weeks_for(side, weeks_played, team_weeks, hurt_weeks.get((gsis, s), {}))
+            lines.append((s, team, weeks_played, team_weeks, hurt, missed))
         # Injury allowance: excuse injured games up to INJURY_ALLOWANCE of his team's games so far;
         # beyond that, the extra share of injured games counts as games he didn't play.
-        total_games = sum(len(tw) for _, _, _, tw, _ in lines)
-        total_hurt = sum(len(h) for *_, h in lines)
+        total_games = sum(len(tw) for _, _, _, tw, _, _ in lines)
+        total_hurt = sum(len(h) for *_, h, _ in lines)
         allowed = INJURY_ALLOWANCE * total_games
         counted_fraction = (total_hurt - allowed) / total_hurt if total_hurt > allowed else 0.0
 
         # Pass 2: value per season
         season_rows, weighted, total_weight = [], 0.0, 0.0
         past_grades = []
-        for s, team, weeks_played, team_weeks, hurt in lines:
+        for s, team, weeks_played, team_weeks, hurt, missed in lines:
             share, games, counted = season_line(side, weeks_played, team_weeks, hurt, counted_fraction)
+            left = len(hurt - missed)
+            games += left  # he played in the games he left hurt
             # Snap share relative to a typical starter at his position (a 62% RB is full-time)
             rel_share = min(1.0, share / starter_share[room]) if starter_share.get(room) else share
             grade = single_season.get((gsis, s))
@@ -406,7 +439,8 @@ def build(year, entries, through=None):
             weight = recency_weight(s, current, room) * (counted if team_weeks else 1.0)
             season_rows.append({"season": s, "team": team, "snap_share": round(share, 3),
                                 "starter_share": round(rel_share, 3), "games": games,
-                                "games_missed_injured": len(hurt),
+                                "games_missed_injured": len(missed),
+                                "games_left_injured": left,
                                 "injured_games_counted": round(counted_fraction * len(hurt), 1),
                                 "grade": grade,
                                 "grade_used": round(grade_used, 1) if grade_used is not None else None,
