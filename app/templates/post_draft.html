@@ -12,7 +12,11 @@
 
 {% macro verdict(diff, label) -%}
   {%- if diff is not none and label -%}
+  {%- if label == 'Too early' -%}
+  <span class="verdict v-too-early" title="Hasn't played enough yet to judge ({{ '%+.1f'|format(diff) }} vs. expected so far)">Too early</span>
+  {%- else -%}
   <span class="verdict v-{{ label|lower|replace(' ', '-') }}"><span class="v-num">{{ '%+.1f'|format(diff) }}</span> {{ label }}</span>
+  {%- endif -%}
   {%- endif -%}
 {%- endmacro %}
 
@@ -38,6 +42,12 @@
   <h1>Post-Draft Analysis</h1>
   {% if value %}
   <p class="lede">How much each player in the {{ year }} class has been worth to his team so far, ranked within his position.</p>
+  {% if value.seasons|length < 3 %}
+  <p class="early-read"><strong>Early read.</strong>
+    {% if value.seasons|length == 1 %}This class has played part of one season, so these scores rest on a handful of games and will move a lot.
+    {% else %}This class has played one full season and part of a second, so these scores will still move.{% endif %}
+    Picks are compared with what past classes looked like at the same stage ({{ value.seasons|length }} season{{ 's' if value.seasons|length > 1 }}), not after three.</p>
+  {% endif %}
   {% endif %}
 </section>
 
@@ -88,8 +98,10 @@
   {% if value.expectation %}
   <p class="draft-note">Each score is compared with what a typical player taken at that pick becomes (from the
     {{ value.expectation.classes[0] }}–{{ value.expectation.classes[-1] }} draft classes, {{ value.expectation.players }} players,
-    measured over their first {{ value.expectation.seasons_measured }} seasons). <strong>Vs. your rank</strong> holds him to the
-    expectation of a pick at your big board rank. Steal +30 or more · Above +10 · As expected within 10 · Below −10 · Miss −30 or worse.</p>
+    measured over {% if value.expectation.seasons_measured == 1 %}their rookie season{% else %}their first {{ value.expectation.seasons_measured }} seasons{% endif %}). <strong>Vs. your rank</strong> holds him to the
+    expectation of a pick at your big board rank. Steal +30 or more · Above +10 · As expected within 10 · Below −10 · Miss −30 or worse.
+    {% if value.expectation.too_early %}<strong>Too early</strong>: he's played fewer than {{ value.expectation.too_early.games }} games
+    or under {{ (value.expectation.too_early.share * 100)|round|int }}% of a starter's snaps, so there's no verdict yet (his score is still shown).{% endif %}</p>
   {% endif %}
   <div class="table-scroll">
     <table class="rank-table value-table draft-table">

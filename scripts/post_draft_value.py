@@ -455,32 +455,52 @@ def expectation_label(diff):
     return "Miss"
 
 
-def attach_expectations(players):
+# "Too early": in a class that hasn't played three seasons yet, a player who has barely played (a rookie
+# QB sitting behind a veteran, a developmental pick) gets no verdict yet; his score is still shown.
+TOO_EARLY_GAMES = 4          # fewer games played than this
+TOO_EARLY_SHARE = 0.15       # or under this share of a starter's snaps, on average across his seasons
+
+
+def too_early(player, seasons_played):
+    if seasons_played >= 3:
+        return False
+    rows = player.get("seasons", [])
+    games = sum(r.get("games") or 0 for r in rows)
+    share = sum(r.get("starter_share") or 0 for r in rows) / len(rows) if rows else 0.0
+    return games < TOO_EARLY_GAMES or share < TOO_EARLY_SHARE
+
+
+def attach_expectations(players, seasons_played):
     """Compare each score with what's expected at his draft slot and at your board rank.
 
-    Expected scores come from app/data/expected_by_pick.json (scripts/expected_curve.py: past classes
-    measured over their first three seasons). Your board rank is treated like a pick number.
+    Expected scores come from app/data/expected_by_pick_<N>.json (scripts/expected_curve.py: past classes
+    measured over their first N seasons, N = seasons this class has played, capped at 3), so a rookie
+    class is held to what rookies usually do. Your board rank is treated like a pick number.
     """
-    path = OUT_DIR / "expected_by_pick.json"
+    stage = min(3, seasons_played)
+    path = OUT_DIR / f"expected_by_pick_{stage}.json"
     if not path.exists():
-        print("expected_by_pick.json not found: run scripts/expected_curve.py for vs. pick / vs. your rank")
+        print(f"{path.name} not found: run scripts/expected_curve.py {stage} for vs. pick / vs. your rank")
         return None
     curve = json.loads(path.read_text(encoding="utf-8"))
     by_pick = {int(k): v for k, v in curve["by_pick"].items()}
     last = max(by_pick)
     for p in players:
+        early = too_early(p, seasons_played)
+        p["too_early"] = early
         if p.get("pick"):
             exp = by_pick[min(p["pick"], last)]
             p["expected_at_pick"] = exp
             p["vs_pick"] = round(p["score"] - exp, 1)
-            p["vs_pick_label"] = expectation_label(p["vs_pick"])
+            p["vs_pick_label"] = "Too early" if early else expectation_label(p["vs_pick"])
         if p.get("board_rank"):
             exp = by_pick[min(p["board_rank"], last)]
             p["expected_at_board"] = exp
             p["vs_board"] = round(p["score"] - exp, 1)
-            p["vs_board_label"] = expectation_label(p["vs_board"])
+            p["vs_board_label"] = "Too early" if early else expectation_label(p["vs_board"])
     return {"classes": curve["classes"], "seasons_measured": curve["seasons_measured"],
-            "players": curve["players"], "labels": [[f, l] for f, l in EXPECTATION_LABELS[:-1]]}
+            "players": curve["players"], "labels": [[f, l] for f, l in EXPECTATION_LABELS[:-1]],
+            "too_early": {"games": TOO_EARLY_GAMES, "share": TOO_EARLY_SHARE} if seasons_played < 3 else None}
 
 
 def draft_entries(year):
@@ -516,7 +536,7 @@ def main(year):
             e["slug"] = b["slug"] if b.get("reports") else None
 
     players, not_graded, pos_value, seasons, season_fraction, current = build(year, entries)
-    expectation = attach_expectations(players)
+    expectation = attach_expectations(players, len(seasons))
     data = {
         "year": year,
         "seasons": seasons,
@@ -541,5 +561,5 @@ def main(year):
 
 
 if __name__ == "__main__":
-    for y in [int(a) for a in sys.argv[1:]] or [2024]:
+    for y in [int(a) for a in sys.argv[1:]] or [2024, 2025, 2026]:
         main(y)
