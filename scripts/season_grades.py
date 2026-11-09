@@ -3,21 +3,29 @@
 Each season is graded on that season's stats only, so a real jump or drop shows up the year it happens
 (the Sports_Analytics_Project grades blend three seasons, which lags). For each position room:
   1. Compute the room's stats for every player that season (table STATS below).
-  2. Among the season's regulars in the room (enough opportunities, prorated for a partial season),
-     turn each stat into a z-score (sign flipped for lower-is-better stats) and take the weighted average.
-  3. Grade = percentile of that composite among the regulars.
-  4. Players below the regular threshold are placed on the same scale, then pulled toward 50 in
-     proportion to how far short of the threshold they are, so a handful of snaps can't produce an extreme.
+  2. Turn each stat into a z-score against a FIXED yardstick: the mean and spread of that stat among
+     the room's regulars across the 2018-2025 seasons (scripts/grade_reference.json, built by
+     scripts/grade_reference.py), sign flipped for lower-is-better stats, and take the weighted average.
+  3. Grade = 100 x normal CDF(composite / the reference composite's spread). 50 = a typical regular's
+     season. It's a distance, not a rank: players with nearly identical stats get nearly identical
+     grades, and a dominant season sits well clear of a merely good one.
+  4. Players below the regular threshold (enough opportunities, prorated for a partial season) are
+     pulled toward 50 in proportion to how far short they are, so a handful of snaps can't produce an
+     extreme.
 
 Offense uses nflreadpy player stats; defense uses Pro Football Reference's charted stats (pressures,
 coverage, missed tackles) with defensive snaps from the snap counts.
 """
+import json
 import math
+from pathlib import Path
 
 import nflreadpy as nfl
 import polars as pl
 
 SEASON_GAMES = 17
+REFERENCE_PATH = Path(__file__).resolve().parent / "grade_reference.json"
+REFERENCE_SEASONS = list(range(2018, 2026))  # full seasons that set the fixed yardstick
 
 # room -> list of (stat, weight, lower_is_better)
 # Each room mixes efficiency (rates) with raw production per game played (yards, TDs, pressures, tackles),
@@ -155,51 +163,72 @@ def defense_table(seasons, room_by_gsis, pfr_to_gsis):
     return rows
 
 
-def _percentile(sorted_vals, x):
-    lo, hi = 0, len(sorted_vals)
-    while lo < hi:
-        mid = (lo + hi) // 2
-        if sorted_vals[mid] < x:
-            lo = mid + 1
-        else:
-            hi = mid
-    return 100.0 * lo / max(1, len(sorted_vals) - 1) if len(sorted_vals) > 1 else 50.0
-
-
-def grade_rows(rows, season_fraction):
-    """Add a 0-100 'grade' to each row, graded within (room, season)."""
+def _regulars(rows, season_fraction):
+    """(room, season) -> (all members, regulars, the regular threshold)."""
     groups = {}
     for key, r in rows.items():
         groups.setdefault((r["room"], key[1]), []).append(r)
+    out = {}
     for (room, season), members in groups.items():
         need = REGULAR[room] * season_fraction.get(season, 1.0)
-        regulars = [r for r in members if r["opps"] >= need]
-        if len(regulars) < 5:
-            for r in members:
-                r["grade"] = None
-            continue
-        stats = STATS[room]
+        out[(room, season)] = (members, [r for r in members if r["opps"] >= need], need)
+    return out
+
+
+def _composite(r, room, moments):
+    total = 0.0
+    for stat, w, low in STATS[room]:
+        mean, sd = moments[stat]
+        v = r[stat] if r[stat] is not None else mean
+        z = max(-3.0, min(3.0, (v - mean) / sd))
+        total += w * (-z if low else z)
+    return total
+
+
+def build_reference(rows):
+    """Fixed yardstick from full seasons: per room, each stat's mean/sd among regulars (pooled across
+    seasons) and the spread of the resulting composite."""
+    pooled = {}
+    for (room, _season), (_members, regulars, _need) in _regulars(rows, {}).items():
+        pooled.setdefault(room, []).extend(regulars)
+    ref = {}
+    for room, regulars in pooled.items():
         moments = {}
-        for stat, _w, _low in stats:
+        for stat, _w, _low in STATS[room]:
             vals = [r[stat] for r in regulars if r[stat] is not None]
             mean = sum(vals) / len(vals)
             sd = math.sqrt(sum((v - mean) ** 2 for v in vals) / max(1, len(vals) - 1)) or 1.0
-            moments[stat] = (mean, sd)
+            moments[stat] = [mean, sd]
+        comps = [_composite(r, room, moments) for r in regulars]
+        cm = sum(comps) / len(comps)
+        csd = math.sqrt(sum((c - cm) ** 2 for c in comps) / max(1, len(comps) - 1)) or 1.0
+        ref[room] = {"regulars": len(regulars), "stats": moments, "composite_mean": cm, "composite_sd": csd}
+    return ref
 
-        def composite(r):
-            total = 0.0
-            for stat, w, low in stats:
-                mean, sd = moments[stat]
-                v = r[stat] if r[stat] is not None else mean
-                z = max(-3.0, min(3.0, (v - mean) / sd))
-                total += w * (-z if low else z)
-            return total
 
-        reg_scores = sorted(composite(r) for r in regulars)
+def load_reference():
+    if not REFERENCE_PATH.exists():
+        raise SystemExit(f"{REFERENCE_PATH.name} missing: run python scripts/grade_reference.py first")
+    data = json.loads(REFERENCE_PATH.read_text(encoding="utf-8"))
+    for room in data["rooms"].values():
+        room["stats"] = {k: tuple(v) for k, v in room["stats"].items()}
+    return data["rooms"]
+
+
+def grade_rows(rows, season_fraction, reference=None):
+    """Add a 0-100 'grade' to each row on the fixed yardstick (see the module docstring)."""
+    reference = reference or load_reference()
+    for (room, season), (members, regulars, need) in _regulars(rows, season_fraction).items():
+        ref = reference.get(room)
+        if ref is None or len(regulars) < 5:
+            for r in members:
+                r["grade"] = None
+            continue
         for r in members:
-            pct = _percentile(reg_scores, composite(r))
+            z = (_composite(r, room, ref["stats"]) - ref["composite_mean"]) / ref["composite_sd"]
+            grade = 50.0 * (1.0 + math.erf(z / math.sqrt(2.0)))  # normal CDF, 0-100
             trust = min(1.0, r["opps"] / need) if need else 1.0
-            r["grade"] = round(50 + (pct - 50) * trust, 1)
+            r["grade"] = round(50 + (grade - 50) * trust, 1)
 
 
 def pfr_gsis_map(seasons):

@@ -10,7 +10,7 @@ Value per season = positional value x snap share x grade multiplier
                     INJURY_ALLOWANCE of his team's games across his career; past that, missed games count
                     as not playing. Benchings and healthy scratches count as zero.
   grade multiplier  GRADE_MIN_MULT (grade 0) to GRADE_MAX_MULT (grade 100), from a single-season grade
-                    (season_grades.py: that season's stats only, a percentile among the season's regulars at
+                    (season_grades.py: that season's stats only, graded against a fixed multi-season yardstick for regulars at
                     the position). Wide enough that quality separates starters, while a 90%-snap player graded
                     40 still outranks a 30%-snap backup graded 80. No grade for a season = neutral 50.
 
