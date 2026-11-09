@@ -98,7 +98,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Barlow", system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
   font-variant-numeric: tabular-nums;
@@ -116,7 +116,7 @@ a { color: inherit; }
 .brand, .main-nav a, .eyebrow, h1, h2, h3, .stat, .pos,
 .rank-table th, .crumbs, .pos-tabs a, .player-sub, .stat-strip dt,
 .grade-label, .grade-note, .score-total {
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   text-transform: uppercase;
 }
 
@@ -173,7 +173,7 @@ a { color: inherit; }
   gap: 8px;
   padding: 10px 12px;
   font: inherit;
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.05rem;
   letter-spacing: 0.06em;
@@ -320,7 +320,7 @@ h2 {
 
 .stat small {
   margin-left: 6px;
-  font-family: "Barlow", system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
@@ -427,7 +427,7 @@ a.position:hover {
 
 .tier-count {
   margin-left: auto;
-  font-family: "Barlow", system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
@@ -453,7 +453,7 @@ a.position:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--muted);
@@ -540,7 +540,7 @@ a.position:hover {
 
 .rank-table .rank {
   width: 1%;
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--muted);
@@ -689,7 +689,7 @@ a.position:hover {
 
 .stat-strip dd {
   margin: 2px 0 0;
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.1;
@@ -780,7 +780,7 @@ a.position:hover {
 .score-list li + li { margin-top: 12px; }
 
 .score-val {
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.25rem;
 }
@@ -839,7 +839,7 @@ a.position:hover {
 }
 
 .grade-value {
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 2.25rem;
   line-height: 1.1;
@@ -863,7 +863,7 @@ a.position:hover {
 
 .method summary {
   padding: 14px 20px;
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.08em;
@@ -903,7 +903,7 @@ a.position:hover {
 
 .season-head .sub {
   display: block;
-  font-family: "Barlow", system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.65rem;
   letter-spacing: 0.06em;
@@ -944,7 +944,7 @@ a.position:hover {
   display: inline-block;
   min-width: 2.6em;
   padding: 1px 6px;
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
   text-align: center;
@@ -970,7 +970,7 @@ a.position:hover {
 
 .draft-table .rd {
   margin-left: 6px;
-  font-family: "Barlow", system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.7rem;
   color: var(--muted);
@@ -998,7 +998,7 @@ a.position:hover {
 
 .divider-row td {
   padding: 12px 16px !important;
-  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1070,3 +1070,9 @@ button:focus-visible {
   color: var(--text);
 }
 .v-too-early { color: var(--muted); border-style: dashed; border-color: var(--border); }
+
+/* ---------- Fonts ---------- */
+:root {
+  --font-body: "Saira", system-ui, sans-serif;
+  --font-display: "Saira Condensed", "Saira", system-ui, sans-serif;
+}
