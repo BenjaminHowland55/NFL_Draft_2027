@@ -46,8 +46,8 @@ STATS = {
              ("pressures_per_game", 0.25, False), ("sacks_per_game", 0.1, False)],
     "IDL": [("pressure_rate", 0.4, False), ("sack_rate", 0.1, False), ("missed_tackle_rate", 0.15, True),
             ("pressures_per_game", 0.25, False), ("sacks_per_game", 0.1, False)],
-    "LB": [("missed_tackle_rate", 0.25, True), ("tackle_rate", 0.15, False), ("yards_allowed_per_snap", 0.2, True),
-           ("pressure_rate", 0.1, False), ("tackles_per_game", 0.3, False)],
+    "LB": [("missed_tackle_rate", 0.2, True), ("tackle_rate", 0.15, False), ("yards_allowed_per_snap", 0.2, True),
+           ("pressure_rate", 0.1, False), ("tackles_per_game", 0.2, False), ("sacks_per_game", 0.15, False)],
     "CB": [("yards_allowed_per_snap", 0.4, True), ("rating_allowed", 0.25, True),
            ("missed_tackle_rate", 0.2, True), ("int_rate", 0.15, False)],
     "S": [("yards_allowed_per_snap", 0.25, True), ("rating_allowed", 0.15, True), ("int_rate", 0.15, False),
@@ -86,7 +86,7 @@ def _safe(num, den):
     return num / den if den else None
 
 
-def offense_table(seasons):
+def offense_table(seasons, room_by_gsis=None):
     """One row per (gsis_id, season) with offensive stats and opportunities."""
     ps = nfl.load_player_stats(seasons).filter(pl.col("season_type") == "REG")
     ps = ps.with_columns((pl.col("passing_cpoe").fill_null(0) * pl.col("attempts")).alias("cpoe_x_att"))
@@ -100,7 +100,11 @@ def offense_table(seasons):
             "cpoe_x_att", "passing_yards", "passing_tds", "rushing_tds", "receiving_tds"]])
     rows = {}
     for r in agg.iter_rows(named=True):
-        room = OFFENSE_POS.get(r["position"])
+        # The position room he's valued in, if known (e.g. a fullback listed as a running back here but
+        # valued as a tight end), else his listed position
+        room = (room_by_gsis or {}).get(r["player_id"])
+        if room not in ("QB", "RB", "WR", "TE"):
+            room = OFFENSE_POS.get(r["position"])
         if not room:
             continue
         plays = r["attempts"] + r["sacks_suffered"] + r["carries"]
@@ -139,6 +143,11 @@ def defense_table(seasons, room_by_gsis, pfr_to_gsis):
         *[pl.col(c).fill_null(0).sum() for c in [
             "def_ints", "def_targets", "def_yards_allowed", "def_sacks", "def_pressures",
             "def_tackles_combined", "def_missed_tackles", "rat_x_tgt"]])
+    # Sacks from the NFL's own weekly stats: current through the latest week (the charted stats above can
+    # trail by a week), and the official count
+    ps = nfl.load_player_stats(seasons).filter(pl.col("season_type") == "REG").group_by(
+        ["player_id", "season"]).agg(pl.col("def_sacks").fill_null(0).sum(), pl.col("week").n_unique().alias("g"))
+    official_sacks = {(g, s): (sk, n) for g, s, sk, n in ps.iter_rows()}
     rows = {}
     for r in agg.iter_rows(named=True):
         gsis = pfr_to_gsis.get(r["pfr_player_id"])
@@ -147,17 +156,18 @@ def defense_table(seasons, room_by_gsis, pfr_to_gsis):
             continue
         n = snap_map.get((r["pfr_player_id"], r["season"]), 0)
         tackle_attempts = r["def_tackles_combined"] + r["def_missed_tackles"]
+        sacks, sack_games = official_sacks.get((gsis, r["season"]), (r["def_sacks"], r["games"]))
         rows[(gsis, r["season"])] = {
             "room": room, "name": r["name"], "opps": n,
             "pressure_rate": _safe(r["def_pressures"], n),
-            "sack_rate": _safe(r["def_sacks"], n),
+            "sack_rate": _safe(sacks, n),
             "missed_tackle_rate": _safe(r["def_missed_tackles"], tackle_attempts),
             "tackle_rate": _safe(r["def_tackles_combined"], n),
             "yards_allowed_per_snap": _safe(r["def_yards_allowed"], n),
             "rating_allowed": _safe(r["rat_x_tgt"], r["def_targets"]),
             "int_rate": _safe(r["def_ints"], n),
             "pressures_per_game": _safe(r["def_pressures"], r["games"]),
-            "sacks_per_game": _safe(r["def_sacks"], r["games"]),
+            "sacks_per_game": _safe(sacks, sack_games),
             "tackles_per_game": _safe(r["def_tackles_combined"], r["games"]),
         }
     return rows
@@ -340,7 +350,7 @@ def offensive_line_table(seasons, pfr_to_gsis):
 def season_grades(seasons, room_by_gsis, season_fraction):
     """(gsis_id, season) -> grade for every offensive skill player, offensive lineman and defender."""
     pfr_to_gsis = pfr_gsis_map(seasons)
-    rows = offense_table(seasons)
+    rows = offense_table(seasons, room_by_gsis)
     rows.update(defense_table(seasons, room_by_gsis, pfr_to_gsis))
     # Offensive line estimate (offensive_line_table) is not used: free data can't separate a lineman
     # from his teammates well enough (it graded whole lines, not players). Linemen stay ungraded.

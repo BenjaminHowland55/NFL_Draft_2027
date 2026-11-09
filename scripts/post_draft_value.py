@@ -45,7 +45,7 @@ import pymysql
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from import_data import name_key, near_match, split_name  # noqa: E402
-from season_grades import pfr_gsis_map, season_grades  # noqa: E402
+from season_grades import REFERENCE_SEASONS, pfr_gsis_map, season_grades  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 OUT_DIR = REPO / "app" / "data"
@@ -371,10 +371,21 @@ def build(year, entries, through=None):
     season_fraction = {}
     for (s, _team), weeks in team_week.items():
         season_fraction[s] = max(season_fraction.get(s, 0), min(1.0, len(weeks) / SEASON_GAMES))
-    single_season, grade_rows = season_grades(seasons, rooms_by_contract, season_fraction)
+    # Each player is graded in the same position room he's valued in (e.g. a rookie whose contract lists
+    # him as an edge rusher but who plays off-ball linebacker is graded as a linebacker).
+    entry_rooms = {}
+    for base in entries:
+        r = (grades.get(base["gsis_id"], {}).get("room") or rooms_by_contract.get(base["gsis_id"])
+             or DRAFT_ROOM.get(base["draft_position"]))
+        if base["gsis_id"] and r and r != "OL":
+            entry_rooms[base["gsis_id"]] = r
+    grade_room = {**rooms_by_contract, **entry_rooms}
+    single_season, grade_rows = season_grades(seasons, grade_room, season_fraction)
     # Offensive linemen drafted as plain "OL": tackle or interior from their depth chart spot
     ol_room = {g: r["room"] for (g, _s), r in grade_rows.items() if r.get("room") in ("OT", "IOL")}
-    starter_share = starter_shares(seasons, rooms_by_contract)
+    # Starter levels come from the fixed reference seasons (like the grade yardstick), so they don't
+    # swing week to week with a season in progress or depend on which seasons a class has played.
+    starter_share = starter_shares(REFERENCE_SEASONS, grade_room)
 
     players, not_graded = [], []
     for base in entries:
