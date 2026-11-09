@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}{{ year }} Watch List · NFL Draft Archive{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <p class="eyebrow">{{ year }} NFL Draft</p>
+  <h1>Watch List</h1>
+  <p class="lede">Prospects to watch film on for the {{ year }} class. This is <strong>not</strong> this site's ranking: it's a
+    consensus of public big boards, used to decide who's worth watching. The {{ year }} big board and scouting reports
+    replace it as evaluations are completed.</p>
+</section>
+
+<nav class="pos-tabs" aria-label="Position">
+  <a href="{{ url_for('watch_list', year=year) }}" class="tab-all{% if view == 'ALL' %} active{% endif %}" {% if view == 'ALL' %}aria-current="page"{% endif %}>Consensus board</a>
+  {% for pos in positions %}
+  <a href="{{ url_for('watch_list', year=year, pos=pos) }}" {% if view == pos %}class="active" aria-current="page"{% endif %}>{{ pos }}</a>
+  {% endfor %}
+</nav>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>{% if view == 'ALL' %}Consensus Board{% else %}{{ view }} Watch List{% endif %}</h2>
+    <span class="stat">{{ rows|length }}<small>players</small></span>
+  </div>
+  <div class="table-scroll">
+    <table class="rank-table">
+      <thead>
+        <tr>
+          {% if view == 'ALL' %}
+          <th class="num">Rk</th><th>Player</th><th>Pos</th><th>School</th>
+          {% else %}
+          <th class="num">{{ view }} Rk</th><th>Player</th><th>School</th><th class="num">Consensus Rk</th>
+          {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in rows %}
+        <tr>
+          {% if view == 'ALL' %}
+          <td class="num rank">{{ p.rank }}</td>
+          <td class="player-cell">{{ p.name }}{% if p.may_return %} <span class="wl-flag" title="Some boards don't expect him to enter this draft">may return to school</span>{% endif %}</td>
+          <td>{{ p.group }}</td>
+          <td class="muted">{{ p.school }}</td>
+          {% else %}
+          <td class="num rank">{{ p.pos_rank }}</td>
+          <td class="player-cell">{{ p.name }}{% if p.may_return %} <span class="wl-flag" title="Some boards don't expect him to enter this draft">may return to school</span>{% endif %}{% if not p.on_board %} <span class="wl-flag" title="Outside the consensus top {{ wl.board|length }}; on the list for position depth">depth</span>{% endif %}</td>
+          <td class="muted">{{ p.school }}</td>
+          <td class="num">{{ p.rank }}</td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="wl-sources">Consensus of
+    {% for s in wl.sources %}<a href="{{ s.url }}" rel="noopener">{{ s.name }}</a>{{ ', ' if not loop.last and loop.revindex > 2 }}{{ ' and ' if loop.revindex == 2 }}{% endfor %}
+    (average rank across the boards), as of {{ wl.as_of }}.{% if view != 'ALL' %} Position lists go at least as deep as a typical class is covered here at each position; "depth" marks players outside the consensus top {{ wl.board|length }}.{% endif %}</p>
+</section>
+{% endblock %}

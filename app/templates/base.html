@@ -27,7 +27,9 @@
           </button>
           <ul class="year-dropdown" id="year-menu-{{ y }}">
             {% for endpoint, label in sections %}
+            {% if endpoint != 'watch_list' or y in watchlist_years %}
             <li><a href="{{ url_for(endpoint, year=y) }}" {% if year == y and section == endpoint %}aria-current="page"{% endif %}>{{ label }}</a></li>
+            {% endif %}
             {% endfor %}
           </ul>
         </div>

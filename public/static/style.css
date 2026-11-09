@@ -1076,3 +1076,24 @@ button:focus-visible {
   --font-body: "Saira", system-ui, sans-serif;
   --font-display: "Saira Condensed", "Saira", system-ui, sans-serif;
 }
+
+/* Watch list: consensus of public boards */
+.wl-flag {
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.wl-sources {
+  margin: 0;
+  padding: 14px 20px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+.wl-sources a { color: var(--text); }

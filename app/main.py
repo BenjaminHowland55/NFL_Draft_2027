@@ -107,12 +107,24 @@ def inject_site_data():
 
 # The per-year dropdown menu: (view function name, label)
 SECTIONS = [
+    ("watch_list", "Watch List"),
     ("big_board", "Big Board"),
     ("rankings", "Rankings"),
     ("reports", "Scouting Reports"),
     ("post_draft", "Post-Draft Analysis"),
 ]
 app.jinja_env.globals["sections"] = SECTIONS
+
+
+# Watch list: a consensus of public big boards (app/data/<year>_watchlist.json), used to pick which
+# players to watch before the year's own rankings exist. Only years that have one show it in the menu.
+def load_watchlist(year):
+    path = DATA_DIR / f"{year}_watchlist.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+
+
+WATCHLISTS = {year: load_watchlist(year) for year in YEARS}
+app.jinja_env.globals["watchlist_years"] = {y for y, w in WATCHLISTS.items() if w}
 
 OPTIONAL_COLUMNS = ["size_score", "athleticism", "tape_grade"]
 
@@ -142,6 +154,21 @@ def index():
 def big_board(year):
     data = year_data(year)
     return render_template("big_board.html", year=year, section="big_board", data=data)
+
+
+@app.route("/<int:year>/watch-list")
+def watch_list(year):
+    if year not in YEARS:
+        abort(404)
+    wl = WATCHLISTS.get(year)
+    if not wl:
+        abort(404)
+    view = (request.args.get("pos") or "ALL").upper()
+    if view != "ALL" and view not in wl["positions"]:
+        view = "ALL"
+    rows = wl["board"] if view == "ALL" else wl["positions"][view]
+    return render_template("watch_list.html", year=year, section="watch_list", wl=wl, view=view, rows=rows,
+                           positions=list(wl["positions"]))
 
 
 @app.route("/<int:year>/rankings")
