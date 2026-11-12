@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import grade_meter, tier_tag %}
+{% from "_macros.html" import grade_meter %}
 
 {% block title %}{{ year }} {{ pos }} Rankings · Ben's Big Board{% endblock %}
 
@@ -38,13 +38,17 @@
           {% if 'athleticism' in cols %}<th class="num">Athl.</th>{% endif %}
           {% if 'tape_grade' in cols %}<th class="num">Tape</th>{% endif %}
           <th class="num">Grade</th>
-          <th>Tier</th>
           <th class="num">Overall</th>
         </tr>
       </thead>
       <tbody>
         {% for p in players %}
-        <tr>
+        {% if loop.first or p.tier_num != loop.previtem.tier_num %}
+        <tr class="tier-break{% if p.tier_num %} tier-{{ p.tier_num }}{% endif %}">
+          <td colspan="{{ 9 + cols|length }}"><span class="swatch" aria-hidden="true"></span>{{ p.tier or 'No tier' }}</td>
+        </tr>
+        {% endif %}
+        <tr class="tier-row{% if p.tier_num %} tier-{{ p.tier_num }}{% endif %}">
           <td class="num rank">{{ p.position_rank or '—' }}</td>
           <td class="player-cell">
             {% if p.reports %}<a href="{{ url_for('player_page', year=year, slug=p.slug) }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}
@@ -58,11 +62,10 @@
           {% if 'athleticism' in cols %}<td class="num">{{ p.athleticism|grade(1) }}</td>{% endif %}
           {% if 'tape_grade' in cols %}<td class="num">{{ p.tape_grade|grade(1) }}</td>{% endif %}
           <td class="num strong">{{ grade_meter(year, p.grade, p.tier_num) }}</td>
-          <td>{{ tier_tag(p.tier_num, p.tier) }}</td>
           <td class="num muted">{{ p.rank or '—' }}</td>
         </tr>
         {% else %}
-        <tr><td colspan="{{ 10 + cols|length }}" class="empty">No players ranked at {{ pos }}.</td></tr>
+        <tr><td colspan="{{ 9 + cols|length }}" class="empty">No players ranked at {{ pos }}.</td></tr>
         {% endfor %}
       </tbody>
     </table>

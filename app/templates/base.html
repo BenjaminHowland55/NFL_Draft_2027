@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="{{ year_themes.get(year, year_themes[current_year]) }}">
+<html lang="en" data-theme="{{ year_themes.get(year, year_themes[current_year]) }}" data-look="paper" data-yearink>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <script>try { var l = localStorage.getItem("look"); if (l && l !== "classic") document.documentElement.dataset.look = l; } catch (e) {}</script>
 </head>
 <body>
   <header class="site-header">
@@ -43,29 +42,6 @@
     {% block content %}{% endblock %}
   </main>
 
-  <div class="look-switch" role="group" aria-label="Preview look">
-    <button type="button" data-set-look="classic">Current</button>
-    <button type="button" data-set-look="paper">Newsprint</button>
-    <button type="button" data-set-look="sheet">Scout sheet</button>
-  </div>
-  <script>
-    (function () {
-      var btns = document.querySelectorAll("[data-set-look]");
-      function mark() {
-        var cur = document.documentElement.dataset.look || "classic";
-        btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.setLook === cur)); });
-      }
-      btns.forEach(function (b) {
-        b.addEventListener("click", function () {
-          var l = b.dataset.setLook;
-          if (l === "classic") delete document.documentElement.dataset.look; else document.documentElement.dataset.look = l;
-          try { localStorage.setItem("look", l); } catch (e) {}
-          mark();
-        });
-      });
-      mark();
-    })();
-  </script>
   <script>
     // Year dropdowns: click/tap to open (hover also opens on mouse devices, via CSS).
     (function () {

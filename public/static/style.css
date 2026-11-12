@@ -1104,7 +1104,7 @@ button:focus-visible {
 .wl-sources a { color: var(--text); }
 
 /* =========================================================================
-   Looks (preview). "paper" = newsprint, light; "sheet" = dark scouting sheet.
+   Newsprint look (the site's style): light paper, ruled sections, square corners.
    html[data-look] outranks the per-year [data-theme] colors.
    ========================================================================= */
 html[data-look="paper"] {
@@ -1117,12 +1117,6 @@ html[data-look="paper"] {
   --bad: #b42318; --bad-ink: #ffffff; --bad-line: #e4a59f;
 }
 
-html[data-look="sheet"] {
-  --bg: #141414; --surface: #1b1b1b; --surface-2: #242424; --border: #333333;
-  --text: #ebe7df; --muted: #9a958b; --accent: #e46a3c; --accent-ink: #1a0a03;
-  --t1: #ffdccb; --t2: #ffc2a5; --t3: #fda47e; --t4: #f3875a; --t5: #e46a3c;
-  --t6: #cc5a30; --t7: #b44e2a; --t8: #9e4425; --t9: #8a3b21;
-}
 
 /* Square corners everywhere (the grade dot stays round) */
 html[data-look] * { border-radius: 0 !important; }
@@ -1187,15 +1181,43 @@ html[data-look] .wl-flag { border: 0; padding: 0; font-style: italic; }
 html[data-look] .wl-flag::before { content: "("; }
 html[data-look] .wl-flag::after { content: ")"; }
 
-/* Preview switcher (temporary) */
-.look-switch {
-  position: fixed; right: 12px; bottom: 12px; z-index: 50;
-  display: flex; gap: 4px; padding: 6px;
-  font: 600 0.8rem var(--font-body);
-  background: var(--surface); border: 1px solid var(--border);
+
+/* Newsprint tiers: one print ink per tier, warm (Tier 1) to cool (Tier 9).
+   Color marks the tier only (row edge, heading band, grade dot); text stays in ink. */
+html[data-look="paper"] {
+  --t1: #b3261e; --t2: #c4561d; --t3: #b8860b; --t4: #7a8a1f; --t5: #2e7d4f;
+  --t6: #1f7a7a; --t7: #2b5c9e; --t8: #5b4a9e; --t9: #6b6f78;
 }
-.look-switch button {
-  padding: 4px 10px; font: inherit; color: var(--muted);
-  background: none; border: 1px solid transparent; cursor: pointer;
+html[data-look="paper"] .tier-name {
+  margin-top: 14px;
+  padding: 8px 10px;
+  background: color-mix(in srgb, var(--tier) 13%, var(--bg));
+  border-left: 4px solid var(--tier);
 }
-.look-switch button[aria-pressed="true"] { color: var(--text); border-color: var(--accent); }
+html[data-look="paper"] .tier:first-child .tier-name { margin-top: 0; }
+html[data-look="paper"] .tier .rank-table td:first-child { box-shadow: inset 4px 0 0 var(--tier); padding-left: 14px; }
+html[data-look="paper"] .tier .rank-table th:first-child { padding-left: 14px; }
+html[data-look="paper"] .tier + .tier { border-top: 0; }
+
+/* Year inks: each draft year gets its own accent */
+html[data-look="paper"][data-yearink][data-theme="broadcast"] { --accent: #9b1c1c; }
+html[data-look="paper"][data-yearink][data-theme="turf"] { --accent: #1f5f3a; }
+html[data-look="paper"][data-yearink][data-theme="ultraviolet"] { --accent: #5e2a6e; }
+html[data-look="paper"][data-yearink][data-theme="midnight"] { --accent: #1e3a6b; }
+html[data-look="paper"][data-yearink] .site-header { border-bottom-color: var(--accent); }
+html[data-look="paper"][data-yearink] .panel { border-top-color: var(--accent); }
+html[data-look="paper"][data-yearink] h1 { color: var(--accent); }
+
+/* Position rankings: tier breaks inside the table */
+.rank-table tr.tier-break td {
+  padding: 8px 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: color-mix(in srgb, var(--tier) 13%, var(--bg));
+  border-left: 4px solid var(--tier);
+}
+.rank-table tbody tr.tier-break:hover td { background: color-mix(in srgb, var(--tier) 13%, var(--bg)); }
+.rank-table tr.tier-break .swatch { margin-right: 8px; }
+.rank-table tbody tr.tier-row td:first-child { box-shadow: inset 4px 0 0 var(--tier); padding-left: 14px; }
+.rank-table thead + tbody tr.tier-break:first-child td { border-top: 0; }
