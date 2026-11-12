@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}NFL Draft Archive{% endblock %}</title>
+  <title>{% block title %}Ben's Big Board{% endblock %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script>try { var l = localStorage.getItem("look"); if (l && l !== "classic") document.documentElement.dataset.look = l; } catch (e) {}</script>
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-row">
-      <a class="brand" href="{{ url_for('index') }}"><span class="brand-accent">NFL</span> Draft Archive</a>
+      <a class="brand" href="{{ url_for('index') }}">Ben's Big Board</a>
       <nav class="main-nav" aria-label="Main">
         <a href="{{ url_for('about') }}" {% if active == 'about' %}aria-current="page"{% endif %}>About</a>
       </nav>
@@ -22,7 +23,7 @@
         {% for y in years %}
         <div class="year-menu{% if year == y %} active{% endif %}">
           <button type="button" class="year-btn" aria-expanded="false" aria-controls="year-menu-{{ y }}">
-            {{ y }}{% if y == current_year %}<span class="tag">Current</span>{% endif %}
+            {{ y }}
             <svg class="chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <ul class="year-dropdown" id="year-menu-{{ y }}">
@@ -42,6 +43,29 @@
     {% block content %}{% endblock %}
   </main>
 
+  <div class="look-switch" role="group" aria-label="Preview look">
+    <button type="button" data-set-look="classic">Current</button>
+    <button type="button" data-set-look="paper">Newsprint</button>
+    <button type="button" data-set-look="sheet">Scout sheet</button>
+  </div>
+  <script>
+    (function () {
+      var btns = document.querySelectorAll("[data-set-look]");
+      function mark() {
+        var cur = document.documentElement.dataset.look || "classic";
+        btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.setLook === cur)); });
+      }
+      btns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          var l = b.dataset.setLook;
+          if (l === "classic") delete document.documentElement.dataset.look; else document.documentElement.dataset.look = l;
+          try { localStorage.setItem("look", l); } catch (e) {}
+          mark();
+        });
+      });
+      mark();
+    })();
+  </script>
   <script>
     // Year dropdowns: click/tap to open (hover also opens on mouse devices, via CSS).
     (function () {

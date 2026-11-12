@@ -88,6 +88,11 @@
 .tier-8 { --tier: var(--t8); }
 .tier-9 { --tier: var(--t9); }
 
+:root {
+  --good: #4ade80; --good-ink: #0b2b1a; --good-line: #2f7a4c;
+  --bad: #f87171; --bad-ink: #2b0b0b; --bad-line: #8a3a3a;
+}
+
 /* ---------- Base ---------- */
 
 * { box-sizing: border-box; }
@@ -759,9 +764,9 @@ a.position:hover {
 
 .card.is-plus { border-top: 3px solid var(--accent); }
 
-.card.is-minus { border-top: 3px solid #f87171; }
-.card.is-minus .block-title { color: #f87171; }
-.card.is-minus li::marker { color: #f87171; }
+.card.is-minus { border-top: 3px solid var(--bad); }
+.card.is-minus .block-title { color: var(--bad); }
+.card.is-minus li::marker { color: var(--bad); }
 
 /* Profile scores (2025 format) */
 .card .score-list {
@@ -936,7 +941,7 @@ a.position:hover {
 .season-cell .inj {
   margin-left: 4px;
   font-size: 0.7rem;
-  color: #f87171;
+  color: var(--bad);
   cursor: help;
 }
 
@@ -990,11 +995,11 @@ a.position:hover {
 
 .verdict .v-num { font-variant-numeric: tabular-nums; }
 
-.v-steal { color: #0b2b1a; background: #4ade80; }
-.v-above { color: #4ade80; border-color: #2f7a4c; }
+.v-steal { color: var(--good-ink); background: var(--good); }
+.v-above { color: var(--good); border-color: var(--good-line); }
 .v-as-expected { color: var(--muted); border-color: var(--border); }
-.v-below { color: #f87171; border-color: #8a3a3a; }
-.v-miss { color: #2b0b0b; background: #f87171; }
+.v-below { color: var(--bad); border-color: var(--bad-line); }
+.v-miss { color: var(--bad-ink); background: var(--bad); }
 
 .divider-row td {
   padding: 12px 16px !important;
@@ -1097,3 +1102,100 @@ button:focus-visible {
 }
 
 .wl-sources a { color: var(--text); }
+
+/* =========================================================================
+   Looks (preview). "paper" = newsprint, light; "sheet" = dark scouting sheet.
+   html[data-look] outranks the per-year [data-theme] colors.
+   ========================================================================= */
+html[data-look="paper"] {
+  color-scheme: light;
+  --bg: #f4f1ea; --surface: #fbf9f4; --surface-2: #ebe6da; --border: #d5cdbd;
+  --text: #1b1a17; --muted: #67625a; --accent: #1e3a6b; --accent-ink: #ffffff;
+  --t1: #0b1d40; --t2: #173363; --t3: #244a85; --t4: #3360a0; --t5: #4774b0;
+  --t6: #5b86bd; --t7: #6f97c7; --t8: #83a6cf; --t9: #93b1d4;
+  --good: #1d7a3c; --good-ink: #ffffff; --good-line: #8cc39e;
+  --bad: #b42318; --bad-ink: #ffffff; --bad-line: #e4a59f;
+}
+
+html[data-look="sheet"] {
+  --bg: #141414; --surface: #1b1b1b; --surface-2: #242424; --border: #333333;
+  --text: #ebe7df; --muted: #9a958b; --accent: #e46a3c; --accent-ink: #1a0a03;
+  --t1: #ffdccb; --t2: #ffc2a5; --t3: #fda47e; --t4: #f3875a; --t5: #e46a3c;
+  --t6: #cc5a30; --t7: #b44e2a; --t8: #9e4425; --t9: #8a3b21;
+}
+
+/* Square corners everywhere (the grade dot stays round) */
+html[data-look] * { border-radius: 0 !important; }
+html[data-look] .meter-dot { border-radius: 50% !important; }
+
+/* Masthead */
+html[data-look] .site-header { background: var(--bg); border-bottom: 3px solid var(--text); }
+html[data-look] .brand { font-size: 2rem; letter-spacing: 0; }
+html[data-look="paper"] .year-dropdown { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); }
+
+/* Sections are ruled, not boxed */
+html[data-look] .panel { background: none; border: 0; border-top: 2px solid var(--text); }
+html[data-look] .panel-head { padding: 10px 0; }
+html[data-look] .tier-name { padding: 18px 0 6px; }
+html[data-look] .empty,
+html[data-look] .wl-sources,
+html[data-look] .draft-note { padding-left: 0; padding-right: 0; }
+html[data-look] .rank-table th:first-child,
+html[data-look] .rank-table td:first-child { padding-left: 6px; }
+html[data-look] .rank-table th:last-child,
+html[data-look] .rank-table td:last-child { padding-right: 6px; }
+html[data-look] .rank-table th { border-bottom: 1px solid var(--text); }
+html[data-look] .card { padding: 14px 0; }
+html[data-look] .card-row { gap: 24px; }
+html[data-look] .method summary { padding-left: 0; }
+html[data-look] .method-body { padding-left: 0; padding-right: 0; }
+html[data-look] .early-read { background: none; }
+
+/* Less shouting: normal case for labels, tabs and table heads */
+html[data-look] .rank-table th, html[data-look] .pos-tabs a, html[data-look] .crumbs,
+html[data-look] .stat-strip dt, html[data-look] .grade-label, html[data-look] .tier-name,
+html[data-look] .year-btn, html[data-look] .main-nav a, html[data-look] .player-sub,
+html[data-look] .method summary, html[data-look] .divider-row td, html[data-look] .class-meter-labels,
+html[data-look] .score-total, html[data-look] .eyebrow, html[data-look] .block-title,
+html[data-look] .grade-note, html[data-look] h2, html[data-look] .tier-tag, html[data-look] .stat {
+  text-transform: none;
+  letter-spacing: 0;
+}
+html[data-look] .rank-table th { font-family: var(--font-body); font-size: 0.8rem; }
+html[data-look] h2 { font-size: 1.4rem; font-weight: 700; }
+html[data-look] h1 { letter-spacing: 0; }
+html[data-look] .eyebrow { color: var(--muted); font-size: 0.95rem; }
+html[data-look] .block-title { color: var(--text); font-size: 1.1rem; font-weight: 700; }
+
+/* Counts read as a plain note, not a dashboard number */
+html[data-look] .stat { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; color: var(--muted); }
+html[data-look] .stat small { margin-left: 4px; font-size: 0.9rem; letter-spacing: 0; }
+
+/* Tabs: underlined text instead of pill buttons */
+html[data-look] .pos-tabs { gap: 2px 14px; }
+html[data-look] .pos-tabs a { padding: 4px 0; background: none; border: 0; border-bottom: 2px solid transparent; }
+html[data-look] .pos-tabs a.active { color: var(--text); background: none; border-bottom-color: var(--accent); }
+
+/* Position index: a plain list, not tiles */
+html[data-look] .position-grid { gap: 0 24px; padding: 8px 0; }
+html[data-look] .position { background: none; border: 0; border-bottom: 1px solid var(--border); padding: 10px 0; }
+html[data-look] a.position:hover { background: none; }
+html[data-look] a.position:hover .pos { color: var(--accent); }
+
+/* Flags read as small notes */
+html[data-look] .wl-flag { border: 0; padding: 0; font-style: italic; }
+html[data-look] .wl-flag::before { content: "("; }
+html[data-look] .wl-flag::after { content: ")"; }
+
+/* Preview switcher (temporary) */
+.look-switch {
+  position: fixed; right: 12px; bottom: 12px; z-index: 50;
+  display: flex; gap: 4px; padding: 6px;
+  font: 600 0.8rem var(--font-body);
+  background: var(--surface); border: 1px solid var(--border);
+}
+.look-switch button {
+  padding: 4px 10px; font: inherit; color: var(--muted);
+  background: none; border: 1px solid transparent; cursor: pointer;
+}
+.look-switch button[aria-pressed="true"] { color: var(--text); border-color: var(--accent); }

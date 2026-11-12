@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ year }} Post-Draft Analysis · NFL Draft Archive{% endblock %}
+{% block title %}{{ year }} Post-Draft Analysis · Ben's Big Board{% endblock %}
 
 {% macro drafted(p) -%}
   {%- if p.pick %}Rd {{ p['round'] }} · #{{ p.pick }}{% else %}<span class="muted">Undrafted</span>{% endif -%}
@@ -39,10 +39,9 @@
 
 {% block content %}
 <section class="page-head">
-  <p class="eyebrow">{{ year }} NFL Draft</p>
-  <h1>Post-Draft Analysis</h1>
+  <h1>{{ year }} Post-Draft Analysis</h1>
   {% if value %}
-  <p class="lede">How much each player in the {{ year }} class has been worth to his team so far, ranked within his position.</p>
+  <p class="lede">What each pick has been worth to his team so far.</p>
   {% if value.seasons|length < 3 %}
   <p class="early-read"><strong>Early read.</strong>
     {% if value.seasons|length == 1 %}This class has played part of one season, so these scores rest on a handful of games and will move a lot.
@@ -54,7 +53,7 @@
 
 {% if not value %}
 <section class="panel">
-  <p class="empty">{{ year }} post-draft analysis is coming soon.</p>
+  <p class="empty">Not available yet.</p>
 </section>
 {% else %}
 

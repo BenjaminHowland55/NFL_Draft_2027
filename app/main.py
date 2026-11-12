@@ -146,6 +146,9 @@ def players_by_position(data, with_reports_only=False):
 
 @app.route("/")
 def index():
+    data = year_data(CURRENT_YEAR)
+    if not (data and data.get("board_by_tier")) and CURRENT_YEAR in WATCHLISTS:
+        return watch_list(CURRENT_YEAR)
     return big_board(CURRENT_YEAR)
 
 

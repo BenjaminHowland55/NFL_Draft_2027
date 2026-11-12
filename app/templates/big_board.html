@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% from "_macros.html" import grade_meter %}
 
-{% block title %}{{ year }} Big Board · NFL Draft Archive{% endblock %}
+{% block title %}{{ year }} Big Board · Ben's Big Board{% endblock %}
 
 {% block content %}
 <section class="page-head">
-  <p class="eyebrow">{{ year }} NFL Draft</p>
-  <h1>Big Board</h1>
+  <h1>{{ year }} Big Board</h1>
 </section>
 
 <section class="panel">
@@ -45,8 +44,7 @@
     </div>
     {% endfor %}
   {% else %}
-    <p class="empty">The {{ year }} big board is coming soon.{% if year in watchlist_years %} In the meantime, see the
-      <a href="{{ url_for('watch_list', year=year) }}">{{ year }} watch list</a>.{% endif %}</p>
+    <p class="empty">Nothing ranked yet.{% if year in watchlist_years %} See the <a href="{{ url_for('watch_list', year=year) }}">watch list</a>.{% endif %}</p>
   {% endif %}
 </section>
 {% endblock %}

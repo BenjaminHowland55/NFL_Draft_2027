@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}{{ year }} Scouting Reports · NFL Draft Archive{% endblock %}
+{% block title %}{{ year }} Scouting Reports · Ben's Big Board{% endblock %}
 
 {% block content %}
 <section class="page-head">
-  <p class="eyebrow">{{ year }} NFL Draft</p>
-  <h1>Scouting Reports</h1>
+  <h1>{{ year }} Scouting Reports</h1>
 </section>
 
 {% if report_count %}
@@ -36,7 +35,7 @@
 {% endfor %}
 {% else %}
 <section class="panel">
-  <p class="empty">{{ year }} scouting reports are coming soon.</p>
+  <p class="empty">No reports yet.</p>
 </section>
 {% endif %}
 {% endblock %}
