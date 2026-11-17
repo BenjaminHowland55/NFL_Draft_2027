@@ -23,7 +23,7 @@
       <div class="table-scroll">
         <table class="rank-table">
           <thead>
-            <tr><th class="num">Rk</th><th>Player</th><th>Pos</th><th>School</th><th class="num">Grade</th></tr>
+            <tr><th class="num">Rk</th><th>Player</th><th>Pos</th><th>School</th>{% if data.has_ages %}<th class="num" title="Age on draft day">Age</th>{% else %}<th>Yr</th>{% endif %}<th class="num">Grade</th></tr>
           </thead>
           <tbody>
             {% for e in tier.entries %}
@@ -35,6 +35,7 @@
                 </td>
                 <td>{{ p.position if p else e.detail }}</td>
                 <td class="muted">{{ p.school if p and p.school else '' }}</td>
+                {% if data.has_ages %}<td class="num muted">{{ p.age if p and p.age else '—' }}</td>{% else %}<td class="muted">{{ p['class']|yr if p else '' }}</td>{% endif %}
                 <td class="num">{{ grade_meter(year, e.grade, e.tier_num) }}</td>
               </tr>
             {% endfor %}

@@ -25,9 +25,9 @@
       <thead>
         <tr>
           {% if view == 'ALL' %}
-          <th class="num">Rk</th><th>Player</th><th>Pos</th><th>School</th>
+          <th class="num">Rk</th><th>Player</th><th>Pos</th><th>School</th><th title="Years in college (this is his Nth season)">Yr</th>
           {% else %}
-          <th class="num">{{ view }} Rk</th><th>Player</th><th>School</th><th class="num">Consensus Rk</th>
+          <th class="num">{{ view }} Rk</th><th>Player</th><th>School</th><th title="Years in college (this is his Nth season)">Yr</th><th class="num">Consensus Rk</th>
           {% endif %}
         </tr>
       </thead>
@@ -39,10 +39,12 @@
           <td class="player-cell">{{ p.name }}{% if p.may_return %} <span class="wl-flag" title="Some boards don't expect him to enter this draft">may return to school</span>{% endif %}</td>
           <td>{{ p.group }}</td>
           <td class="muted">{{ p.school }}</td>
+          <td class="muted">{{ p.yr or '—' }}</td>
           {% else %}
           <td class="num rank">{{ p.pos_rank }}</td>
           <td class="player-cell">{{ p.name }}{% if p.may_return %} <span class="wl-flag" title="Some boards don't expect him to enter this draft">may return to school</span>{% endif %}{% if not p.on_board %} <span class="wl-flag" title="Outside the consensus top {{ wl.board|length }}; on the list for position depth">depth</span>{% endif %}</td>
           <td class="muted">{{ p.school }}</td>
+          <td class="muted">{{ p.yr or '—' }}</td>
           <td class="num">{{ p.rank }}</td>
           {% endif %}
         </tr>

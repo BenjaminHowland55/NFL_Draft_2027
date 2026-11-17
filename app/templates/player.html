@@ -35,7 +35,7 @@
     </p>
     <h1>{{ player.name }}</h1>
     <p class="player-sub">
-      {{ player.position or '' }}{% if player.school %} · {{ player.school }}{% endif %}{% if player['class'] %} · {{ player['class'] }}{% endif %}
+      {{ player.position or '' }}{% if player.school %} · {{ player.school }}{% endif %}{% if player.age %} · Age {{ player.age }} at draft{% elif player['class'] %} · {{ player['class']|yr }}{% endif %}
     </p>
   </div>
   <div class="player-grade{% if player.tier_num %} tier-{{ player.tier_num }}{% endif %}">

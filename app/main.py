@@ -31,6 +31,12 @@ def load_year(year):
         return None
     data = json.loads(path.read_text(encoding="utf-8"))
     data["by_slug"] = {p["slug"]: p for p in data["players"]}
+    # Age on draft day (scripts/draft_ages.py); drafted classes show this instead of class year
+    ages_path = DATA_DIR / f"{year}_ages.json"
+    ages = json.loads(ages_path.read_text(encoding="utf-8")) if ages_path.exists() else {}
+    for p in data["players"]:
+        p["age"] = (ages.get(p["slug"]) or {}).get("age")
+    data["has_ages"] = bool(ages)
     # Tier number (1 = best) drives the tier color ramp in style.css
     tier_num = {name: i for i, name in enumerate(data["tiers"], start=1)}
     for item in data["players"] + data["big_board"]:
@@ -74,6 +80,26 @@ def year_data(year):
     if year not in YEARS:
         abort(404)
     return DATA.get(year)
+
+
+# Class as written in the workbooks -> years in college + eligibility class.
+# 2024 is already in this form ("3JR"); 2025 on uses "Jr." / "RS Sr." etc.
+CLASS_YEARS = {"FR": ("FR", 1), "SO": ("SO", 2), "JR": ("JR", 3), "SR": ("SR", 4)}
+
+
+@app.template_filter("yr")
+def format_class(value):
+    if not value:
+        return ""
+    v = str(value).strip()
+    if v[:1].isdigit():
+        return v.upper()
+    redshirt = v.upper().startswith("RS")
+    core = v.upper().replace("RS", "", 1).replace("-", "").replace(".", "").strip()[:2]
+    if core not in CLASS_YEARS:
+        return v
+    label, years = CLASS_YEARS[core]
+    return f"{years + 1 if redshirt else years}{label}"
 
 
 @app.template_filter("grade")
@@ -192,6 +218,7 @@ def position_page(year, pos):
     return render_template(
         "position.html", year=year, section="rankings", pos=pos, positions=POSITIONS,
         players=players_by_position(data)[pos], cols=available_columns(data["players"]),
+        has_ages=data.get("has_ages"),
     )
 
 

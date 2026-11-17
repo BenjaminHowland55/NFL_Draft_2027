@@ -394,7 +394,8 @@ a.position:hover {
 .tier .rank-table th:nth-child(1) { width: 64px; }
 .tier .rank-table th:nth-child(2) { width: 34%; }
 .tier .rank-table th:nth-child(3) { width: 14%; }
-.tier .rank-table th:nth-child(5) { width: 200px; }
+.tier .rank-table th:nth-child(5) { width: 64px; }
+.tier .rank-table th:nth-child(6) { width: 200px; }
 
 @media (max-width: 640px) {
   /* Phones: drop School so the grade stays on screen */
@@ -404,7 +405,8 @@ a.position:hover {
   .tier .rank-table th:nth-child(1) { width: 52px; }
   .tier .rank-table th:nth-child(2) { width: auto; }
   .tier .rank-table th:nth-child(3) { width: 72px; }
-  .tier .rank-table th:nth-child(5) { width: 100px; }
+  .tier .rank-table th:nth-child(5) { width: 52px; }
+  .tier .rank-table th:nth-child(6) { width: 100px; }
   .grade-meter { gap: 0; }
 }
 
