@@ -42,7 +42,6 @@
    "group": "WR",
    "school": "Ohio State",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -51,7 +50,6 @@
    "group": "EDGE",
    "school": "Texas",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -60,7 +58,6 @@
    "group": "CB",
    "school": "Notre Dame",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -69,7 +66,6 @@
    "group": "EDGE",
    "school": "South Carolina",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -78,7 +74,6 @@
    "group": "WR",
    "school": "Indiana",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -87,7 +82,6 @@
    "group": "QB",
    "school": "Oklahoma State",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -96,7 +90,6 @@
    "group": "IDL",
    "school": "Ole Miss",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -105,7 +98,6 @@
    "group": "OT",
    "school": "LSU",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -114,7 +106,6 @@
    "group": "LB",
    "school": "Georgia",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -123,7 +114,6 @@
    "group": "CB",
    "school": "Georgia",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -132,7 +122,6 @@
    "group": "CB",
    "school": "Clemson",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -141,7 +130,6 @@
    "group": "RB",
    "school": "Florida",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -150,7 +138,6 @@
    "group": "IOL",
    "school": "Minnesota",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -159,7 +146,6 @@
    "group": "IDL",
    "school": "Tennessee",
    "boards": 7,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -168,7 +154,6 @@
    "group": "QB",
    "school": "Miami",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -177,7 +162,6 @@
    "group": "CB",
    "school": "Mississippi State",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -186,7 +170,6 @@
    "group": "QB",
    "school": "Oregon",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -195,7 +178,6 @@
    "group": "WR",
    "school": "Indiana",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -204,7 +186,6 @@
    "group": "EDGE",
    "school": "Alabama",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -213,7 +194,6 @@
    "group": "SAF",
    "school": "Georgia",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -222,7 +202,6 @@
    "group": "TE",
    "school": "LSU",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -231,7 +210,6 @@
    "group": "TE",
    "school": "Oregon",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -240,7 +218,6 @@
    "group": "OT",
    "school": "Iowa",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -249,7 +226,6 @@
    "group": "WR",
    "school": "Texas",
    "boards": 7,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -258,7 +234,6 @@
    "group": "QB",
    "school": "Notre Dame",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -267,7 +242,6 @@
    "group": "IOL",
    "school": "Iowa",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -276,7 +250,6 @@
    "group": "QB",
    "school": "Ole Miss",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -285,7 +258,6 @@
    "group": "IDL",
    "school": "Oklahoma",
    "boards": 7,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -294,7 +266,6 @@
    "group": "IDL",
    "school": "Oregon",
    "boards": 7,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -303,7 +274,6 @@
    "group": "OT",
    "school": "Texas",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -312,7 +282,6 @@
    "group": "QB",
    "school": "Texas",
    "boards": 7,
-   "may_return": true,
    "yr": "4th"
   },
   {
@@ -321,7 +290,6 @@
    "group": "RB",
    "school": "Ole Miss",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -330,7 +298,6 @@
    "group": "OT",
    "school": "Kentucky",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -339,7 +306,6 @@
    "group": "SAF",
    "school": "Notre Dame",
    "boards": 5,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -348,7 +314,6 @@
    "group": "EDGE",
    "school": "Notre Dame",
    "boards": 8,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -357,7 +322,6 @@
    "group": "OT",
    "school": "Utah",
    "boards": 6,
-   "may_return": false,
    "yr": "6th"
   },
   {
@@ -366,7 +330,6 @@
    "group": "IDL",
    "school": "Miami",
    "boards": 6,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -375,7 +338,6 @@
    "group": "EDGE",
    "school": "Oregon",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -384,7 +346,6 @@
    "group": "WR",
    "school": "Alabama",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -393,7 +354,6 @@
    "group": "WR",
    "school": "Arizona State",
    "boards": 7,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -402,7 +362,6 @@
    "group": "IDL",
    "school": "Alabama",
    "boards": 8,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -411,7 +370,6 @@
    "group": "WR",
    "school": "Rutgers",
    "boards": 7,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -420,7 +378,6 @@
    "group": "IDL",
    "school": "Miami",
    "boards": 6,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -429,7 +386,6 @@
    "group": "EDGE",
    "school": "Clemson",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -438,7 +394,6 @@
    "group": "LB",
    "school": "Notre Dame",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -447,7 +402,6 @@
    "group": "OT",
    "school": "Missouri",
    "boards": 7,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -456,7 +410,6 @@
    "group": "QB",
    "school": "Missouri",
    "boards": 7,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -465,7 +418,6 @@
    "group": "EDGE",
    "school": "Ohio State",
    "boards": 5,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -474,7 +426,6 @@
    "group": "QB",
    "school": "Ohio State",
    "boards": 3,
-   "may_return": true,
    "yr": "3rd"
   },
   {
@@ -483,7 +434,6 @@
    "group": "OT",
    "school": "Texas",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -492,7 +442,6 @@
    "group": "WR",
    "school": "Ole Miss",
    "boards": 7,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -501,7 +450,6 @@
    "group": "IDL",
    "school": "Texas Tech",
    "boards": 6,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -510,7 +458,6 @@
    "group": "CB",
    "school": "Alabama",
    "boards": 5,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -519,7 +466,6 @@
    "group": "SAF",
    "school": "Texas",
    "boards": 7,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -528,7 +474,6 @@
    "group": "SAF",
    "school": "California",
    "boards": 6,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -537,7 +482,6 @@
    "group": "QB",
    "school": "South Carolina",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -546,7 +490,6 @@
    "group": "LB",
    "school": "Clemson",
    "boards": 6,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -555,7 +498,6 @@
    "group": "SAF",
    "school": "Ohio State",
    "boards": 8,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -564,7 +506,6 @@
    "group": "EDGE",
    "school": "LSU",
    "boards": 7,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -573,7 +514,6 @@
    "group": "OT",
    "school": "Indiana",
    "boards": 8,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -582,7 +522,6 @@
    "group": "EDGE",
    "school": "Louisville",
    "boards": 6,
-   "may_return": false,
    "yr": "6th"
   },
   {
@@ -591,7 +530,6 @@
    "group": "EDGE",
    "school": "Miami",
    "boards": 7,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -600,7 +538,6 @@
    "group": "OT",
    "school": "Ohio State",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -609,7 +546,6 @@
    "group": "RB",
    "school": "Missouri",
    "boards": 5,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -618,7 +554,6 @@
    "group": "QB",
    "school": "USC",
    "boards": 5,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -627,7 +562,6 @@
    "group": "CB",
    "school": "South Carolina",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -636,7 +570,6 @@
    "group": "TE",
    "school": "Virginia Tech",
    "boards": 7,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -645,7 +578,6 @@
    "group": "QB",
    "school": "Houston",
    "boards": 2,
-   "may_return": true,
    "yr": "5th"
   },
   {
@@ -654,7 +586,6 @@
    "group": "WR",
    "school": "Clemson",
    "boards": 6,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -663,7 +594,6 @@
    "group": "WR",
    "school": "Texas",
    "boards": 6,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -672,7 +602,6 @@
    "group": "IDL",
    "school": "Oregon",
    "boards": 6,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -681,7 +610,6 @@
    "group": "EDGE",
    "school": "Arkansas",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -690,7 +618,6 @@
    "group": "EDGE",
    "school": "Michigan",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -699,7 +626,6 @@
    "group": "SAF",
    "school": "LSU",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -708,7 +634,6 @@
    "group": "OT",
    "school": "Miami",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -717,7 +642,6 @@
    "group": "LB",
    "school": "Texas",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -726,7 +650,6 @@
    "group": "LB",
    "school": "UCLA",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -735,7 +658,6 @@
    "group": "WR",
    "school": "Arizona State",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -744,7 +666,6 @@
    "group": "IDL",
    "school": "Kentucky",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -753,7 +674,6 @@
    "group": "OT",
    "school": "USC",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -762,7 +682,6 @@
    "group": "CB",
    "school": "Indiana",
    "boards": 3,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -771,7 +690,6 @@
    "group": "IOL",
    "school": "Notre Dame",
    "boards": 7,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -780,7 +698,6 @@
    "group": "WR",
    "school": "LSU",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -789,7 +706,6 @@
    "group": "WR",
    "school": "Houston",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -798,7 +714,6 @@
    "group": "OT",
    "school": "South Carolina",
    "boards": 4,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -807,7 +722,6 @@
    "group": "RB",
    "school": "Louisville",
    "boards": 6,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -816,7 +730,6 @@
    "group": "WR",
    "school": "Oklahoma State",
    "boards": 6,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -825,7 +738,6 @@
    "group": "CB",
    "school": "Michigan",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -834,7 +746,6 @@
    "group": "RB",
    "school": "Boise State",
    "boards": 2,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -843,7 +754,6 @@
    "group": "EDGE",
    "school": "Oregon",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -852,7 +762,6 @@
    "group": "IOL",
    "school": "Oregon",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -861,7 +770,6 @@
    "group": "SAF",
    "school": "Alabama",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -870,7 +778,6 @@
    "group": "SAF",
    "school": "Oregon",
    "boards": 5,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -879,7 +786,6 @@
    "group": "OT",
    "school": "Stanford",
    "boards": 5,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -888,7 +794,6 @@
    "group": "LB",
    "school": "Penn State",
    "boards": 6,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -897,7 +802,6 @@
    "group": "EDGE",
    "school": "LSU",
    "boards": 5,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -906,7 +810,6 @@
    "group": "SAF",
    "school": "Iowa",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -915,7 +818,6 @@
    "group": "OT",
    "school": "Tennessee",
    "boards": 2,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -924,7 +826,6 @@
    "group": "LB",
    "school": "Oregon",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -933,7 +834,6 @@
    "group": "WR",
    "school": "Texas A&M",
    "boards": 5,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -942,7 +842,6 @@
    "group": "IOL",
    "school": "Cincinnati",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -951,7 +850,6 @@
    "group": "CB",
    "school": "Houston",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -960,7 +858,6 @@
    "group": "IDL",
    "school": "USC",
    "boards": 4,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -969,7 +866,6 @@
    "group": "CB",
    "school": "Miami",
    "boards": 4,
-   "may_return": false,
    "yr": null
   },
   {
@@ -978,7 +874,6 @@
    "group": "CB",
    "school": "Texas Tech",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -987,7 +882,6 @@
    "group": "EDGE",
    "school": "Minnesota",
    "boards": 5,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -996,7 +890,6 @@
    "group": "TE",
    "school": "Texas Tech",
    "boards": 3,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1005,7 +898,6 @@
    "group": "WR",
    "school": "Florida State",
    "boards": 3,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1014,7 +906,6 @@
    "group": "RB",
    "school": "Georgia",
    "boards": 5,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1023,7 +914,6 @@
    "group": "OT",
    "school": "SMU",
    "boards": 4,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1032,7 +922,6 @@
    "group": "EDGE",
    "school": "Kentucky",
    "boards": 3,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1041,7 +930,6 @@
    "group": "RB",
    "school": "Miami",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1050,7 +938,6 @@
    "group": "SAF",
    "school": "Utah",
    "boards": 3,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1059,7 +946,6 @@
    "group": "EDGE",
    "school": "Wisconsin",
    "boards": 5,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1068,7 +954,6 @@
    "group": "WR",
    "school": "Clemson",
    "boards": 4,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1077,7 +962,6 @@
    "group": "EDGE",
    "school": "Florida",
    "boards": 3,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1086,7 +970,6 @@
    "group": "LB",
    "school": "Texas Tech",
    "boards": 4,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1095,7 +978,6 @@
    "group": "IOL",
    "school": "Houston",
    "boards": 4,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1104,7 +986,6 @@
    "group": "LB",
    "school": "Ole Miss",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1113,7 +994,6 @@
    "group": "IOL",
    "school": "Ohio State",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1122,7 +1002,6 @@
    "group": "CB",
    "school": "Syracuse",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1131,7 +1010,6 @@
    "group": "RB",
    "school": "BYU",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1140,7 +1018,6 @@
    "group": "EDGE",
    "school": "UCLA",
    "boards": 2,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1149,7 +1026,6 @@
    "group": "RB",
    "school": "Texas",
    "boards": 2,
-   "may_return": false,
    "yr": "6th"
   },
   {
@@ -1158,7 +1034,6 @@
    "group": "LB",
    "school": "LSU",
    "boards": 5,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1167,7 +1042,6 @@
    "group": "CB",
    "school": "Minnesota",
    "boards": 3,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1176,7 +1050,6 @@
    "group": "IDL",
    "school": "Oklahoma",
    "boards": 3,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1185,7 +1058,6 @@
    "group": "RB",
    "school": "Louisville",
    "boards": 2,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1194,7 +1066,6 @@
    "group": "RB",
    "school": "Tennessee",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1203,7 +1074,6 @@
    "group": "LB",
    "school": "Ohio State",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1212,7 +1082,6 @@
    "group": "WR",
    "school": "Vanderbilt",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1221,7 +1090,6 @@
    "group": "QB",
    "school": "LSU",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1230,7 +1098,6 @@
    "group": "SAF",
    "school": "Oklahoma",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1239,7 +1106,6 @@
    "group": "IOL",
    "school": "Kentucky",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1248,7 +1114,6 @@
    "group": "SAF",
    "school": "Clemson",
    "boards": 3,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1257,7 +1122,6 @@
    "group": "CB",
    "school": "Notre Dame",
    "boards": 6,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1266,7 +1130,6 @@
    "group": "EDGE",
    "school": "Kansas State",
    "boards": 2,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1275,7 +1138,6 @@
    "group": "SAF",
    "school": "Ohio State",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1284,7 +1146,6 @@
    "group": "WR",
    "school": "Notre Dame",
    "boards": 2,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1293,7 +1154,6 @@
    "group": "CB",
    "school": "Tennessee",
    "boards": 3,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1302,7 +1162,6 @@
    "group": "IDL",
    "school": "UCF",
    "boards": 4,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1311,7 +1170,6 @@
    "group": "OT",
    "school": "Georgia",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1320,7 +1178,6 @@
    "group": "RB",
    "school": "West Virginia",
    "boards": 2,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1329,7 +1186,6 @@
    "group": "IDL",
    "school": "Notre Dame",
    "boards": 4,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1338,7 +1194,6 @@
    "group": "EDGE",
    "school": "Oklahoma",
    "boards": 3,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1347,7 +1202,6 @@
    "group": "RB",
    "school": "Georgia Tech",
    "boards": 2,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1356,7 +1210,6 @@
    "group": "TE",
    "school": "Temple",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1365,7 +1218,6 @@
    "group": "EDGE",
    "school": "Texas A&M",
    "boards": 4,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1374,7 +1226,6 @@
    "group": "RB",
    "school": "Utah",
    "boards": 4,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1383,7 +1234,6 @@
    "group": "CB",
    "school": "Penn State",
    "boards": 6,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1392,7 +1242,6 @@
    "group": "IOL",
    "school": "Ohio State",
    "boards": 2,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1401,7 +1250,6 @@
    "group": "IDL",
    "school": "Indiana",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1410,7 +1258,6 @@
    "group": "WR",
    "school": "Oklahoma",
    "boards": 3,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1419,7 +1266,6 @@
    "group": "TE",
    "school": "Iowa",
    "boards": 3,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1428,7 +1274,6 @@
    "group": "IDL",
    "school": "Texas Tech",
    "boards": 3,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1437,7 +1282,6 @@
    "group": "IOL",
    "school": "Georgia",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1446,7 +1290,6 @@
    "group": "CB",
    "school": "Florida State",
    "boards": 2,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1455,7 +1298,6 @@
    "group": "SAF",
    "school": "Indiana",
    "boards": 4,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1464,7 +1306,6 @@
    "group": "CB",
    "school": "Michigan",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1473,7 +1314,6 @@
    "group": "RB",
    "school": "UCLA",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1482,7 +1322,6 @@
    "group": "IOL",
    "school": "Nebraska",
    "boards": 2,
-   "may_return": false,
    "yr": "5th"
   },
   {
@@ -1491,7 +1330,6 @@
    "group": "QB",
    "school": "Minnesota",
    "boards": 1,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1500,7 +1338,6 @@
    "group": "LB",
    "school": "Notre Dame",
    "boards": 3,
-   "may_return": false,
    "yr": "4th"
   },
   {
@@ -1509,7 +1346,6 @@
    "group": "OT",
    "school": "Texas",
    "boards": 3,
-   "may_return": false,
    "yr": "3rd"
   },
   {
@@ -1518,7 +1354,6 @@
    "group": "LB",
    "school": "Auburn",
    "boards": 1,
-   "may_return": true,
    "yr": "3rd"
   }
  ],
@@ -1530,7 +1365,6 @@
     "school": "Oklahoma State",
     "rank": 6,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1539,7 +1373,6 @@
     "school": "Miami",
     "rank": 15,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1548,7 +1381,6 @@
     "school": "Oregon",
     "rank": 17,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1557,7 +1389,6 @@
     "school": "Notre Dame",
     "rank": 25,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1566,7 +1397,6 @@
     "school": "Ole Miss",
     "rank": 27,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1575,7 +1405,6 @@
     "school": "Texas",
     "rank": 31,
     "on_board": true,
-    "may_return": true,
     "yr": "4th"
    },
    {
@@ -1584,7 +1413,6 @@
     "school": "Missouri",
     "rank": 47,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1593,7 +1421,6 @@
     "school": "Ohio State",
     "rank": 49,
     "on_board": true,
-    "may_return": true,
     "yr": "3rd"
    },
    {
@@ -1602,7 +1429,6 @@
     "school": "South Carolina",
     "rank": 56,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1611,7 +1437,6 @@
     "school": "USC",
     "rank": 65,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -1620,7 +1445,6 @@
     "school": "Houston",
     "rank": 68,
     "on_board": true,
-    "may_return": true,
     "yr": "5th"
    },
    {
@@ -1629,7 +1453,6 @@
     "school": "LSU",
     "rank": 132,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1638,7 +1461,6 @@
     "school": "Minnesota",
     "rank": 162,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    }
   ],
@@ -1649,7 +1471,6 @@
     "school": "Florida",
     "rank": 12,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1658,7 +1479,6 @@
     "school": "Ole Miss",
     "rank": 32,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1667,7 +1487,6 @@
     "school": "Missouri",
     "rank": 64,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1676,7 +1495,6 @@
     "school": "Louisville",
     "rank": 86,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1685,7 +1503,6 @@
     "school": "Boise State",
     "rank": 89,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1694,7 +1511,6 @@
     "school": "Georgia",
     "rank": 109,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1703,7 +1519,6 @@
     "school": "Miami",
     "rank": 112,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1712,7 +1527,6 @@
     "school": "BYU",
     "rank": 122,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1721,7 +1535,6 @@
     "school": "Texas",
     "rank": 124,
     "on_board": true,
-    "may_return": false,
     "yr": "6th"
    },
    {
@@ -1730,7 +1543,6 @@
     "school": "Louisville",
     "rank": 128,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1739,7 +1551,6 @@
     "school": "Tennessee",
     "rank": 129,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1748,7 +1559,6 @@
     "school": "West Virginia",
     "rank": 143,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1757,7 +1567,6 @@
     "school": "Georgia Tech",
     "rank": 146,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1766,7 +1575,6 @@
     "school": "Utah",
     "rank": 149,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1775,7 +1583,6 @@
     "school": "UCLA",
     "rank": 160,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -1784,7 +1591,6 @@
     "school": "UNLV",
     "rank": 177,
     "on_board": false,
-    "may_return": false,
     "yr": "4th"
    }
   ],
@@ -1795,7 +1601,6 @@
     "school": "Ohio State",
     "rank": 1,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1804,7 +1609,6 @@
     "school": "Indiana",
     "rank": 5,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1813,7 +1617,6 @@
     "school": "Indiana",
     "rank": 18,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1822,7 +1625,6 @@
     "school": "Texas",
     "rank": 24,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1831,7 +1633,6 @@
     "school": "Alabama",
     "rank": 39,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1840,7 +1641,6 @@
     "school": "Arizona State",
     "rank": 40,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1849,7 +1649,6 @@
     "school": "Rutgers",
     "rank": 42,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1858,7 +1657,6 @@
     "school": "Ole Miss",
     "rank": 51,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1867,7 +1665,6 @@
     "school": "Clemson",
     "rank": 69,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1876,7 +1673,6 @@
     "school": "Texas",
     "rank": 70,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1885,7 +1681,6 @@
     "school": "Arizona State",
     "rank": 78,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1894,7 +1689,6 @@
     "school": "LSU",
     "rank": 83,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1903,7 +1697,6 @@
     "school": "Houston",
     "rank": 84,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1912,7 +1705,6 @@
     "school": "Oklahoma State",
     "rank": 87,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1921,7 +1713,6 @@
     "school": "Texas A&M",
     "rank": 100,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1930,7 +1721,6 @@
     "school": "Florida State",
     "rank": 108,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1939,7 +1729,6 @@
     "school": "Clemson",
     "rank": 115,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1948,7 +1737,6 @@
     "school": "Vanderbilt",
     "rank": 131,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1957,7 +1745,6 @@
     "school": "Notre Dame",
     "rank": 139,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -1966,7 +1753,6 @@
     "school": "Oklahoma",
     "rank": 153,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -1975,7 +1761,6 @@
     "school": "Iowa",
     "rank": 168,
     "on_board": false,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1984,7 +1769,6 @@
     "school": "Tennessee",
     "rank": 170,
     "on_board": false,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -1993,7 +1777,6 @@
     "school": "Texas State",
     "rank": 176,
     "on_board": false,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2002,7 +1785,6 @@
     "school": "Texas State",
     "rank": 183,
     "on_board": false,
-    "may_return": false,
     "yr": "4th"
    }
   ],
@@ -2013,7 +1795,6 @@
     "school": "LSU",
     "rank": 21,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2022,7 +1803,6 @@
     "school": "Oregon",
     "rank": 22,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2031,7 +1811,6 @@
     "school": "Virginia Tech",
     "rank": 67,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2040,7 +1819,6 @@
     "school": "Texas Tech",
     "rank": 107,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2049,7 +1827,6 @@
     "school": "Temple",
     "rank": 147,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2058,7 +1835,6 @@
     "school": "Iowa",
     "rank": 154,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2067,7 +1843,6 @@
     "school": "Penn State",
     "rank": 189,
     "on_board": false,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2076,7 +1851,6 @@
     "school": "Georgia Tech",
     "rank": 209,
     "on_board": false,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2085,7 +1859,6 @@
     "school": "Oklahoma",
     "rank": 217,
     "on_board": false,
-    "may_return": false,
     "yr": "5th"
    }
   ],
@@ -2096,7 +1869,6 @@
     "school": "LSU",
     "rank": 8,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2105,7 +1877,6 @@
     "school": "Iowa",
     "rank": 23,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2114,7 +1885,6 @@
     "school": "Texas",
     "rank": 30,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2123,7 +1893,6 @@
     "school": "Kentucky",
     "rank": 33,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2132,7 +1901,6 @@
     "school": "Utah",
     "rank": 36,
     "on_board": true,
-    "may_return": false,
     "yr": "6th"
    },
    {
@@ -2141,7 +1909,6 @@
     "school": "Missouri",
     "rank": 46,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2150,7 +1917,6 @@
     "school": "Texas",
     "rank": 50,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2159,7 +1925,6 @@
     "school": "Indiana",
     "rank": 60,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2168,7 +1933,6 @@
     "school": "Ohio State",
     "rank": 63,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2177,7 +1941,6 @@
     "school": "Miami",
     "rank": 75,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2186,7 +1949,6 @@
     "school": "USC",
     "rank": 80,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2195,7 +1957,6 @@
     "school": "South Carolina",
     "rank": 85,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2204,7 +1965,6 @@
     "school": "Stanford",
     "rank": 94,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2213,7 +1973,6 @@
     "school": "Tennessee",
     "rank": 98,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2222,7 +1981,6 @@
     "school": "SMU",
     "rank": 110,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2231,7 +1989,6 @@
     "school": "Georgia",
     "rank": 142,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2240,7 +1997,6 @@
     "school": "Texas",
     "rank": 164,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    }
   ],
@@ -2251,7 +2007,6 @@
     "school": "Minnesota",
     "rank": 13,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2260,7 +2015,6 @@
     "school": "Iowa",
     "rank": 26,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2269,7 +2023,6 @@
     "school": "Notre Dame",
     "rank": 82,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2278,7 +2031,6 @@
     "school": "Oregon",
     "rank": 91,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2287,7 +2039,6 @@
     "school": "Cincinnati",
     "rank": 101,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2296,7 +2047,6 @@
     "school": "Houston",
     "rank": 118,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2305,7 +2055,6 @@
     "school": "Ohio State",
     "rank": 120,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2314,7 +2063,6 @@
     "school": "Kentucky",
     "rank": 134,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2323,7 +2071,6 @@
     "school": "Ohio State",
     "rank": 151,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2332,7 +2079,6 @@
     "school": "Georgia",
     "rank": 156,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2341,7 +2087,6 @@
     "school": "Nebraska",
     "rank": 161,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2350,7 +2095,6 @@
     "school": "LSU",
     "rank": 216,
     "on_board": false,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2359,7 +2103,6 @@
     "school": "Texas Tech",
     "rank": 218,
     "on_board": false,
-    "may_return": false,
     "yr": "5th"
    }
   ],
@@ -2370,7 +2113,6 @@
     "school": "Texas",
     "rank": 2,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2379,7 +2121,6 @@
     "school": "South Carolina",
     "rank": 4,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2388,7 +2129,6 @@
     "school": "Alabama",
     "rank": 19,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2397,7 +2137,6 @@
     "school": "Notre Dame",
     "rank": 35,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2406,7 +2145,6 @@
     "school": "Oregon",
     "rank": 38,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2415,7 +2153,6 @@
     "school": "Clemson",
     "rank": 44,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2424,7 +2161,6 @@
     "school": "Ohio State",
     "rank": 48,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2433,7 +2169,6 @@
     "school": "LSU",
     "rank": 59,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2442,7 +2177,6 @@
     "school": "Louisville",
     "rank": 61,
     "on_board": true,
-    "may_return": false,
     "yr": "6th"
    },
    {
@@ -2451,7 +2185,6 @@
     "school": "Miami",
     "rank": 62,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2460,7 +2193,6 @@
     "school": "Arkansas",
     "rank": 72,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2469,7 +2201,6 @@
     "school": "Michigan",
     "rank": 73,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2478,7 +2209,6 @@
     "school": "Oregon",
     "rank": 90,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2487,7 +2217,6 @@
     "school": "LSU",
     "rank": 96,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2496,7 +2225,6 @@
     "school": "Minnesota",
     "rank": 106,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2505,7 +2233,6 @@
     "school": "Kentucky",
     "rank": 111,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2514,7 +2241,6 @@
     "school": "Wisconsin",
     "rank": 114,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2523,7 +2249,6 @@
     "school": "Florida",
     "rank": 116,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2532,7 +2257,6 @@
     "school": "UCLA",
     "rank": 123,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2541,7 +2265,6 @@
     "school": "Kansas State",
     "rank": 137,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2550,7 +2273,6 @@
     "school": "Oklahoma",
     "rank": 145,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2559,7 +2281,6 @@
     "school": "Texas A&M",
     "rank": 148,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    }
   ],
@@ -2570,7 +2291,6 @@
     "school": "Ole Miss",
     "rank": 7,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2579,7 +2299,6 @@
     "school": "Tennessee",
     "rank": 14,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2588,7 +2307,6 @@
     "school": "Oklahoma",
     "rank": 28,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2597,7 +2315,6 @@
     "school": "Oregon",
     "rank": 29,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2606,7 +2323,6 @@
     "school": "Miami",
     "rank": 37,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2615,7 +2331,6 @@
     "school": "Alabama",
     "rank": 41,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2624,7 +2339,6 @@
     "school": "Miami",
     "rank": 43,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2633,7 +2347,6 @@
     "school": "Texas Tech",
     "rank": 52,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2642,7 +2355,6 @@
     "school": "Oregon",
     "rank": 71,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2651,7 +2363,6 @@
     "school": "Kentucky",
     "rank": 79,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2660,7 +2371,6 @@
     "school": "USC",
     "rank": 103,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2669,7 +2379,6 @@
     "school": "Oklahoma",
     "rank": 127,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2678,7 +2387,6 @@
     "school": "UCF",
     "rank": 141,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2687,7 +2395,6 @@
     "school": "Notre Dame",
     "rank": 144,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2696,7 +2403,6 @@
     "school": "Indiana",
     "rank": 152,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2705,7 +2411,6 @@
     "school": "Texas Tech",
     "rank": 155,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2714,7 +2419,6 @@
     "school": "Baylor",
     "rank": 169,
     "on_board": false,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2723,7 +2427,6 @@
     "school": "Auburn",
     "rank": 172,
     "on_board": false,
-    "may_return": false,
     "yr": "4th"
    }
   ],
@@ -2734,7 +2437,6 @@
     "school": "Georgia",
     "rank": 9,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2743,7 +2445,6 @@
     "school": "Notre Dame",
     "rank": 45,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2752,7 +2453,6 @@
     "school": "Clemson",
     "rank": 57,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2761,7 +2461,6 @@
     "school": "Texas",
     "rank": 76,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2770,7 +2469,6 @@
     "school": "UCLA",
     "rank": 77,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2779,7 +2477,6 @@
     "school": "Penn State",
     "rank": 95,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2788,7 +2485,6 @@
     "school": "Oregon",
     "rank": 99,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2797,7 +2493,6 @@
     "school": "Texas Tech",
     "rank": 117,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2806,7 +2501,6 @@
     "school": "Ole Miss",
     "rank": 119,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2815,7 +2509,6 @@
     "school": "LSU",
     "rank": 125,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2824,7 +2517,6 @@
     "school": "Ohio State",
     "rank": 130,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2833,7 +2525,6 @@
     "school": "Notre Dame",
     "rank": 163,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2842,7 +2533,6 @@
     "school": "Auburn",
     "rank": 165,
     "on_board": true,
-    "may_return": true,
     "yr": "3rd"
    }
   ],
@@ -2853,7 +2543,6 @@
     "school": "Notre Dame",
     "rank": 3,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2862,7 +2551,6 @@
     "school": "Georgia",
     "rank": 10,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2871,7 +2559,6 @@
     "school": "Clemson",
     "rank": 11,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2880,7 +2567,6 @@
     "school": "Mississippi State",
     "rank": 16,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2889,7 +2575,6 @@
     "school": "Alabama",
     "rank": 53,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -2898,7 +2583,6 @@
     "school": "South Carolina",
     "rank": 66,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2907,7 +2591,6 @@
     "school": "Indiana",
     "rank": 81,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2916,7 +2599,6 @@
     "school": "Michigan",
     "rank": 88,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2925,7 +2607,6 @@
     "school": "Houston",
     "rank": 102,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2934,7 +2615,6 @@
     "school": "Miami",
     "rank": 104,
     "on_board": true,
-    "may_return": false,
     "yr": null
    },
    {
@@ -2943,7 +2623,6 @@
     "school": "Texas Tech",
     "rank": 105,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2952,7 +2631,6 @@
     "school": "Syracuse",
     "rank": 121,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2961,7 +2639,6 @@
     "school": "Minnesota",
     "rank": 126,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2970,7 +2647,6 @@
     "school": "Notre Dame",
     "rank": 136,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2979,7 +2655,6 @@
     "school": "Tennessee",
     "rank": 140,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -2988,7 +2663,6 @@
     "school": "Penn State",
     "rank": 150,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -2997,7 +2671,6 @@
     "school": "Florida State",
     "rank": 157,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -3006,7 +2679,6 @@
     "school": "Michigan",
     "rank": 159,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    }
   ],
@@ -3017,7 +2689,6 @@
     "school": "Georgia",
     "rank": 20,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -3026,7 +2697,6 @@
     "school": "Notre Dame",
     "rank": 34,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -3035,7 +2705,6 @@
     "school": "Texas",
     "rank": 54,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -3044,7 +2713,6 @@
     "school": "California",
     "rank": 55,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -3053,7 +2721,6 @@
     "school": "Ohio State",
     "rank": 58,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -3062,7 +2729,6 @@
     "school": "LSU",
     "rank": 74,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -3071,7 +2737,6 @@
     "school": "Alabama",
     "rank": 92,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -3080,7 +2745,6 @@
     "school": "Oregon",
     "rank": 93,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -3089,7 +2753,6 @@
     "school": "Iowa",
     "rank": 97,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -3098,7 +2761,6 @@
     "school": "Utah",
     "rank": 113,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -3107,7 +2769,6 @@
     "school": "Oklahoma",
     "rank": 133,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    },
    {
@@ -3116,7 +2777,6 @@
     "school": "Clemson",
     "rank": 135,
     "on_board": true,
-    "may_return": false,
     "yr": "3rd"
    },
    {
@@ -3125,7 +2785,6 @@
     "school": "Ohio State",
     "rank": 138,
     "on_board": true,
-    "may_return": false,
     "yr": "5th"
    },
    {
@@ -3134,7 +2793,6 @@
     "school": "Indiana",
     "rank": 158,
     "on_board": true,
-    "may_return": false,
     "yr": "4th"
    }
   ]

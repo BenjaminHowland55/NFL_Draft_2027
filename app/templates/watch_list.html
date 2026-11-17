@@ -36,13 +36,13 @@
         <tr>
           {% if view == 'ALL' %}
           <td class="num rank">{{ p.rank }}</td>
-          <td class="player-cell">{{ p.name }}{% if p.may_return %} <span class="wl-flag" title="Some boards don't expect him to enter this draft">may return to school</span>{% endif %}</td>
+          <td class="player-cell">{{ p.name }}</td>
           <td>{{ p.group }}</td>
           <td class="muted">{{ p.school }}</td>
           <td class="muted">{{ p.yr or '—' }}</td>
           {% else %}
           <td class="num rank">{{ p.pos_rank }}</td>
-          <td class="player-cell">{{ p.name }}{% if p.may_return %} <span class="wl-flag" title="Some boards don't expect him to enter this draft">may return to school</span>{% endif %}{% if not p.on_board %} <span class="wl-flag" title="Outside the consensus top {{ wl.board|length }}; on the list for position depth">depth</span>{% endif %}</td>
+          <td class="player-cell">{{ p.name }}{% if not p.on_board %} <span class="wl-flag" title="Outside the consensus top {{ wl.board|length }}; on the list for position depth">depth</span>{% endif %}</td>
           <td class="muted">{{ p.school }}</td>
           <td class="muted">{{ p.yr or '—' }}</td>
           <td class="num">{{ p.rank }}</td>
